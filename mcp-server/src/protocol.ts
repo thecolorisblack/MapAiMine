@@ -87,9 +87,10 @@ export interface ProbeResult {
 }
 
 export interface JobStatus {
-  jobId: string;
+  /** null for dry runs, which never create a job. */
+  jobId: string | null;
   label?: string;
-  status: 'queued' | 'running' | 'done' | 'failed' | 'cancelled';
+  status: 'queued' | 'running' | 'done' | 'failed' | 'cancelled' | 'dry-run';
   progress?: {
     opsDone: number;
     opsTotal: number;
@@ -228,7 +229,8 @@ export interface OpsRequest {
 }
 
 export interface OpsResult {
-  jobId: string;
+  /** null for dry runs. */
+  jobId: string | null;
   status: JobStatus['status'];
   estimatedBlocks?: number;
   blocksChanged?: number;

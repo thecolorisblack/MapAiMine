@@ -1,0 +1,87 @@
+{
+  "id": "fountain",
+  "name": { "ru": "Фонтан", "en": "Fountain" },
+  "category": "statue",
+  "tags": ["decor","fountain","water","plaza","landmark"],
+  "size": [7,5,7],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [7,7],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["fence","foundation","wall_primary","water"],
+  "legend": {
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "&": { "role": "wall_accent" },
+    ".": { "block": "minecraft:air" },
+    "O": { "role": "foundation" },
+    "Y": { "role": "light_ground" },
+    "Z": { "role": "plaza" },
+    "f": { "role": "fence", "variant": "fence" },
+    "~": { "role": "water" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "ZZZZZZZ",
+        "Z#####Z",
+        "Z#####Z",
+        "Z#####Z",
+        "Z#####Z",
+        "Z#####Z",
+        "ZZZZZZZ"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "f.....f",
+        ".#####.",
+        ".#~~~#.",
+        ".#~&~#.",
+        ".#~~~#.",
+        ".#####.",
+        "f.....f"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "Y     Y",
+        " ..... ",
+        " ..... ",
+        " ..&.. ",
+        " ..... ",
+        " ..... ",
+        "Y     Y"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "   ~   ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    }
+  ],
+  "clearance": { "above": 4 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

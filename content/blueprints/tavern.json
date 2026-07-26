@@ -1,0 +1,278 @@
+{
+  "id": "tavern",
+  "name": { "ru": "Таверна", "en": "Tavern" },
+  "category": "tavern",
+  "tags": ["village","tavern","inn","social","landmark"],
+  "size": [13,11,15],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [13,15],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["banner","beam","carpet","door","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "1": { "prop": "bed_red", "facing": "north" },
+    "2": { "prop": "table_long" },
+    "3": { "prop": "table_small" },
+    "4": { "prop": "chair", "facing": "east" },
+    "5": { "prop": "chair", "facing": "west" },
+    "9": { "prop": "brewing_corner" },
+    " ": { "skip": true },
+    "!": { "role": "wall_secondary", "variant": "slab", "half": "bottom" },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "&": { "role": "wall_accent" },
+    "'": { "block": "minecraft:campfire[lit=true,facing=north]" },
+    ",": { "role": "wall_primary", "variant": "slab", "half": "bottom" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "D": { "role": "door", "variant": "door", "facing": "north" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "S": { "role": "wall_secondary", "variant": "stairs", "facing": "south" },
+    "W": { "role": "window", "variant": "pane" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "_": { "role": "roof_primary", "variant": "slab", "half": "bottom" },
+    "b": { "role": "banner" },
+    "c": { "role": "carpet" },
+    "k": { "role": "decor" },
+    "l": { "role": "light", "variant": "hanging" },
+    "|": { "role": "beam", "variant": "axisZ" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B###########B",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "B###########B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B#WW#D&D#WW#B",
+        "#...........#",
+        "#..........S#",
+        "#9..42..5..##",
+        "#.%........##",
+        "#k%B.....B.##",
+        "#.%.........#",
+        "#k%.42..5...#",
+        "#.%.........#",
+        "#.%.........#",
+        "#..B.....B..#",
+        "#..43..42..5#",
+        "#L.........L#",
+        "#....#'#....#",
+        "B###########B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "B#WW# & #WW#B",
+        "#...........#",
+        "#...........#",
+        "W..........SW",
+        "W.!........#W",
+        "#.!B.....B.##",
+        "W.!.........W",
+        "W.!.........W",
+        "#.!.........#",
+        "#.!.........#",
+        "W..B.....B..W",
+        "W...........W",
+        "#...........#",
+        "#....#.#....#",
+        "B##WW###WW##B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B-----------B",
+        "|...........|",
+        "|...........|",
+        "|...........|",
+        "|..........S|",
+        "|..B.....B.#|",
+        "|...........|",
+        "|...........|",
+        "|...........|",
+        "|...........|",
+        "|..B.....B..|",
+        "|...........|",
+        "|...........|",
+        "|....#.#....|",
+        "B-----------B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "B%%%%%%%%%%%B",
+        "%...b...b...%",
+        "%...........%",
+        "%...........%",
+        "%...........%",
+        "%..l.....l.S%",
+        "%...........%",
+        "%...........%",
+        "%...........%",
+        "%...........%",
+        "%..l.....l..%",
+        "%...........%",
+        "%...........%",
+        "%....#,#....%",
+        "B%%%%%%%%%%%B"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "B%%%%%%%%%%%B",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFF.%",
+        "%FFFFFFFFFF.%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "%FFFFFFFFFFF%",
+        "B%%%%%%%%%%%B"
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "_/%%%W%W%%%\\_",
+        "_/.........\\_",
+        "_/1......1.\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/....L....\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/1...c..1.\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/%%%%W%%%%\\_"
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "  _/%%%%%\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/%%%%%\\_  "
+      ]
+    },
+    {
+      "y": 9,
+      "rows": [
+        "    _/%\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/%\\_    "
+      ]
+    },
+    {
+      "y": 10,
+      "rows": [
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      "
+      ]
+    }
+  ],
+  "signs": [
+    { "pos": [6,4,0], "variant": "wall_sign", "facing": "north", "textKey": "tavern" }
+  ],
+  "containers": [
+    { "pos": [1,2,8], "block": "minecraft:barrel[facing=up]", "lootTable": "minecraft:chests/village/village_plains_house" },
+    { "pos": [1,2,9], "block": "minecraft:barrel[facing=up]", "lootTable": "minecraft:chests/village/village_butcher" }
+  ],
+  "entities": [
+    { "pos": [1,2,6], "entity": "minecraft:villager", "profession": "butcher" }
+  ],
+  "clearance": { "above": 5 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

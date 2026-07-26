@@ -119,13 +119,14 @@ export class Context {
         lightUpdate: index === batches.length - 1,
       });
       result = partial;
-      jobIds.push(partial.jobId);
+      if (partial.jobId) jobIds.push(partial.jobId);
       if (partial.undoId) undoIds.push(partial.undoId);
       batchWarnings.push(...(partial.warnings ?? []));
 
-      if (!opts.dryRun && (opts.wait ?? true) && this.bridge.kind === 'http') {
-        final = await this.waitForJob(partial.jobId).catch((err) => {
-          this.log.warn(`could not follow job ${partial.jobId}: ${(err as Error).message}`);
+      if (!opts.dryRun && partial.jobId && (opts.wait ?? true) && this.bridge.kind === 'http') {
+        const jobId = partial.jobId;
+        final = await this.waitForJob(jobId).catch((err) => {
+          this.log.warn(`could not follow job ${jobId}: ${(err as Error).message}`);
           return undefined;
         });
         if (final?.undoId && !undoIds.includes(final.undoId)) undoIds.push(final.undoId);
@@ -159,7 +160,9 @@ export class Context {
 
     const report =
       `world=${world} ` +
-      (jobIds.length > 1 ? `jobs=${jobIds.length} (${jobIds[0]}…${jobIds[jobIds.length - 1]})` : `job=${result.jobId}`) +
+      (jobIds.length > 1
+        ? `jobs=${jobIds.length} (${jobIds[0]}…${jobIds[jobIds.length - 1]})`
+        : jobIds.length === 1 ? `job=${jobIds[0]}` : 'dry-run') +
       ` status=${status} blocks≈${changed.toLocaleString()}` +
       (undoIds.length ? ` undo=${undoIds.join(',')}` : '') +
       (undoIds.length > 1

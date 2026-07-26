@@ -1,0 +1,30 @@
+{
+  "id": "table_small",
+  "name": { "ru": "Столик", "en": "Small table" },
+  "category": "prop",
+  "tags": ["furniture","table"],
+  "size": [1,2,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [1,1],
+  "styleHints": ["any"],
+  "minStyleRoles": ["fence","wall_secondary"],
+  "legend": {
+    "!": { "role": "wall_secondary", "variant": "slab", "half": "bottom" },
+    "f": { "role": "fence", "variant": "fence" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "f"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "!"
+      ]
+    }
+  ]
+}

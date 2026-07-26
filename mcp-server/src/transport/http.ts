@@ -159,7 +159,11 @@ export class HttpBridge implements Bridge {
   }
 
   undoList(): Promise<UndoEntry[]> {
-    return this.request<{ entries: UndoEntry[] }>('GET', '/undo').then((d) => d.entries ?? []);
+    // The plugin names the list `history`; accept `entries` too so a third-party
+    // bridge implementing the documented shape keeps working.
+    return this
+      .request<{ history?: UndoEntry[]; entries?: UndoEntry[] }>('GET', '/undo')
+      .then((d) => d.history ?? d.entries ?? []);
   }
 
   capture(req: CaptureRequest): Promise<RawStructure> {

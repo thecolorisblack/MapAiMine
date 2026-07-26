@@ -4,7 +4,7 @@ import type { Op, Pos } from '../protocol.js';
 import { Rng } from '../util/rng.js';
 import { Palette } from './palette.js';
 import {
-  isConnecting, isDoor, mirrorFacing, parseBlock, rotateAxis, rotateFacing,
+  composeBlock, isConnecting, isDoor, mirrorFacing, parseBlock, rotateAxis, rotateFacing,
   withStates, type Facing,
 } from './blockstate.js';
 
@@ -147,9 +147,13 @@ export function placeBlueprint(bp: Blueprint, opts: PlaceOptions): PlaceResult {
   for (const sign of bp.signs ?? []) {
     const pos = xf(sign.pos[0], sign.pos[1], sign.pos[2]);
     const facing = xf.facing(sign.facing ?? 'north');
-    const block =
-      sign.block ??
-      palette.block('wall_secondary', { variant: sign.variant ?? 'wall_sign', facing });
+    // A sign must end up an actual sign block: if the style's wood has no sign
+    // variant the palette would hand back a plain plank, silently swallowing the text.
+    const variant = sign.variant ?? 'wall_sign';
+    const candidate = sign.block ?? palette.block('wall_secondary', { variant, facing });
+    const block = /_sign(\[|$)/.test(candidate)
+      ? candidate
+      : composeBlock(variant === 'sign' ? 'minecraft:oak_sign' : 'minecraft:oak_wall_sign', { facing });
     const raw = sign.text ?? signLines(opts.style.signs?.[sign.textKey ?? ''], lang);
     const front = raw.map((line) =>
       line.replace(/%(\w+)%/g, (_, key: string) => opts.signVars?.[key] ?? ''),

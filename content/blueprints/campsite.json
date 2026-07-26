@@ -1,0 +1,83 @@
+{
+  "id": "campsite",
+  "name": { "ru": "Стоянка", "en": "Campsite" },
+  "category": "prop",
+  "tags": ["camp","travel","wild","decor","fire"],
+  "size": [7,4,7],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [7,7],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["carpet","fence","foundation","path_primary","roof_primary","wall_secondary"],
+  "legend": {
+    " ": { "skip": true },
+    "%": { "role": "wall_secondary" },
+    "'": { "block": "minecraft:campfire[lit=true,facing=north]" },
+    ".": { "block": "minecraft:air" },
+    "O": { "role": "foundation" },
+    "X": { "role": "roof_primary" },
+    "Y": { "role": "light_ground" },
+    "[": { "role": "log", "variant": "axisX" },
+    "]": { "role": "log", "variant": "axisZ" },
+    "^": { "role": "roof_primary", "variant": "stairs", "facing": "north" },
+    "c": { "role": "carpet" },
+    "f": { "role": "fence", "variant": "fence" },
+    "v": { "role": "roof_primary", "variant": "stairs", "facing": "south" },
+    "z": { "role": "path_primary" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        " OOOOO ",
+        " OOOOO ",
+        " OOOOO ",
+        " OOOOO ",
+        " zzzzz ",
+        " zzzzz ",
+        " zzzzz "
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        " vvvvv ",
+        " %...% ",
+        " %ccc% ",
+        " %...% ",
+        " ^^^^^ ",
+        " ] ' ]f",
+        "  [ [  "
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "       ",
+        " vvvvv ",
+        " XXXXX ",
+        " ^^^^^ ",
+        "       ",
+        "      f",
+        "       "
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "       ",
+        "       ",
+        "      Y",
+        "       "
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [2,1,1], "block": "minecraft:chest[facing=south]", "lootTable": "minecraft:chests/village/village_plains_house" }
+  ],
+  "clearance": { "above": 3 },
+  "prepare": { "flatten": true, "padding": 1 }
+}

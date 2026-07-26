@@ -1,0 +1,188 @@
+{
+  "id": "stable",
+  "name": { "ru": "Конюшня", "en": "Stable" },
+  "category": "farm",
+  "tags": ["stable","horses","rural","animals","travel"],
+  "size": [11,8,13],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [11,13],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["beam","fence","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "1": { "prop": "hay_stack" },
+    "2": { "prop": "cauldron_stand" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "Q": { "block": "minecraft:crafting_table" },
+    "W": { "role": "window", "variant": "pane" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "_": { "role": "roof_primary", "variant": "slab", "half": "bottom" },
+    "f": { "role": "fence", "variant": "fence" },
+    "k": { "role": "decor" },
+    "l": { "role": "light", "variant": "hanging" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF",
+        "FFFFFFFFFFF"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B.B.B.B.B.B",
+        "#.........#",
+        "#2.f...f.2#",
+        "#.........#",
+        "#fff...fff#",
+        "#.........#",
+        "#..f...f.L#",
+        "#.........#",
+        "#fff...fff#",
+        "#.........#",
+        "#1.....f.k#",
+        "#L...Q..k.#",
+        "B...######B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "B.B.B.B.B.B",
+        "#.........#",
+        "#.........#",
+        "W.........W",
+        "#fff...fff#",
+        "#.........#",
+        "W.........W",
+        "#.........#",
+        "#fff...fff#",
+        "W.........W",
+        "#.........#",
+        "#.........#",
+        "B...###W##B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B---------B",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "B#########B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "_/%%%%%%%\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/%%%%%%%\\_"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "  _/%%%\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/.l.\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/.l.\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/%%%\\_  "
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    "
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [6,2,11], "block": "minecraft:chest[facing=north]", "lootTable": "minecraft:chests/village/village_shepherd" }
+  ],
+  "entities": [
+    { "pos": [2,2,6], "entity": "minecraft:horse" },
+    { "pos": [8,2,6], "entity": "minecraft:horse" }
+  ],
+  "clearance": { "above": 5 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

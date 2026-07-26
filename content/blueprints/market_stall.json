@@ -1,0 +1,88 @@
+{
+  "id": "market_stall",
+  "name": { "ru": "Торговый лоток", "en": "Market stall" },
+  "category": "market",
+  "tags": ["market","trade","plaza","stall"],
+  "size": [5,5,5],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [5,5],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["beam","floor","foundation","light","roof_primary","wall_secondary"],
+  "legend": {
+    "1": { "prop": "barrel_stack" },
+    "!": { "role": "wall_secondary", "variant": "slab", "half": "bottom" },
+    "%": { "role": "wall_secondary" },
+    ".": { "block": "minecraft:air" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "F": { "role": "floor" },
+    "O": { "role": "foundation" },
+    "_": { "role": "roof_primary", "variant": "slab", "half": "bottom" },
+    "h": { "role": "railing", "variant": "fence" },
+    "k": { "role": "decor" },
+    "l": { "role": "light", "variant": "hanging" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOO",
+        "OOOOO",
+        "OOOOO",
+        "OOOOO",
+        "OOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "FFFFF",
+        "FFFFF",
+        "FFFFF",
+        "FFFFF",
+        "FFFFF"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B%%%B",
+        "...1.",
+        ".....",
+        ".k.k.",
+        "B...B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "B!!!B",
+        ".....",
+        "..l..",
+        ".....",
+        "BhhhB"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "_____",
+        "_____",
+        "_____",
+        "_____",
+        "_____"
+      ]
+    }
+  ],
+  "signs": [
+    { "pos": [2,3,0], "variant": "wall_sign", "facing": "north", "textKey": "shop" }
+  ],
+  "containers": [
+    { "pos": [1,2,1], "block": "minecraft:barrel[facing=up]", "lootTable": "minecraft:chests/village/village_fletcher" }
+  ],
+  "entities": [
+    { "pos": [2,2,2], "entity": "minecraft:villager", "profession": "farmer" }
+  ],
+  "clearance": { "above": 3 },
+  "prepare": { "flatten": true, "padding": 0, "foundationTo": "ground" }
+}

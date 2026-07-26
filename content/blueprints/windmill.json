@@ -1,0 +1,271 @@
+{
+  "id": "windmill",
+  "name": { "ru": "Мельница", "en": "Windmill" },
+  "category": "mill",
+  "tags": ["mill","farm","rural","landmark","tower"],
+  "size": [9,16,9],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [9,9],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["beam","door","fence","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "1": { "prop": "hay_stack" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "+": { "block": "minecraft:ladder[facing=south]" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "C": { "role": "ceiling" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "Q": { "block": "minecraft:crafting_table" },
+    "T": { "role": "wall_secondary", "variant": "trapdoor" },
+    "W": { "role": "window", "variant": "pane" },
+    "X": { "role": "roof_primary" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "]": { "role": "log", "variant": "axisZ" },
+    "^": { "role": "roof_primary", "variant": "stairs", "facing": "north" },
+    "d": { "role": "door", "variant": "door", "facing": "south" },
+    "f": { "role": "fence", "variant": "fence" },
+    "k": { "role": "decor" },
+    "v": { "role": "roof_primary", "variant": "stairs", "facing": "south" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "         ",
+        " B#####B ",
+        " #FFFFF# ",
+        " #FFFFF# ",
+        " #FFFFF# ",
+        " #FFFFF# ",
+        " #FFFFF# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "         ",
+        " B#####B ",
+        " #Q...+# ",
+        " #k....# ",
+        " #.....# ",
+        " #...1.. ",
+        " #L..... ",
+        " B##d... ",
+        "         "
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "         ",
+        " B#####B ",
+        " #....+# ",
+        " #.....# ",
+        " W.....W ",
+        " #...... ",
+        " #...... ",
+        " B## ... ",
+        "         "
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "         ",
+        " B#####B ",
+        " #....+# ",
+        " #.....# ",
+        " #.....# ",
+        " #.....# ",
+        " #.....# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "         ",
+        " B#####B ",
+        " #CCCC+# ",
+        " #CCCCC# ",
+        " #CCCCC# ",
+        " #CCCCC# ",
+        " #CCCCC# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "TT     TT",
+        " B##W##B ",
+        " #....+# ",
+        " #.L...# ",
+        " #.....# ",
+        " #.....# ",
+        " #.....# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        " fT   Tf ",
+        " B#####B ",
+        " #....+# ",
+        " #.....# ",
+        " W.....W ",
+        " #.....# ",
+        " #.....# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "  fT Tf  ",
+        " %%%%%%% ",
+        " %....+% ",
+        " %.....% ",
+        " %.....% ",
+        " %.....% ",
+        " %.....% ",
+        " %%%%%%% ",
+        "         "
+      ]
+    },
+    {
+      "y": 9,
+      "rows": [
+        "   f f   ",
+        " B#####B ",
+        " #CCCC+# ",
+        " #CCCCC# ",
+        " #CCCCC# ",
+        " #CCCCC# ",
+        " #CCCCC# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 10,
+      "rows": [
+        "    ]    ",
+        " B##]##B ",
+        " #....+# ",
+        " #.L...# ",
+        " #.....# ",
+        " #.....# ",
+        " #.....# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 11,
+      "rows": [
+        "   f f   ",
+        " B#####B ",
+        " #....+# ",
+        " #.....# ",
+        " W.....W ",
+        " #.....# ",
+        " #.....# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 12,
+      "rows": [
+        "  fT Tf  ",
+        " B#####B ",
+        " #.....# ",
+        " #.....# ",
+        " #.....# ",
+        " #.....# ",
+        " #.....# ",
+        " B#####B ",
+        "         "
+      ]
+    },
+    {
+      "y": 13,
+      "rows": [
+        " fT   Tf ",
+        " XvvvvvX ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " X^^^^^X ",
+        "         "
+      ]
+    },
+    {
+      "y": 14,
+      "rows": [
+        "TT     TT",
+        "         ",
+        "  XvvvX  ",
+        "  /...\\  ",
+        "  /.L.\\  ",
+        "  /...\\  ",
+        "  X^^^X  ",
+        "         ",
+        "         "
+      ]
+    },
+    {
+      "y": 15,
+      "rows": [
+        "         ",
+        "         ",
+        "         ",
+        "   XvX   ",
+        "   /X\\   ",
+        "   X^X   ",
+        "         ",
+        "         ",
+        "         "
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [5,2,2], "block": "minecraft:barrel[facing=up]", "lootTable": "minecraft:chests/village/village_shepherd" }
+  ],
+  "entities": [
+    { "pos": [3,2,5], "entity": "minecraft:villager", "profession": "farmer" }
+  ],
+  "clearance": { "above": 6 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

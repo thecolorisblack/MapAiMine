@@ -1,22 +1,43 @@
 {
   "id": "modern",
-  "name": { "ru": "Модерн", "en": "Modern" },
+  "name": {
+    "ru": "Модерн",
+    "en": "Modern"
+  },
   "description": {
     "ru": "Современная архитектура: белый и серый бетон, кварц, гладкий камень, панорамное остекление, плоские крыши и холодный свет морских фонарей.",
     "en": "Contemporary architecture: white and grey concrete, quartz, smooth stone, floor-to-ceiling glazing, flat roofs and the cold glow of sea lanterns."
   },
-  "tags": ["modern", "contemporary", "minimal", "concrete", "glass", "city"],
+  "tags": [
+    "modern",
+    "contemporary",
+    "minimal",
+    "concrete",
+    "glass",
+    "city"
+  ],
   "season": "none",
   "author": "MapAiMine",
   "version": 1,
-
   "materials": {
     "foundation": {
       "full": [
-        { "block": "minecraft:smooth_stone", "weight": 5 },
-        { "block": "minecraft:polished_andesite", "weight": 3 },
-        { "block": "minecraft:gray_concrete", "weight": 2 },
-        { "block": "minecraft:polished_blackstone", "weight": 1 }
+        {
+          "block": "minecraft:smooth_stone",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:polished_andesite",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:gray_concrete",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_blackstone",
+          "weight": 1
+        }
       ],
       "stairs": "minecraft:polished_andesite_stairs",
       "slab": "minecraft:smooth_stone_slab",
@@ -24,10 +45,22 @@
     },
     "wall_primary": {
       "full": [
-        { "block": "minecraft:white_concrete", "weight": 6 },
-        { "block": "minecraft:light_gray_concrete", "weight": 2 },
-        { "block": "minecraft:smooth_quartz", "weight": 2 },
-        { "block": "minecraft:quartz_block", "weight": 1 }
+        {
+          "block": "minecraft:white_concrete",
+          "weight": 6
+        },
+        {
+          "block": "minecraft:light_gray_concrete",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:smooth_quartz",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:quartz_block",
+          "weight": 1
+        }
       ],
       "stairs": "minecraft:smooth_quartz_stairs",
       "slab": "minecraft:smooth_quartz_slab",
@@ -36,19 +69,41 @@
     },
     "wall_secondary": {
       "full": [
-        { "block": "minecraft:smooth_stone", "weight": 6 },
-        { "block": "minecraft:polished_andesite", "weight": 3 },
-        { "block": "minecraft:light_gray_concrete", "weight": 1 }
+        {
+          "block": "minecraft:smooth_stone",
+          "weight": 6
+        },
+        {
+          "block": "minecraft:polished_andesite",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:light_gray_concrete",
+          "weight": 1
+        }
       ],
       "stairs": "minecraft:polished_andesite_stairs",
-      "slab": "minecraft:smooth_stone_slab"
+      "slab": "minecraft:smooth_stone_slab",
+      "trapdoor": "minecraft:iron_trapdoor"
     },
     "wall_accent": {
       "full": [
-        { "block": "minecraft:gray_concrete", "weight": 4 },
-        { "block": "minecraft:polished_blackstone", "weight": 3 },
-        { "block": "minecraft:black_concrete", "weight": 2 },
-        { "block": "minecraft:polished_deepslate", "weight": 1 }
+        {
+          "block": "minecraft:gray_concrete",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:polished_blackstone",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:black_concrete",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_deepslate",
+          "weight": 1
+        }
       ],
       "stairs": "minecraft:polished_blackstone_stairs",
       "slab": "minecraft:polished_blackstone_slab",
@@ -56,9 +111,18 @@
     },
     "beam": {
       "full": [
-        { "block": "minecraft:polished_basalt", "weight": 5 },
-        { "block": "minecraft:quartz_pillar", "weight": 2 },
-        { "block": "minecraft:iron_block", "weight": 1 }
+        {
+          "block": "minecraft:polished_basalt",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:quartz_pillar",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:iron_block",
+          "weight": 1
+        }
       ],
       "axisX": "minecraft:polished_basalt[axis=x]",
       "axisY": "minecraft:polished_basalt[axis=y]",
@@ -68,8 +132,14 @@
     },
     "pillar": {
       "full": [
-        { "block": "minecraft:quartz_pillar", "weight": 5 },
-        { "block": "minecraft:smooth_quartz", "weight": 2 }
+        {
+          "block": "minecraft:quartz_pillar",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:smooth_quartz",
+          "weight": 2
+        }
       ],
       "axisX": "minecraft:quartz_pillar[axis=x]",
       "axisY": "minecraft:quartz_pillar[axis=y]",
@@ -79,9 +149,18 @@
     },
     "floor": {
       "full": [
-        { "block": "minecraft:birch_planks", "weight": 5 },
-        { "block": "minecraft:smooth_quartz", "weight": 3 },
-        { "block": "minecraft:polished_diorite", "weight": 2 }
+        {
+          "block": "minecraft:birch_planks",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:smooth_quartz",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:polished_diorite",
+          "weight": 2
+        }
       ],
       "stairs": "minecraft:birch_stairs",
       "slab": "minecraft:birch_slab",
@@ -89,9 +168,18 @@
     },
     "floor_accent": {
       "full": [
-        { "block": "minecraft:black_concrete", "weight": 3 },
-        { "block": "minecraft:polished_blackstone", "weight": 2 },
-        { "block": "minecraft:gray_concrete", "weight": 2 }
+        {
+          "block": "minecraft:black_concrete",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:polished_blackstone",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:gray_concrete",
+          "weight": 2
+        }
       ],
       "stairs": "minecraft:polished_blackstone_stairs",
       "slab": "minecraft:polished_blackstone_slab",
@@ -99,34 +187,64 @@
     },
     "ceiling": {
       "full": [
-        { "block": "minecraft:white_concrete", "weight": 6 },
-        { "block": "minecraft:smooth_quartz", "weight": 2 }
+        {
+          "block": "minecraft:white_concrete",
+          "weight": 6
+        },
+        {
+          "block": "minecraft:smooth_quartz",
+          "weight": 2
+        }
       ],
       "stairs": "minecraft:smooth_quartz_stairs",
       "slab": "minecraft:smooth_quartz_slab"
     },
     "roof_primary": {
       "full": [
-        { "block": "minecraft:smooth_stone", "weight": 5 },
-        { "block": "minecraft:light_gray_concrete", "weight": 3 },
-        { "block": "minecraft:smooth_quartz", "weight": 2 },
-        { "block": "minecraft:polished_andesite", "weight": 1 }
+        {
+          "block": "minecraft:smooth_stone",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:light_gray_concrete",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:smooth_quartz",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:polished_andesite",
+          "weight": 1
+        }
       ],
       "stairs": "minecraft:polished_andesite_stairs",
       "slab": "minecraft:smooth_stone_slab"
     },
     "roof_secondary": {
       "full": [
-        { "block": "minecraft:gray_concrete", "weight": 4 },
-        { "block": "minecraft:polished_blackstone", "weight": 2 }
+        {
+          "block": "minecraft:gray_concrete",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:polished_blackstone",
+          "weight": 2
+        }
       ],
       "stairs": "minecraft:polished_blackstone_stairs",
       "slab": "minecraft:polished_blackstone_slab"
     },
     "roof_support": {
       "full": [
-        { "block": "minecraft:polished_basalt", "weight": 4 },
-        { "block": "minecraft:iron_block", "weight": 1 }
+        {
+          "block": "minecraft:polished_basalt",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:iron_block",
+          "weight": 1
+        }
       ],
       "axisX": "minecraft:polished_basalt[axis=x]",
       "axisY": "minecraft:polished_basalt[axis=y]",
@@ -136,28 +254,52 @@
     },
     "window": {
       "full": [
-        { "block": "minecraft:glass", "weight": 7 },
-        { "block": "minecraft:tinted_glass", "weight": 2 },
-        { "block": "minecraft:light_blue_stained_glass", "weight": 1 }
+        {
+          "block": "minecraft:glass",
+          "weight": 7
+        },
+        {
+          "block": "minecraft:tinted_glass",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:light_blue_stained_glass",
+          "weight": 1
+        }
       ],
       "pane": "minecraft:glass_pane"
     },
     "window_frame": {
-      "full": [{ "block": "minecraft:gray_concrete", "weight": 1 }],
+      "full": [
+        {
+          "block": "minecraft:gray_concrete",
+          "weight": 1
+        }
+      ],
       "stairs": "minecraft:polished_blackstone_stairs",
       "slab": "minecraft:polished_blackstone_slab",
       "trapdoor": "minecraft:iron_trapdoor",
       "pane": "minecraft:iron_bars"
     },
     "door": {
-      "full": [{ "block": "minecraft:birch_planks", "weight": 1 }],
+      "full": [
+        {
+          "block": "minecraft:birch_planks",
+          "weight": 1
+        }
+      ],
       "door": "minecraft:birch_door",
       "trapdoor": "minecraft:birch_trapdoor",
       "button": "minecraft:birch_button",
       "pressure_plate": "minecraft:birch_pressure_plate"
     },
     "gate": {
-      "full": [{ "block": "minecraft:iron_block", "weight": 1 }],
+      "full": [
+        {
+          "block": "minecraft:iron_block",
+          "weight": 1
+        }
+      ],
       "door": "minecraft:iron_door",
       "trapdoor": "minecraft:iron_trapdoor",
       "gate": "minecraft:birch_fence_gate",
@@ -166,16 +308,28 @@
     },
     "fence": {
       "full": [
-        { "block": "minecraft:smooth_stone", "weight": 5 },
-        { "block": "minecraft:polished_blackstone", "weight": 2 }
+        {
+          "block": "minecraft:smooth_stone",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:polished_blackstone",
+          "weight": 2
+        }
       ],
       "fence": "minecraft:iron_bars",
       "pane": "minecraft:glass_pane",
       "wall": "minecraft:polished_blackstone_wall",
-      "slab": "minecraft:smooth_stone_slab"
+      "slab": "minecraft:smooth_stone_slab",
+      "gate": "minecraft:birch_fence_gate"
     },
     "railing": {
-      "full": [{ "block": "minecraft:polished_blackstone", "weight": 1 }],
+      "full": [
+        {
+          "block": "minecraft:polished_blackstone",
+          "weight": 1
+        }
+      ],
       "fence": "minecraft:iron_bars",
       "pane": "minecraft:glass_pane",
       "wall": "minecraft:polished_blackstone_wall",
@@ -183,28 +337,61 @@
     },
     "path_primary": {
       "full": [
-        { "block": "minecraft:polished_andesite", "weight": 5 },
-        { "block": "minecraft:smooth_stone", "weight": 3 },
-        { "block": "minecraft:light_gray_concrete", "weight": 2 },
-        { "block": "minecraft:gray_concrete", "weight": 1 }
+        {
+          "block": "minecraft:polished_andesite",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:smooth_stone",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:light_gray_concrete",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:gray_concrete",
+          "weight": 1
+        }
       ],
       "stairs": "minecraft:polished_andesite_stairs",
       "slab": "minecraft:polished_andesite_slab"
     },
     "path_secondary": {
       "full": [
-        { "block": "minecraft:gray_concrete", "weight": 4 },
-        { "block": "minecraft:black_concrete", "weight": 2 },
-        { "block": "minecraft:gravel", "weight": 2 }
+        {
+          "block": "minecraft:gray_concrete",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:black_concrete",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        }
       ],
       "slab": "minecraft:polished_blackstone_slab"
     },
     "plaza": {
       "full": [
-        { "block": "minecraft:smooth_quartz", "weight": 5 },
-        { "block": "minecraft:polished_diorite", "weight": 3 },
-        { "block": "minecraft:light_gray_concrete", "weight": 2 },
-        { "block": "minecraft:black_concrete", "weight": 1 }
+        {
+          "block": "minecraft:smooth_quartz",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:polished_diorite",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:light_gray_concrete",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:black_concrete",
+          "weight": 1
+        }
       ],
       "stairs": "minecraft:smooth_quartz_stairs",
       "slab": "minecraft:smooth_quartz_slab",
@@ -212,83 +399,189 @@
     },
     "ground_top": {
       "full": [
-        { "block": "minecraft:grass_block", "weight": 7 },
-        { "block": "minecraft:moss_block", "weight": 2 },
-        { "block": "minecraft:gravel", "weight": 1 }
+        {
+          "block": "minecraft:grass_block",
+          "weight": 7
+        },
+        {
+          "block": "minecraft:moss_block",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 1
+        }
       ]
     },
     "ground_under": {
       "full": [
-        { "block": "minecraft:dirt", "weight": 6 },
-        { "block": "minecraft:gravel", "weight": 2 },
-        { "block": "minecraft:stone", "weight": 2 }
+        {
+          "block": "minecraft:dirt",
+          "weight": 6
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:stone",
+          "weight": 2
+        }
       ]
     },
     "water": {
-      "full": [{ "block": "minecraft:water", "weight": 1 }],
+      "full": [
+        {
+          "block": "minecraft:water",
+          "weight": 1
+        }
+      ],
       "slab": "minecraft:smooth_quartz_slab",
       "stairs": "minecraft:smooth_quartz_stairs",
       "wall": "minecraft:polished_blackstone_wall"
     },
     "light": {
       "full": [
-        { "block": "minecraft:sea_lantern", "weight": 6 },
-        { "block": "minecraft:redstone_lamp[lit=true]", "weight": 3 },
-        { "block": "minecraft:glowstone", "weight": 1 }
+        {
+          "block": "minecraft:sea_lantern",
+          "weight": 6
+        },
+        {
+          "block": "minecraft:redstone_lamp[lit=true]",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:glowstone",
+          "weight": 1
+        }
       ],
       "hanging": "minecraft:end_rod[facing=down]"
     },
     "light_ground": {
       "full": [
-        { "block": "minecraft:sea_lantern", "weight": 5 },
-        { "block": "minecraft:end_rod", "weight": 3 },
-        { "block": "minecraft:redstone_lamp[lit=true]", "weight": 2 }
+        {
+          "block": "minecraft:sea_lantern",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:end_rod",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:redstone_lamp[lit=true]",
+          "weight": 2
+        }
       ],
       "hanging": "minecraft:end_rod[facing=down]"
     },
     "decor": {
       "full": [
-        { "block": "minecraft:flower_pot", "weight": 3 },
-        { "block": "minecraft:barrel[facing=up]", "weight": 2 },
-        { "block": "minecraft:chiseled_bookshelf", "weight": 2 },
-        { "block": "minecraft:smoker[facing=north]", "weight": 2 },
-        { "block": "minecraft:cartography_table", "weight": 1 },
-        { "block": "minecraft:decorated_pot", "weight": 1 }
+        {
+          "block": "minecraft:flower_pot",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:barrel[facing=up]",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:chiseled_bookshelf",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:smoker[facing=north]",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:cartography_table",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:decorated_pot",
+          "weight": 1
+        }
       ]
     },
     "banner": {
       "full": [
-        { "block": "minecraft:white_banner", "weight": 5 },
-        { "block": "minecraft:light_gray_banner", "weight": 3 },
-        { "block": "minecraft:black_banner", "weight": 2 }
+        {
+          "block": "minecraft:white_banner",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:light_gray_banner",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:black_banner",
+          "weight": 2
+        }
       ]
     },
     "carpet": {
       "full": [
-        { "block": "minecraft:light_gray_carpet", "weight": 4 },
-        { "block": "minecraft:white_carpet", "weight": 3 },
-        { "block": "minecraft:gray_carpet", "weight": 2 },
-        { "block": "minecraft:black_carpet", "weight": 1 }
+        {
+          "block": "minecraft:light_gray_carpet",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:white_carpet",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:gray_carpet",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:black_carpet",
+          "weight": 1
+        }
       ],
       "carpet": "minecraft:light_gray_carpet"
     },
     "plant": {
       "full": [
-        { "block": "minecraft:potted_fern", "weight": 4 },
-        { "block": "minecraft:potted_bamboo", "weight": 3 },
-        { "block": "minecraft:potted_azalea_bush", "weight": 2 },
-        { "block": "minecraft:potted_birch_sapling", "weight": 1 }
+        {
+          "block": "minecraft:potted_fern",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:potted_bamboo",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:potted_azalea_bush",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:potted_birch_sapling",
+          "weight": 1
+        }
       ]
     },
     "crop": {
       "full": [
-        { "block": "minecraft:wheat[age=7]", "weight": 3 },
-        { "block": "minecraft:carrots[age=7]", "weight": 3 },
-        { "block": "minecraft:potatoes[age=7]", "weight": 2 }
+        {
+          "block": "minecraft:wheat[age=7]",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:carrots[age=7]",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:potatoes[age=7]",
+          "weight": 2
+        }
       ]
     },
     "log": {
-      "full": [{ "block": "minecraft:stripped_birch_log", "weight": 1 }],
+      "full": [
+        {
+          "block": "minecraft:stripped_birch_log",
+          "weight": 1
+        }
+      ],
       "axisX": "minecraft:stripped_birch_log[axis=x]",
       "axisY": "minecraft:stripped_birch_log[axis=y]",
       "axisZ": "minecraft:stripped_birch_log[axis=z]",
@@ -296,13 +589,21 @@
     },
     "foliage": {
       "full": [
-        { "block": "minecraft:birch_leaves[persistent=true]", "weight": 5 },
-        { "block": "minecraft:oak_leaves[persistent=true]", "weight": 3 },
-        { "block": "minecraft:azalea_leaves[persistent=true]", "weight": 1 }
+        {
+          "block": "minecraft:birch_leaves[persistent=true]",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:oak_leaves[persistent=true]",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:azalea_leaves[persistent=true]",
+          "weight": 1
+        }
       ]
     }
   },
-
   "environment": {
     "time": 6000,
     "timeLock": false,
@@ -311,56 +612,133 @@
     "biomePaint": null,
     "fogTint": "#dfe6ea"
   },
-
   "ground": {
     "top": [
-      { "block": "minecraft:grass_block", "weight": 7 },
-      { "block": "minecraft:moss_block", "weight": 2 },
-      { "block": "minecraft:gravel", "weight": 1 }
+      {
+        "block": "minecraft:grass_block",
+        "weight": 7
+      },
+      {
+        "block": "minecraft:moss_block",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:gravel",
+        "weight": 1
+      }
     ],
     "under": [
-      { "block": "minecraft:dirt", "weight": 6 },
-      { "block": "minecraft:gravel", "weight": 2 },
-      { "block": "minecraft:stone", "weight": 2 }
+      {
+        "block": "minecraft:dirt",
+        "weight": 6
+      },
+      {
+        "block": "minecraft:gravel",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:stone",
+        "weight": 2
+      }
     ],
     "path": [
-      { "block": "minecraft:polished_andesite", "weight": 5 },
-      { "block": "minecraft:smooth_stone", "weight": 3 },
-      { "block": "minecraft:light_gray_concrete", "weight": 2 },
-      { "block": "minecraft:gray_concrete", "weight": 1 }
+      {
+        "block": "minecraft:polished_andesite",
+        "weight": 5
+      },
+      {
+        "block": "minecraft:smooth_stone",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:light_gray_concrete",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:gray_concrete",
+        "weight": 1
+      }
     ],
     "pathEdge": [
-      { "block": "minecraft:polished_andesite_slab", "weight": 5 },
-      { "block": "minecraft:smooth_stone_slab", "weight": 3 },
-      { "block": "minecraft:polished_blackstone_slab", "weight": 1 }
+      {
+        "block": "minecraft:polished_andesite_slab",
+        "weight": 5
+      },
+      {
+        "block": "minecraft:smooth_stone_slab",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:polished_blackstone_slab",
+        "weight": 1
+      }
     ],
     "plaza": [
-      { "block": "minecraft:smooth_quartz", "weight": 5 },
-      { "block": "minecraft:polished_diorite", "weight": 3 },
-      { "block": "minecraft:light_gray_concrete", "weight": 2 },
-      { "block": "minecraft:black_concrete", "weight": 1 }
+      {
+        "block": "minecraft:smooth_quartz",
+        "weight": 5
+      },
+      {
+        "block": "minecraft:polished_diorite",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:light_gray_concrete",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:black_concrete",
+        "weight": 1
+      }
     ]
   },
-
   "flora": {
     "trees": [
-      { "tree": "BIRCH", "weight": 5 },
-      { "tree": "OAK", "weight": 3 },
-      { "tree": "TALL_BIRCH", "weight": 2 }
+      {
+        "tree": "BIRCH",
+        "weight": 5
+      },
+      {
+        "tree": "OAK",
+        "weight": 3
+      },
+      {
+        "tree": "TALL_BIRCH",
+        "weight": 2
+      }
     ],
     "treeDensity": 0.012,
     "ground": [
-      { "block": "minecraft:short_grass", "weight": 10 },
-      { "block": "minecraft:fern", "weight": 3 },
-      { "block": "minecraft:oxeye_daisy", "weight": 2 },
-      { "block": "minecraft:white_tulip", "weight": 1 },
-      { "block": "minecraft:moss_carpet", "weight": 2 }
+      {
+        "block": "minecraft:short_grass",
+        "weight": 10
+      },
+      {
+        "block": "minecraft:fern",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:oxeye_daisy",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:white_tulip",
+        "weight": 1
+      },
+      {
+        "block": "minecraft:moss_carpet",
+        "weight": 2
+      }
     ],
     "groundDensity": 0.08,
-    "rocks": [{ "blueprint": "rock_small", "weight": 1 }],
+    "rocks": [
+      {
+        "blueprint": "rock_small",
+        "weight": 1
+      }
+    ],
     "rockDensity": 0.001
   },
-
   "building": {
     "roofShape": "flat",
     "roofPitch": 0,
@@ -370,10 +748,12 @@
     "overhang": 1,
     "chimney": false
   },
-
   "settlement": {
     "roadWidth": 6,
-    "plazaSize": [21, 21],
+    "plazaSize": [
+      21,
+      21
+    ],
     "plotPadding": 3,
     "density": 0.75,
     "wall": false,
@@ -392,41 +772,94 @@
     },
     "landmark": "statue"
   },
-
-  "lighting": { "role": "light", "spacing": 6, "height": 5, "onPosts": true },
-
+  "lighting": {
+    "role": "light",
+    "spacing": 6,
+    "height": 5,
+    "onPosts": true
+  },
   "signs": {
     "welcome": {
-      "ru": ["Добро пожаловать", "%settlement%", "Тихий район"],
-      "en": ["Welcome to", "%settlement%", "Quiet neighbourhood"]
+      "ru": [
+        "Добро пожаловать",
+        "%settlement%",
+        "Тихий район"
+      ],
+      "en": [
+        "Welcome to",
+        "%settlement%",
+        "Quiet neighbourhood"
+      ]
     },
     "tavern": {
-      "ru": ["Кафе", "«Стекло и Бетон»"],
-      "en": ["Cafe", "\"Glass & Concrete\""]
+      "ru": [
+        "Кафе",
+        "«Стекло и Бетон»"
+      ],
+      "en": [
+        "Cafe",
+        "\"Glass & Concrete\""
+      ]
     },
     "smithy": {
-      "ru": ["Мастерская", "Ремонт и сборка"],
-      "en": ["Workshop", "Repairs & assembly"]
+      "ru": [
+        "Мастерская",
+        "Ремонт и сборка"
+      ],
+      "en": [
+        "Workshop",
+        "Repairs & assembly"
+      ]
     },
     "shop": {
-      "ru": ["Магазин", "Круглосуточно"],
-      "en": ["Store", "Open 24/7"]
+      "ru": [
+        "Магазин",
+        "Круглосуточно"
+      ],
+      "en": [
+        "Store",
+        "Open 24/7"
+      ]
     },
     "market": {
-      "ru": ["Торговый центр", "Второй этаж"],
-      "en": ["Shopping Centre", "Second floor"]
+      "ru": [
+        "Торговый центр",
+        "Второй этаж"
+      ],
+      "en": [
+        "Shopping Centre",
+        "Second floor"
+      ]
     },
     "farm": {
-      "ru": ["Городская ферма", "Гидропоника"],
-      "en": ["Urban Farm", "Hydroponics"]
+      "ru": [
+        "Городская ферма",
+        "Гидропоника"
+      ],
+      "en": [
+        "Urban Farm",
+        "Hydroponics"
+      ]
     },
     "tower": {
-      "ru": ["Офисная башня", "Лифт направо"],
-      "en": ["Office Tower", "Lifts to the right"]
+      "ru": [
+        "Офисная башня",
+        "Лифт направо"
+      ],
+      "en": [
+        "Office Tower",
+        "Lifts to the right"
+      ]
     },
     "house": {
-      "ru": ["Квартал", "Парковка со двора"],
-      "en": ["Residences", "Parking at the rear"]
+      "ru": [
+        "Квартал",
+        "Парковка со двора"
+      ],
+      "en": [
+        "Residences",
+        "Parking at the rear"
+      ]
     }
   }
 }

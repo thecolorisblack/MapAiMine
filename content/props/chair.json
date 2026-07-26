@@ -1,0 +1,23 @@
+{
+  "id": "chair",
+  "name": { "ru": "Стул", "en": "Chair" },
+  "category": "prop",
+  "tags": ["furniture","chair","seat"],
+  "size": [1,1,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [1,1],
+  "styleHints": ["any"],
+  "minStyleRoles": ["wall_secondary"],
+  "legend": {
+    "N": { "role": "wall_secondary", "variant": "stairs", "facing": "north" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "N"
+      ]
+    }
+  ]
+}

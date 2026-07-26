@@ -1,0 +1,44 @@
+{
+  "id": "well_head",
+  "name": { "ru": "Навес колодца", "en": "Well head" },
+  "category": "prop",
+  "tags": ["well","water","village"],
+  "size": [3,3,3],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [3,3],
+  "styleHints": ["any"],
+  "minStyleRoles": ["beam","fence","roof_primary"],
+  "legend": {
+    " ": { "skip": true },
+    "-": { "role": "beam", "variant": "axisX" },
+    "_": { "role": "roof_primary", "variant": "slab", "half": "bottom" },
+    "f": { "role": "fence", "variant": "fence" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "f f",
+        "   ",
+        "f f"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "f f",
+        " - ",
+        "f f"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "___",
+        "___",
+        "___"
+      ]
+    }
+  ]
+}

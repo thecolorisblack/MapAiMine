@@ -1,0 +1,197 @@
+{
+  "id": "smithy",
+  "name": { "ru": "Кузница", "en": "Smithy" },
+  "category": "smithy",
+  "tags": ["village","smithy","craft","forge"],
+  "size": [11,9,11],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [11,11],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["beam","door","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "1": { "prop": "anvil_station" },
+    "2": { "prop": "cauldron_stand" },
+    "3": { "prop": "barrel_stack" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "'": { "block": "minecraft:blast_furnace[facing=east]" },
+    ",": { "role": "wall_primary", "variant": "slab", "half": "bottom" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    ":": { "block": "minecraft:furnace[facing=east]" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "W": { "role": "window", "variant": "pane" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "_": { "role": "roof_primary", "variant": "slab", "half": "bottom" },
+    "d": { "role": "door", "variant": "door", "facing": "south" },
+    "e": { "role": "wall_primary", "variant": "stairs", "facing": "east" },
+    "k": { "role": "decor" },
+    "l": { "role": "light", "variant": "hanging" },
+    "{": { "block": "minecraft:smithing_table" },
+    "|": { "role": "beam", "variant": "axisZ" },
+    "}": { "block": "minecraft:grindstone[face=floor,facing=north]" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B#########B",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "B#########B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B#B..B..B#B",
+        "##........#",
+        "#'k.......#",
+        "#:....1...#",
+        "#:........#",
+        "#.........#",
+        "#........{#",
+        "#........}#",
+        "#.2.3.....#",
+        "#........L#",
+        "B########dB"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "B#B..B..B#B",
+        "##........#",
+        "#e........#",
+        "We........W",
+        "#e........#",
+        "#.........#",
+        "#.........#",
+        "W.........W",
+        "#.........#",
+        "#.........#",
+        "B##W###W# B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B#B-----B#B",
+        "##........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "B#########B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "B---------B",
+        "|#........|",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "|....l....|",
+        "|.l.......|",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "B---------B"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "_/%%%%%%%\\_",
+        "_#.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/.......\\_",
+        "_/%%%%%%%\\_"
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "  _/%%%\\_  ",
+        " #_/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/...\\_  ",
+        "  _/%%%\\_  "
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "    ___    ",
+        " ,  ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    ",
+        "    ___    "
+      ]
+    }
+  ],
+  "signs": [
+    { "pos": [9,4,0], "variant": "wall_sign", "facing": "north", "textKey": "smithy" }
+  ],
+  "containers": [
+    { "pos": [8,2,9], "block": "minecraft:chest[facing=north]", "lootTable": "minecraft:chests/village/village_weaponsmith" }
+  ],
+  "entities": [
+    { "pos": [7,2,4], "entity": "minecraft:villager", "profession": "weaponsmith" }
+  ],
+  "clearance": { "above": 5 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

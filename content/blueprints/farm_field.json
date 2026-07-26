@@ -1,0 +1,67 @@
+{
+  "id": "farm_field",
+  "name": { "ru": "Поле", "en": "Farm field" },
+  "category": "farm",
+  "tags": ["farm","crops","rural","food"],
+  "size": [9,3,9],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [9,9],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["crop","ground_under","light","path_primary","water"],
+  "legend": {
+    ".": { "block": "minecraft:air" },
+    ":": { "block": "minecraft:farmland[moisture=7]" },
+    "L": { "role": "light" },
+    "q": { "role": "crop" },
+    "u": { "role": "ground_under" },
+    "z": { "role": "path_primary" },
+    "~": { "role": "water" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "uuuuuuuuu",
+        "uuuuuuuuu",
+        "uuuuuuuuu",
+        "uuuuuuuuu",
+        "uuuuuuuuu",
+        "uuuuuuuuu",
+        "uuuuuuuuu",
+        "uuuuuuuuu",
+        "uuuuuuuuu"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "zzzzzzzzz",
+        "z:::~:::z",
+        "z:::~:::z",
+        "z:::~:::z",
+        "z:::~:::z",
+        "z:::~:::z",
+        "z:::~:::z",
+        "z:::~:::z",
+        "zzzzzzzzz"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "L.......L",
+        ".qqq.qqq.",
+        ".qqq.qqq.",
+        ".qqq.qqq.",
+        ".qqq.qqq.",
+        ".qqq.qqq.",
+        ".qqq.qqq.",
+        ".qqq.qqq.",
+        "L.......L"
+      ]
+    }
+  ],
+  "clearance": { "above": 3 },
+  "prepare": { "flatten": true, "padding": 0, "foundationTo": "ground" }
+}

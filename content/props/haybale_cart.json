@@ -1,0 +1,45 @@
+{
+  "id": "haybale_cart",
+  "name": { "ru": "Телега с сеном", "en": "Haybale cart" },
+  "category": "prop",
+  "tags": ["farm","cart","rural"],
+  "size": [3,3,3],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [3,3],
+  "styleHints": ["any"],
+  "minStyleRoles": ["wall_secondary"],
+  "legend": {
+    "1": { "block": "minecraft:hay_block[axis=x]" },
+    " ": { "skip": true },
+    "%": { "role": "wall_secondary" },
+    ".": { "block": "minecraft:air" },
+    "T": { "role": "wall_secondary", "variant": "trapdoor" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "T.T",
+        "...",
+        "T.T"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "%%%",
+        "%.%",
+        "%%%"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "111",
+        " 1 ",
+        "   "
+      ]
+    }
+  ]
+}

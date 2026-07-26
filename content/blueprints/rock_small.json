@@ -1,0 +1,45 @@
+{
+  "id": "rock_small",
+  "name": { "ru": "Валун", "en": "Small rock" },
+  "category": "rock",
+  "tags": ["nature","rock","scatter","decor"],
+  "size": [3,3,3],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [3,3],
+  "styleHints": ["medieval","fantasy","rustic","winter"],
+  "minStyleRoles": ["wall_primary"],
+  "legend": {
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    ";": { "role": "wall_primary", "variant": "slab", "half": "top" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "## ",
+        "###",
+        " ##"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "   ",
+        "## ",
+        " # "
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "   ",
+        " ; ",
+        "   "
+      ]
+    }
+  ],
+  "clearance": { "above": 1 },
+  "prepare": { "flatten": false, "padding": 0 }
+}

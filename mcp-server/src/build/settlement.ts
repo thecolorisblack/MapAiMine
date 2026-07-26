@@ -88,6 +88,8 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
     x2: opts.center[0] + half, z2: opts.center[1] + half,
   };
 
+  const mixPreview = { ...defaults.mix, ...(settings.buildingMix ?? {}) };
+
   const ops: Op[] = [];
   const physicsOps: Op[] = [];
   const buildings: PlacedBuilding[] = [];
@@ -125,13 +127,31 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
   blockCount += (plaza.x2 - plaza.x1 + 1) * (plaza.z2 - plaza.z1 + 1);
 
   /* ── 3. road grid ────────────────────────────────────────────────── */
-  const cell = Math.max(18, Math.round(opts.size / Math.max(2, Math.round(opts.size / 26))));
+  // Blocks between streets must be deep enough for two rows of buildings back to
+  // back, otherwise only the tiniest blueprints ever fit and the town fills up
+  // with wells. Size the grid from the catalogue instead of a magic constant.
+  const catalogDepths = [...opts.library.blueprints.values()]
+    .filter((b) => (mixPreview[b.id] ?? mixPreview[b.category]) !== undefined)
+    .map((b) => Math.min(b.size[0], b.size[2]))
+    .sort((a, b) => a - b);
+  const typicalDepth = catalogDepths.length
+    ? catalogDepths[Math.floor(catalogDepths.length * 0.7)]
+    : 9;
+  const idealCell = typicalDepth * 2 + roadWidth + padding * 2 + 2;
+
+  // Space the streets evenly from the centre to the edge instead of stepping outwards
+  // by a fixed amount: a fixed step leaves a narrow leftover band at the site edge,
+  // and those bands only ever fit the smallest blueprint in the catalogue.
+  const usable = half - 4;
+  const steps = Math.max(1, Math.round(usable / Math.max(12, idealCell)));
+  const cell = Math.max(14, Math.round(usable / steps));
+
   const roadXs: number[] = [];
   const roadZs: number[] = [];
-  for (let x = opts.center[0]; x >= site.x1 + 6; x -= cell) roadXs.unshift(x);
-  for (let x = opts.center[0] + cell; x <= site.x2 - 6; x += cell) roadXs.push(x);
-  for (let z = opts.center[1]; z >= site.z1 + 6; z -= cell) roadZs.unshift(z);
-  for (let z = opts.center[1] + cell; z <= site.z2 - 6; z += cell) roadZs.push(z);
+  for (let k = -steps; k <= steps; k++) {
+    roadXs.push(opts.center[0] + k * cell);
+    roadZs.push(opts.center[1] + k * cell);
+  }
 
   const roadBlock = { choices: (opts.style.ground?.path ?? [{ block: palette.fullBlock('path_primary') }]).map((b) => ({ block: b.block, weight: b.weight })) };
   const roadRects: Rect[] = [];
@@ -184,9 +204,66 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
     warnings.push(`landmark blueprint "${landmarkId}" not found in the library`);
   }
 
-  /* ── 5. plots between the roads ──────────────────────────────────── */
-  const mix = { ...defaults.mix, ...(settings.buildingMix ?? {}) };
-  const catalog = buildCatalog(opts.library, opts.style, mix, opts.only);
+  /* ── 5. curtain wall (before the plots, so nothing is planned on top of it) ── */
+  if (wantWall) {
+    const wallHeight = settings.wallHeight ?? 6;
+    const wallBlock = palette.fullBlock('wall_primary');
+    ops.push({
+      type: 'walls',
+      from: [site.x1, groundY + 1, site.z1],
+      to: [site.x2, groundY + wallHeight, site.z2],
+      block: wallBlock,
+    });
+    // Crenellations
+    ops.push({
+      type: 'walls',
+      from: [site.x1, groundY + wallHeight + 1, site.z1],
+      to: [site.x2, groundY + wallHeight + 1, site.z2],
+      block: palette.block('wall_primary', { variant: 'wall' }),
+    });
+    blockCount += ((site.x2 - site.x1) + (site.z2 - site.z1)) * 2 * (wallHeight + 1);
+
+    // Reserve the wall band so plots are never planned on top of it.
+    const band = Math.max(2, Math.ceil((settings.wallHeight ?? 6) / 3));
+    occupied.push({ x1: site.x1, z1: site.z1, x2: site.x2, z2: site.z1 + band });
+    occupied.push({ x1: site.x1, z1: site.z2 - band, x2: site.x2, z2: site.z2 });
+    occupied.push({ x1: site.x1, z1: site.z1, x2: site.x1 + band, z2: site.z2 });
+    occupied.push({ x1: site.x2 - band, z1: site.z1, x2: site.x2, z2: site.z2 });
+
+    // Gates where the main roads meet the wall.
+    const gate = opts.library.blueprints.get('gatehouse');
+    for (const x of [roadXs[Math.floor(roadXs.length / 2)]].filter((v) => v !== undefined)) {
+      for (const z of [site.z1, site.z2]) {
+        ops.push({
+          type: 'fill',
+          from: [x - hw, groundY + 1, z - 1], to: [x - hw + roadWidth - 1, groundY + 4, z + 1],
+          block: 'minecraft:air', mode: 'replace',
+        });
+        if (gate) {
+          const [gw, gd] = rotatedFootprint(gate, 0);
+          const rot: Rotation = z === site.z1 ? 0 : 180;
+          // Keep the gatehouse inside the requested square: a build must never spill
+          // outside the area the user asked for, even by half a structure.
+          const gx = Math.min(Math.max(x - Math.floor(gw / 2), site.x1), site.x2 - gw + 1);
+          const gz = z === site.z1 ? site.z1 : site.z2 - gd + 1;
+          const origin: Pos = [gx, groundY + 1 - (gate.groundLevel ?? 0), gz];
+          const placed = placeBlueprint(gate, {
+            origin, rotation: rot, style: opts.style, props: opts.library.props,
+            seed: rng.int(0, 1e9), lang,
+          });
+          ops.push(...placed.ops);
+          physicsOps.push(...placed.physicsOps);
+          blockCount += placed.blockCount;
+          buildings.push({ blueprint: gate.id, category: 'gate', pos: origin, rotation: rot, footprint: [gw, gd] });
+          occupied.push({ x1: gx - 1, z1: gz - 1, x2: gx + gw, z2: gz + gd });
+        }
+      }
+    }
+  }
+
+  /* ── 6. plots between the roads ──────────────────────────────────── */
+  const catalog = buildCatalog(opts.library, opts.style, mixPreview, opts.only);
+  const usage = new Map<string, number>();
   if (!catalog.length) {
     warnings.push('no blueprints matched this style — nothing was built inside the plots');
   }
@@ -199,10 +276,15 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
   for (const [bx1, bx2] of xSpans) {
     for (const [bz1, bz2] of zSpans) {
       const block: Rect = { x1: bx1 + padding, z1: bz1 + padding, x2: bx2 - padding, z2: bz2 - padding };
-      if (block.x2 - block.x1 < 5 || block.z2 - block.z1 < 5) continue;
-      if (overlaps(block, plaza)) continue;
+      // Anything narrower than a small building is left as green space rather than
+      // being packed with whatever tiny blueprint happens to fit.
+      if (block.x2 - block.x1 < 9 || block.z2 - block.z1 < 9) continue;
+      // Blocks touching the plaza are NOT skipped wholesale — the plaza is already in
+      // `occupied`, so only the individual buildings that would sit on it get rejected.
+      // Skipping the whole block emptied the town centre for styles with a large plaza.
 
-      for (const side of ['north', 'south', 'west', 'east'] as const) {
+      const sides: Array<'north' | 'south' | 'west' | 'east'> = ['north', 'south', 'west', 'east'];
+      for (const side of rng.shuffle(sides)) {
         fillSide(side, block);
       }
     }
@@ -223,7 +305,7 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
         continue;
       }
       const remaining = spanEnd - cursor + 1;
-      const candidate = pickFitting(catalog, rng, remaining, Math.floor(depthAvailable / 2) + 1, rotation);
+      const candidate = pickFitting(catalog, rng, remaining, Math.max(3, depthAvailable - 1), rotation, usage);
       if (!candidate) break;
       const { bp, w, d } = candidate;
 
@@ -247,11 +329,12 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
       blockCount += placed.blockCount;
       buildings.push({ blueprint: bp.id, category: bp.category, pos: origin, rotation, footprint: [w, d] });
       occupied.push(rect);
+      usage.set(bp.id, (usage.get(bp.id) ?? 0) + 1);
       cursor += (horizontal ? w : d) + rng.int(1, 3);
     }
   }
 
-  /* ── 6. street lamps ─────────────────────────────────────────────── */
+  /* ── 7. street lamps ─────────────────────────────────────────────── */
   const lampBp = opts.library.blueprints.get('lamp_post');
   const lampSpots: Pos[] = [];
   for (const x of roadXs) {
@@ -279,51 +362,6 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
       ops.push({ type: 'fill', from: spot, to: [spot[0], spot[1] + 2, spot[2]], block: post, mode: 'replace' });
       ops.push({ type: 'set', pos: [spot[0], spot[1] + 3, spot[2]], block: palette.block('light') });
       blockCount += 4;
-    }
-  }
-
-  /* ── 7. curtain wall ─────────────────────────────────────────────── */
-  if (wantWall) {
-    const wallHeight = settings.wallHeight ?? 6;
-    const wallBlock = palette.fullBlock('wall_primary');
-    ops.push({
-      type: 'walls',
-      from: [site.x1, groundY + 1, site.z1],
-      to: [site.x2, groundY + wallHeight, site.z2],
-      block: wallBlock,
-    });
-    // Crenellations
-    ops.push({
-      type: 'walls',
-      from: [site.x1, groundY + wallHeight + 1, site.z1],
-      to: [site.x2, groundY + wallHeight + 1, site.z2],
-      block: palette.block('wall_primary', { variant: 'wall' }),
-    });
-    blockCount += ((site.x2 - site.x1) + (site.z2 - site.z1)) * 2 * (wallHeight + 1);
-
-    // Gates where the main roads meet the wall.
-    const gate = opts.library.blueprints.get('gatehouse');
-    for (const x of [roadXs[Math.floor(roadXs.length / 2)]].filter((v) => v !== undefined)) {
-      for (const z of [site.z1, site.z2]) {
-        ops.push({
-          type: 'fill',
-          from: [x - hw, groundY + 1, z - 1], to: [x - hw + roadWidth - 1, groundY + 4, z + 1],
-          block: 'minecraft:air', mode: 'replace',
-        });
-        if (gate) {
-          const [gw, gd] = rotatedFootprint(gate, 0);
-          const rot: Rotation = z === site.z1 ? 0 : 180;
-          const origin: Pos = [x - Math.floor(gw / 2), groundY + 1 - (gate.groundLevel ?? 0), z - Math.floor(gd / 2)];
-          const placed = placeBlueprint(gate, {
-            origin, rotation: rot, style: opts.style, props: opts.library.props,
-            seed: rng.int(0, 1e9), lang,
-          });
-          ops.push(...placed.ops);
-          physicsOps.push(...placed.physicsOps);
-          blockCount += placed.blockCount;
-          buildings.push({ blueprint: gate.id, category: 'gate', pos: origin, rotation: rot, footprint: [gw, gd] });
-        }
-      }
     }
   }
 
@@ -436,15 +474,16 @@ function buildCatalog(
   const out: CatalogEntry[] = [];
   for (const bp of lib.blueprints.values()) {
     if (only?.length && !only.includes(bp.id)) continue;
-    const weightByCategory = mix[bp.category] ?? mix[bp.id];
-    if (weightByCategory === undefined) continue;
-    if (bp.styleHints?.length) {
-      const matches = bp.styleHints.some(
-        (h) => h === style.id || style.tags?.includes(h) || h === style.season,
-      );
-      if (!matches && !bp.styleHints.includes('any')) continue;
-    }
-    out.push({ bp, weight: weightByCategory });
+    const base = mix[bp.id] ?? mix[bp.category];
+    if (base === undefined) continue;
+
+    // styleHints are a *preference*, never a filter: every blueprint is built from
+    // palette roles, so a medieval cottage renders perfectly well in the winter or
+    // desert palette. A matching hint just makes that blueprint more likely.
+    const matches = bp.styleHints?.some(
+      (h) => h === style.id || style.tags?.includes(h) || h === style.season,
+    );
+    out.push({ bp, weight: matches ? base * 2 : base });
   }
   return out;
 }
@@ -490,11 +529,17 @@ function pickFitting(
   maxWidth: number,
   maxDepth: number,
   rotation: Rotation,
+  usage: Map<string, number>,
 ): { bp: Blueprint; w: number; d: number } | null {
   const fitting = catalog
     .map((e) => {
       const [w, d] = rotatedFootprint(e.bp, rotation);
-      return { ...e, w, d };
+      // Already-used blueprints get progressively less likely, so a settlement does
+      // not end up as eighteen identical wells just because they fit everywhere.
+      // Quadratic, not linear: a linear penalty still let a 5x5 well that fits
+      // everywhere out-number the houses it was supposed to accompany.
+      const repeats = usage.get(e.bp.id) ?? 0;
+      return { ...e, w, d, weight: e.weight / (1 + repeats * repeats * 0.6) };
     })
     .filter((e) => e.w <= maxWidth && e.d <= maxDepth);
   if (!fitting.length) return null;

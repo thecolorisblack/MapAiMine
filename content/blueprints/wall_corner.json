@@ -1,0 +1,108 @@
+{
+  "id": "wall_corner",
+  "name": { "ru": "Угол стены", "en": "Wall corner" },
+  "category": "wall",
+  "tags": ["defence","wall","corner","fortification"],
+  "size": [7,7,7],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [7,7],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["floor","foundation","light","wall_primary"],
+  "legend": {
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    ".": { "block": "minecraft:air" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOO    ",
+        "OOO    ",
+        "OOO    ",
+        "OOO    "
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "#######",
+        "#######",
+        "#######",
+        "###    ",
+        "###    ",
+        "###    ",
+        "###    "
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "#######",
+        "#######",
+        "#######",
+        "###    ",
+        "###    ",
+        "###    ",
+        "###    "
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "#######",
+        "#######",
+        "#######",
+        "###    ",
+        "###    ",
+        "###    ",
+        "###    "
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "#######",
+        "#######",
+        "#######",
+        "###    ",
+        "###    ",
+        "###    ",
+        "###    "
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "#######",
+        "#FFFFFF",
+        "#FF####",
+        "#F#    ",
+        "#F#    ",
+        "#F#    ",
+        "#F#    "
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "#.#.L.#",
+        ".......",
+        "#...#.#",
+        "...    ",
+        "L.#    ",
+        "...    ",
+        "#.#    "
+      ]
+    }
+  ],
+  "clearance": { "above": 3 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

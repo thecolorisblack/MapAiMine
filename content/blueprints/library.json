@@ -1,0 +1,245 @@
+{
+  "id": "library",
+  "name": { "ru": "Библиотека", "en": "Library" },
+  "category": "house",
+  "tags": ["village","library","civic","books","scholar"],
+  "size": [11,11,13],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [11,13],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["beam","carpet","door","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "2": { "prop": "table_long" },
+    "4": { "prop": "chair", "facing": "east" },
+    "5": { "prop": "chair", "facing": "west" },
+    "7": { "prop": "bookshelf_wall" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "D": { "role": "door", "variant": "door", "facing": "north" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "W": { "role": "window", "variant": "pane" },
+    "X": { "role": "roof_primary" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "c": { "role": "carpet" },
+    "k": { "role": "decor" },
+    "l": { "role": "light", "variant": "hanging" },
+    "|": { "role": "beam", "variant": "axisZ" },
+    "}": { "block": "minecraft:lectern[facing=north,has_book=true]" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B#########B",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "B#########B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B####D####B",
+        "#7.....7..#",
+        "#.........#",
+        "#.........#",
+        "#kk.ccc.kk#",
+        "#kk.ccc.kk#",
+        "#..42..5..#",
+        "#kk.....kk#",
+        "#kk.....kk#",
+        "#L..4}5..L#",
+        "#.........#",
+        "#7.....7..#",
+        "B#########B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "B#WW# #WW#B",
+        "#.........#",
+        "#.........#",
+        "W.........W",
+        "Wkk.....kkW",
+        "#kk.....kk#",
+        "#.........#",
+        "Wkk.....kkW",
+        "Wkk.....kkW",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "B##W#W#W##B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B---------B",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "|kk.....kk|",
+        "|kk.....kk|",
+        "|.........|",
+        "|kk.....kk|",
+        "|kk.....kk|",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "B---------B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "B%%%%%%%%%B",
+        "%.........%",
+        "%.........%",
+        "%..l...l..%",
+        "W.........W",
+        "%.........%",
+        "%.........%",
+        "%.........%",
+        "W.........W",
+        "%..l...l..%",
+        "%.........%",
+        "%.........%",
+        "B%%%%%%%%%B"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "/%%%%%%%%%\\",
+        "/.........\\",
+        "/.........\\",
+        "/---------\\",
+        "/.........\\",
+        "/.........\\",
+        "/---------\\",
+        "/.........\\",
+        "/.........\\",
+        "/---------\\",
+        "/.........\\",
+        "/.........\\",
+        "/%%%%%%%%%\\"
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        " /%%%%%%%\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /%%%%%%%\\ "
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "  /%%%%%\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /%%%%%\\  "
+      ]
+    },
+    {
+      "y": 9,
+      "rows": [
+        "   /%%%\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /%%%\\   "
+      ]
+    },
+    {
+      "y": 10,
+      "rows": [
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    "
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [9,2,11], "block": "minecraft:chest[facing=west]", "lootTable": "minecraft:chests/village/village_temple" }
+  ],
+  "entities": [
+    { "pos": [5,2,10], "entity": "minecraft:villager", "profession": "librarian" }
+  ],
+  "clearance": { "above": 5 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "dock_segment",
+  "name": { "ru": "Секция причала", "en": "Dock segment" },
+  "category": "dock",
+  "tags": ["dock","harbour","water","tileable","infrastructure"],
+  "size": [7,4,7],
+  "facing": "north",
+  "groundLevel": 2,
+  "footprint": [7,7],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["fence","floor"],
+  "legend": {
+    " ": { "skip": true },
+    ".": { "block": "minecraft:air" },
+    "F": { "role": "floor" },
+    "I": { "role": "log", "variant": "axisY" },
+    "Y": { "role": "light_ground" },
+    "f": { "role": "fence", "variant": "fence" },
+    "h": { "role": "railing", "variant": "fence" },
+    "k": { "role": "decor" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "       ",
+        "I     I",
+        "       ",
+        "       ",
+        "I     I",
+        "       ",
+        "       "
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "       ",
+        "I     I",
+        "       ",
+        "       ",
+        "I     I",
+        "       ",
+        "       "
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "FFFFFFF",
+        "FFFFFFF",
+        "FFFFFFF",
+        "FFFFFFF",
+        "FFFFFFF",
+        "FFFFFFF",
+        "FFFFFFF"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "h.....h",
+        "h..k..h",
+        "h.....h",
+        "Y.....f",
+        "h.....h",
+        "h..k..h",
+        "h.....h"
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [4,3,5], "block": "minecraft:barrel[facing=up]", "lootTable": "minecraft:chests/village/village_fisher" }
+  ],
+  "clearance": { "above": 4 },
+  "prepare": { "flatten": false, "padding": 0 }
+}

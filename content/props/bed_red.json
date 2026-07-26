@@ -1,0 +1,25 @@
+{
+  "id": "bed_red",
+  "name": { "ru": "Кровать красная", "en": "Red bed" },
+  "category": "prop",
+  "tags": ["furniture","bed","sleep"],
+  "size": [1,1,2],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [1,2],
+  "styleHints": ["any"],
+  "minStyleRoles": [],
+  "legend": {
+    "1": { "block": "minecraft:red_bed[facing=north,part=head]" },
+    "2": { "block": "minecraft:red_bed[facing=north,part=foot]" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "1",
+        "2"
+      ]
+    }
+  ]
+}

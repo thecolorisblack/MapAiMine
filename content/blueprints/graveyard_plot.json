@@ -1,0 +1,63 @@
+{
+  "id": "graveyard_plot",
+  "name": { "ru": "Кладбищенский участок", "en": "Graveyard plot" },
+  "category": "prop",
+  "tags": ["graveyard","church","decor","village"],
+  "size": [5,3,7],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [5,7],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["fence","ground_top","path_primary","wall_primary"],
+  "legend": {
+    " ": { "skip": true },
+    ",": { "role": "wall_primary", "variant": "slab", "half": "bottom" },
+    ";": { "role": "wall_primary", "variant": "slab", "half": "top" },
+    "H": { "role": "wall_accent", "variant": "wall" },
+    "Y": { "role": "light_ground" },
+    "f": { "role": "fence", "variant": "fence" },
+    "g": { "role": "fence", "variant": "gate", "facing": "north" },
+    "t": { "role": "ground_top" },
+    "z": { "role": "path_primary" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "ttztt",
+        "ttztt",
+        "ttztt",
+        "ttztt",
+        "ttztt",
+        "ttztt",
+        "ttztt"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "ffgff",
+        "fH Hf",
+        "f, ,f",
+        "f   f",
+        "fH Hf",
+        "f, ,f",
+        "fffff"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "     ",
+        " ; ; ",
+        "     ",
+        "Y   Y",
+        " ; ; ",
+        "     ",
+        "     "
+      ]
+    }
+  ],
+  "clearance": { "above": 3 },
+  "prepare": { "flatten": true, "padding": 0 }
+}

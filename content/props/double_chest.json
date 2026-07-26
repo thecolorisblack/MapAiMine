@@ -1,0 +1,24 @@
+{
+  "id": "double_chest",
+  "name": { "ru": "Двойной сундук", "en": "Double chest" },
+  "category": "prop",
+  "tags": ["furniture","storage","chest"],
+  "size": [2,1,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [2,1],
+  "styleHints": ["any"],
+  "minStyleRoles": [],
+  "legend": {
+    "1": { "block": "minecraft:chest[facing=north,type=right]" },
+    "2": { "block": "minecraft:chest[facing=north,type=left]" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "12"
+      ]
+    }
+  ]
+}

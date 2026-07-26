@@ -1,0 +1,30 @@
+{
+  "id": "barrel_stack",
+  "name": { "ru": "Штабель бочек", "en": "Barrel stack" },
+  "category": "prop",
+  "tags": ["furniture","storage","barrel"],
+  "size": [2,2,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [2,1],
+  "styleHints": ["any"],
+  "minStyleRoles": [],
+  "legend": {
+    "1": { "block": "minecraft:barrel[facing=up]" },
+    ".": { "block": "minecraft:air" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "11"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "1."
+      ]
+    }
+  ]
+}

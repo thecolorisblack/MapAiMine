@@ -1,0 +1,23 @@
+{
+  "id": "flower_pot",
+  "name": { "ru": "Горшок с цветком", "en": "Flower pot" },
+  "category": "prop",
+  "tags": ["decor","plant"],
+  "size": [1,1,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [1,1],
+  "styleHints": ["any"],
+  "minStyleRoles": [],
+  "legend": {
+    "1": { "block": "minecraft:potted_poppy" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "1"
+      ]
+    }
+  ]
+}

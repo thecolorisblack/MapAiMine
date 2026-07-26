@@ -1,0 +1,30 @@
+{
+  "id": "cauldron_stand",
+  "name": { "ru": "Котёл на подставке", "en": "Cauldron stand" },
+  "category": "prop",
+  "tags": ["furniture","water","kitchen"],
+  "size": [1,2,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [1,1],
+  "styleHints": ["any"],
+  "minStyleRoles": ["wall_primary"],
+  "legend": {
+    "1": { "block": "minecraft:water_cauldron[level=3]" },
+    "#": { "role": "wall_primary" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "#"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "shop",
+  "name": { "ru": "Лавка", "en": "Shop" },
+  "category": "shop",
+  "tags": ["village","shop","trade","market"],
+  "size": [9,9,9],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [9,9],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["beam","door","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "6": { "prop": "flower_pot" },
+    "7": { "prop": "bookshelf_wall" },
+    "8": { "prop": "barrel_stack" },
+    " ": { "skip": true },
+    "!": { "role": "wall_secondary", "variant": "slab", "half": "bottom" },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "D": { "role": "door", "variant": "door", "facing": "north" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "W": { "role": "window", "variant": "pane" },
+    "X": { "role": "roof_primary" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "k": { "role": "decor" },
+    "l": { "role": "light", "variant": "hanging" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO",
+        "OOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B#######B",
+        "#FFFFFFF#",
+        "#FFFFFFF#",
+        "#FFFFFFF#",
+        "#FFFFFFF#",
+        "#FFFFFFF#",
+        "#FFFFFFF#",
+        "#FFFFFFF#",
+        "B#######B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "BWW#D#WWB",
+        "#L......#",
+        "#.......#",
+        "#k.....6#",
+        "#.......#",
+        "#.%%%%%%#",
+        "#.......#",
+        "#7...k8.#",
+        "B#######B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "BWWW WWWB",
+        "#.......#",
+        "#.......#",
+        "W.......W",
+        "#.......#",
+        "W.!!!!!!W",
+        "#.......#",
+        "#.......#",
+        "B###W###B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B%%%%%%%B",
+        "%.......%",
+        "%...l...%",
+        "%.......%",
+        "%.......%",
+        "%.......%",
+        "%...l...%",
+        "%.......%",
+        "B%%%%%%%B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "/%%%%%%%\\",
+        "/.......\\",
+        "/-------\\",
+        "/.......\\",
+        "/.......\\",
+        "/.......\\",
+        "/-------\\",
+        "/.......\\",
+        "/%%%%%%%\\"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        " /%%%%%\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /.....\\ ",
+        " /%%%%%\\ "
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "  /%%%\\  ",
+        "  /...\\  ",
+        "  /...\\  ",
+        "  /...\\  ",
+        "  /...\\  ",
+        "  /...\\  ",
+        "  /...\\  ",
+        "  /...\\  ",
+        "  /%%%\\  "
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "   /X\\   ",
+        "   /X\\   ",
+        "   /X\\   ",
+        "   /X\\   ",
+        "   /X\\   ",
+        "   /X\\   ",
+        "   /X\\   ",
+        "   /X\\   ",
+        "   /X\\   "
+      ]
+    }
+  ],
+  "signs": [
+    { "pos": [4,4,0], "variant": "wall_sign", "facing": "north", "textKey": "shop" }
+  ],
+  "containers": [
+    { "pos": [7,2,6], "block": "minecraft:barrel[facing=up]", "lootTable": "minecraft:chests/village/village_cartographer" }
+  ],
+  "entities": [
+    { "pos": [4,2,6], "entity": "minecraft:villager", "profession": "cartographer" }
+  ],
+  "clearance": { "above": 4 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

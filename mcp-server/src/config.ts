@@ -48,11 +48,19 @@ function bool(name: string, def: boolean): boolean {
   return /^(1|true|yes|on)$/i.test(raw);
 }
 
+export function normalizeBridgeUrl(raw: string): string {
+  return raw.trim().replace(/\/+$/, '').replace(/\/api\/v1$/, '');
+}
+
 export function loadConfig(): Config {
   const transport = (process.env.MAPAIMINE_TRANSPORT ?? 'auto').toLowerCase();
   return {
     transport: transport === 'http' || transport === 'rcon' ? transport : 'auto',
-    bridgeUrl: (process.env.MAPAIMINE_BRIDGE_URL ?? 'http://127.0.0.1:25599').replace(/\/+$/, ''),
+    // The plugin's startup banner prints MAPAIMINE_URL including the /api/v1 suffix;
+    // accept that verbatim so copy-pasting from the server log just works.
+    bridgeUrl: normalizeBridgeUrl(
+      process.env.MAPAIMINE_BRIDGE_URL ?? process.env.MAPAIMINE_URL ?? 'http://127.0.0.1:25599',
+    ),
     token: process.env.MAPAIMINE_TOKEN,
     rcon: {
       host: process.env.MAPAIMINE_RCON_HOST ?? '127.0.0.1',

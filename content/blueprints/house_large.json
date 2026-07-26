@@ -1,0 +1,268 @@
+{
+  "id": "house_large",
+  "name": { "ru": "Дом, большой", "en": "Large house" },
+  "category": "house",
+  "tags": ["village","house","residential","wealthy","two_storey"],
+  "size": [11,12,13],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [11,13],
+  "styleHints": ["medieval","fantasy","rustic"],
+  "minStyleRoles": ["beam","carpet","door","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "1": { "prop": "bed_red", "facing": "north" },
+    "2": { "prop": "table_long" },
+    "3": { "prop": "double_chest", "facing": "north" },
+    "4": { "prop": "chair", "facing": "east" },
+    "5": { "prop": "chair", "facing": "west" },
+    "6": { "prop": "flower_pot" },
+    "7": { "prop": "bookshelf_wall" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    ":": { "block": "minecraft:furnace[facing=east]" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "D": { "role": "door", "variant": "door", "facing": "north" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "Q": { "block": "minecraft:crafting_table" },
+    "S": { "role": "wall_secondary", "variant": "stairs", "facing": "south" },
+    "W": { "role": "window", "variant": "pane" },
+    "X": { "role": "roof_primary" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "c": { "role": "carpet" },
+    "d": { "role": "door", "variant": "door", "facing": "south" },
+    "l": { "role": "light", "variant": "hanging" },
+    "|": { "role": "beam", "variant": "axisZ" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO",
+        "OOOOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B#########B",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "#FFFFFFFFF#",
+        "B#########B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B####D####B",
+        "#::Q....6.#",
+        "#........S#",
+        "#........##",
+        "#........##",
+        "#L..ccc...#",
+        "#...ccc...#",
+        "#.........#",
+        "#.42..5...#",
+        "#.........#",
+        "#.......L.#",
+        "#3........#",
+        "B####d####B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "B#WW# #WW#B",
+        "#.........#",
+        "#.........#",
+        "W........SW",
+        "W........#W",
+        "#.........#",
+        "#.........#",
+        "#.........#",
+        "W.........W",
+        "W.........W",
+        "#.........#",
+        "#.........#",
+        "B##W# #W##B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B---------B",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "|........S|",
+        "|.........|",
+        "|....l....|",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "|.........|",
+        "B---------B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "B%%%%%%%%%B",
+        "%FFFFFFFFF%",
+        "%FFFFFFFFF%",
+        "%FFFFFFFF.%",
+        "%FFFFFFFF.%",
+        "%FFFFFFFFF%",
+        "%FFFFFFFFF%",
+        "%FFFFFFFFF%",
+        "%FFFFFFFFF%",
+        "%FFFFFFFFF%",
+        "%FFFFFFFFF%",
+        "%FFFFFFFFF%",
+        "B%%%%%%%%%B"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "B%%W%%%W%%B",
+        "%.........%",
+        "%1......1.%",
+        "%.........%",
+        "W.........W",
+        "%.........%",
+        "%....L....%",
+        "%.........%",
+        "W.........W",
+        "%7........%",
+        "%.........%",
+        "%.........%",
+        "B%%W%%%W%%B"
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "/%%%W%W%%%\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/.........\\",
+        "/%%%%W%%%%\\"
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        " /%%%%%%%\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " ........\\ ",
+        " /.......\\ ",
+        " /.......\\ ",
+        " /%%%%%%%\\ "
+      ]
+    },
+    {
+      "y": 9,
+      "rows": [
+        "  /%%%%%\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /..l..\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /.....\\  ",
+        "  /%%%%%\\  "
+      ]
+    },
+    {
+      "y": 10,
+      "rows": [
+        "   /%%%\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /...\\   ",
+        "   /%%%\\   "
+      ]
+    },
+    {
+      "y": 11,
+      "rows": [
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    ",
+        "    /X\\    "
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [9,6,10], "block": "minecraft:chest[facing=west]", "lootTable": "minecraft:chests/village/village_plains_house" }
+  ],
+  "entities": [
+    { "pos": [5,2,4], "entity": "minecraft:cat" }
+  ],
+  "clearance": { "above": 5 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

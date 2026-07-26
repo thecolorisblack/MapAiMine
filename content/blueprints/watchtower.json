@@ -1,0 +1,232 @@
+{
+  "id": "watchtower",
+  "name": { "ru": "Дозорная башня", "en": "Watchtower" },
+  "category": "watchtower",
+  "tags": ["defence","tower","guard","landmark","lookout"],
+  "size": [7,16,7],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [7,7],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["banner","beam","door","fence","floor","foundation","light","wall_primary","window"],
+  "legend": {
+    "1": { "prop": "double_chest", "facing": "north" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "+": { "block": "minecraft:ladder[facing=south]" },
+    ".": { "block": "minecraft:air" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "C": { "role": "ceiling" },
+    "D": { "role": "door", "variant": "door", "facing": "north" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "W": { "role": "window", "variant": "pane" },
+    "Y": { "role": "light_ground" },
+    "b": { "role": "banner" },
+    "f": { "role": "fence", "variant": "fence" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B#####B",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B##D##B",
+        "#....+#",
+        "#.....#",
+        "#.....#",
+        "#.....#",
+        "#L....#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "B## ##B",
+        "#....+#",
+        "#.....#",
+        "W.....W",
+        "#.....#",
+        "#.....#",
+        "B##W##B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B#####B",
+        "#....+#",
+        "#.....#",
+        "#.....#",
+        "#.....#",
+        "#.....#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "B#####B",
+        "#CCCC+#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "B##W##B",
+        "#....+#",
+        "#.....#",
+        "WL....W",
+        "#1....#",
+        "#.....#",
+        "B##W##B"
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "B##W##B",
+        "#....+#",
+        "#.....#",
+        "W.....W",
+        "#.....#",
+        "#.....#",
+        "B##W##B"
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "B#####B",
+        "#....+#",
+        "#.....#",
+        "#.....#",
+        "#.....#",
+        "#.....#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 9,
+      "rows": [
+        "B#####B",
+        "#CCCC+#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 10,
+      "rows": [
+        "B##W##B",
+        "#....+#",
+        "#.....#",
+        "WL....W",
+        "#.....#",
+        "#.....#",
+        "B##W##B"
+      ]
+    },
+    {
+      "y": 11,
+      "rows": [
+        "B##W##B",
+        "#....+#",
+        "#.....#",
+        "W.....W",
+        "#.....#",
+        "#.....#",
+        "B##W##B"
+      ]
+    },
+    {
+      "y": 12,
+      "rows": [
+        "B#####B",
+        "#CCCC+#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "#CCCCC#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 13,
+      "rows": [
+        "B#####B",
+        "#b....#",
+        "#.....#",
+        "#..f..#",
+        "#.....#",
+        "#....b#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 14,
+      "rows": [
+        "B.#.#.B",
+        ".......",
+        "#.....#",
+        "...f...",
+        "#.....#",
+        ".......",
+        "B.#.#.B"
+      ]
+    },
+    {
+      "y": 15,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "   Y   ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [2,10,4], "block": "minecraft:chest[facing=north]", "lootTable": "minecraft:chests/village/village_armorer" }
+  ],
+  "entities": [
+    { "pos": [3,13,4], "entity": "minecraft:villager", "profession": "armorer" }
+  ],
+  "lights": [[3,15,3]],
+  "clearance": { "above": 6 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

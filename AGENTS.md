@@ -27,6 +27,10 @@ npm run build
 npm run validate:content               # ОБЯЗАТЕЛЬНО после правок content/
 npm run doctor                         # проверка связи с живым сервером
 npm test
+
+# против ЖИВОГО сервера (меняет мир — запускай на тестовом):
+MAPAIMINE_TOKEN=... npm run e2e                     # прогон всех инструментов через MCP
+MAPAIMINE_TOKEN=... node scripts/verify-blocks.mjs  # все блоки всех построек × стилей
 ```
 
 ## Правила

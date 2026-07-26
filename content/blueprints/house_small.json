@@ -1,0 +1,159 @@
+{
+  "id": "house_small",
+  "name": { "ru": "Домик, малый", "en": "Small house" },
+  "category": "house",
+  "tags": ["village","house","starter","residential"],
+  "size": [7,8,9],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [7,9],
+  "styleHints": ["medieval","fantasy","rustic","winter"],
+  "minStyleRoles": ["beam","carpet","door","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "1": { "prop": "bed_red", "facing": "north" },
+    "2": { "prop": "double_chest", "facing": "south" },
+    "3": { "prop": "table_small" },
+    "4": { "prop": "chair", "facing": "east" },
+    "5": { "prop": "chair", "facing": "west" },
+    "6": { "prop": "flower_pot" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    ":": { "block": "minecraft:furnace[facing=north]" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "D": { "role": "door", "variant": "door", "facing": "north" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "Q": { "block": "minecraft:crafting_table" },
+    "W": { "role": "window", "variant": "pane" },
+    "X": { "role": "roof_primary" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "c": { "role": "carpet" },
+    "l": { "role": "light", "variant": "hanging" },
+    "|": { "role": "beam", "variant": "axisZ" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO",
+        "OOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B#####B",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "#FFFFF#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B##D##B",
+        "#1..2.#",
+        "#.....#",
+        "#.....#",
+        "#.435.#",
+        "#L....#",
+        "#.ccc.#",
+        "#6..:Q#",
+        "B#####B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "BW% %WB",
+        "%.....%",
+        "%.....%",
+        "W.....W",
+        "%.....%",
+        "%.....%",
+        "W.....W",
+        "%.....%",
+        "B%W%W%B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B-----B",
+        "|.....|",
+        "|.....|",
+        "|.....|",
+        "|..l..|",
+        "|.....|",
+        "|.....|",
+        "|.....|",
+        "B-----B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "/%%%%%\\",
+        "/.....\\",
+        "/-----\\",
+        "/.....\\",
+        "/-----\\",
+        "/.....\\",
+        "/-----\\",
+        "/.....\\",
+        "/%%%%%\\"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        " /%%%\\ ",
+        " /...\\ ",
+        " /...\\ ",
+        " /...\\ ",
+        " /...\\ ",
+        " /...\\ ",
+        " /...\\ ",
+        " /...\\ ",
+        " /%%%\\ "
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "  /X\\  ",
+        "  /X\\  ",
+        "  /X\\  ",
+        "  /X\\  ",
+        "  /X\\  ",
+        "  /X\\  ",
+        "  /X\\  ",
+        "  /X\\  ",
+        "  /X\\  "
+      ]
+    }
+  ],
+  "containers": [
+    { "pos": [5,2,5], "block": "minecraft:barrel[facing=up]", "lootTable": "minecraft:chests/village/village_plains_house" }
+  ],
+  "lights": [[3,4,4]],
+  "clearance": { "above": 4 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "bookshelf_wall",
+  "name": { "ru": "Стена из книжных полок", "en": "Bookshelf wall" },
+  "category": "prop",
+  "tags": ["furniture","books","library"],
+  "size": [3,3,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [3,1],
+  "styleHints": ["any"],
+  "minStyleRoles": [],
+  "legend": {
+    "1": { "block": "minecraft:bookshelf" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "111"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "111"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "111"
+      ]
+    }
+  ]
+}

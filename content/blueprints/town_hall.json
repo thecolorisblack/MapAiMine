@@ -1,0 +1,315 @@
+{
+  "id": "town_hall",
+  "name": { "ru": "Ратуша", "en": "Town hall" },
+  "category": "house",
+  "tags": ["village","civic","landmark","government","plaza"],
+  "size": [13,13,15],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [13,15],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["banner","beam","carpet","door","floor","foundation","light","roof_primary","wall_primary","wall_secondary","window"],
+  "legend": {
+    "2": { "prop": "table_long" },
+    "3": { "prop": "double_chest", "facing": "north" },
+    "4": { "prop": "chair", "facing": "east" },
+    "5": { "prop": "chair", "facing": "west" },
+    "7": { "prop": "bookshelf_wall" },
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "%": { "role": "wall_secondary" },
+    "&": { "role": "wall_accent" },
+    "-": { "role": "beam", "variant": "axisX" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    ";": { "role": "wall_primary", "variant": "slab", "half": "top" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "D": { "role": "door", "variant": "door", "facing": "north" },
+    "F": { "role": "floor" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "P": { "role": "pillar" },
+    "S": { "role": "wall_secondary", "variant": "stairs", "facing": "south" },
+    "W": { "role": "window", "variant": "pane" },
+    "Z": { "role": "plaza" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "_": { "role": "roof_primary", "variant": "slab", "half": "bottom" },
+    "b": { "role": "banner" },
+    "c": { "role": "carpet" },
+    "l": { "role": "light", "variant": "hanging" },
+    "}": { "block": "minecraft:lectern[facing=north,has_book=false]" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "ZZZZZZZZZZZZZ",
+        "ZZZZZZZZZZZZZ",
+        "ZZZZZZZZZZZZZ",
+        "B###########B",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "B###########B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "P..P..P..P..P",
+        "P...........P",
+        "P...........P",
+        "B####D.D####B",
+        "#L....c....L#",
+        "#.....c...S.#",
+        "#..42.c5..#.#",
+        "#.....c...#.#",
+        "#.....c...#.#",
+        "#..42.c5....#",
+        "#.....c.....#",
+        "#.....c.....#",
+        "#...;;;;;...#",
+        "#L.........L#",
+        "B###########B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "P..P..P..P..P",
+        "P...........P",
+        "P...........P",
+        "B#WW# . #WW#B",
+        "#...........#",
+        "W...........W",
+        "W.........S.W",
+        "#.........#.#",
+        "W.........#.W",
+        "W...........W",
+        "#...........#",
+        "W...........W",
+        "W.....}.....W",
+        "#...........#",
+        "B###W#W#W###B"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "P..P..P..P..P",
+        "P...........P",
+        "P...........P",
+        "B#WW##&##WW#B",
+        "#...........#",
+        "W...........W",
+        "W...........W",
+        "#.........S.#",
+        "W.........#.W",
+        "W...........W",
+        "#...........#",
+        "W...........W",
+        "W...........W",
+        "#.b.......b.#",
+        "B###W#W#W###B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "-__-__-__-__-",
+        "_____________",
+        "_____________",
+        "B&&&&&&&&&&&B",
+        "&...........&",
+        "&...........&",
+        "&...........&",
+        "&...........&",
+        "&...l...l.S.&",
+        "&...........&",
+        "&...........&",
+        "&...........&",
+        "&...........&",
+        "&...........&",
+        "B&&&&&&&&&&&B"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "             ",
+        "             ",
+        "             ",
+        "B###########B",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFF.F#",
+        "#FFFFFFFFF.F#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "#FFFFFFFFFFF#",
+        "B###########B"
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "             ",
+        "             ",
+        "             ",
+        "B#W#W###W#W#B",
+        "#...........#",
+        "#7..........#",
+        "W...........W",
+        "#...........#",
+        "#.....L.....#",
+        "W........3..W",
+        "#...........#",
+        "#...........#",
+        "W...........W",
+        "#...........#",
+        "B###########B"
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "             ",
+        "             ",
+        "             ",
+        "B###########B",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "#...........#",
+        "B###########B"
+      ]
+    },
+    {
+      "y": 9,
+      "rows": [
+        "             ",
+        "             ",
+        "             ",
+        "_/%%%%%%%%%\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/.........\\_",
+        "_/%%%%%%%%%\\_"
+      ]
+    },
+    {
+      "y": 10,
+      "rows": [
+        "             ",
+        "             ",
+        "             ",
+        "  _/%%%%%\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/.....\\_  ",
+        "  _/%%%%%\\_  "
+      ]
+    },
+    {
+      "y": 11,
+      "rows": [
+        "             ",
+        "             ",
+        "             ",
+        "    _/%\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/.\\_    ",
+        "    _/%\\_    "
+      ]
+    },
+    {
+      "y": 12,
+      "rows": [
+        "             ",
+        "             ",
+        "             ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      ",
+        "      _      "
+      ]
+    }
+  ],
+  "signs": [
+    { "pos": [6,4,3], "variant": "wall_sign", "facing": "north", "textKey": "welcome" }
+  ],
+  "containers": [
+    { "pos": [11,7,12], "block": "minecraft:chest[facing=west]", "lootTable": "minecraft:chests/village/village_cartographer" }
+  ],
+  "entities": [
+    { "pos": [6,2,11], "entity": "minecraft:villager", "profession": "librarian" }
+  ],
+  "clearance": { "above": 5 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

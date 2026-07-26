@@ -1,0 +1,52 @@
+{
+  "id": "lamp_post",
+  "name": { "ru": "Фонарный столб", "en": "Lamp post" },
+  "category": "prop",
+  "tags": ["decor","light","street","road"],
+  "size": [1,5,1],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [1,1],
+  "styleHints": ["medieval","fantasy","rustic","winter"],
+  "minStyleRoles": ["fence","foundation"],
+  "legend": {
+    "O": { "role": "foundation" },
+    "Y": { "role": "light_ground" },
+    "f": { "role": "fence", "variant": "fence" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "O"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "f"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "f"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "f"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "Y"
+      ]
+    }
+  ],
+  "lights": [[0,4,0]],
+  "clearance": { "above": 2 },
+  "prepare": { "flatten": false, "padding": 0, "foundationTo": "ground" }
+}

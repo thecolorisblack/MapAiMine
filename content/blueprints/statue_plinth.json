@@ -1,0 +1,111 @@
+{
+  "id": "statue_plinth",
+  "name": { "ru": "Статуя на постаменте", "en": "Statue on a plinth" },
+  "category": "statue",
+  "tags": ["decor","statue","plaza","landmark","monument"],
+  "size": [5,8,5],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [5,5],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["fence","foundation","wall_primary"],
+  "legend": {
+    " ": { "skip": true },
+    "&": { "role": "wall_accent" },
+    ";": { "role": "wall_primary", "variant": "slab", "half": "top" },
+    "H": { "role": "wall_accent", "variant": "wall" },
+    "O": { "role": "foundation" },
+    "P": { "role": "pillar" },
+    "Y": { "role": "light_ground" },
+    "Z": { "role": "plaza" },
+    "e": { "role": "wall_primary", "variant": "stairs", "facing": "east" },
+    "f": { "role": "fence", "variant": "fence" },
+    "m": { "role": "wall_primary", "variant": "stairs", "facing": "west" },
+    "n": { "role": "wall_primary", "variant": "stairs", "facing": "north" },
+    "s": { "role": "wall_primary", "variant": "stairs", "facing": "south" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOO",
+        "OOOOO",
+        "OOOOO",
+        "OOOOO",
+        "OOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "ZZZZZ",
+        "ZZZZZ",
+        "ZZZZZ",
+        "ZZZZZ",
+        "ZZZZZ"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "fsssf",
+        "e&&&m",
+        "e&&&m",
+        "e&&&m",
+        "fnnnf"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "Y   Y",
+        " &&& ",
+        " &&& ",
+        " &&& ",
+        "Y   Y"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "     ",
+        " ;;; ",
+        " ;;; ",
+        " ;;; ",
+        "     "
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "     ",
+        "     ",
+        "  &  ",
+        "     ",
+        "     "
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "     ",
+        "     ",
+        " HPH ",
+        "     ",
+        "     "
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "     ",
+        "     ",
+        "  &  ",
+        "     ",
+        "     "
+      ]
+    }
+  ],
+  "clearance": { "above": 4 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

@@ -82,19 +82,57 @@ export class Palette {
     const variant = opts.variant && opts.variant !== 'full' ? opts.variant : undefined;
 
     let block = base;
+    let effectiveVariant = variant;
     if (variant) {
-      const explicit = mat && typeof mat[variant] === 'string' ? (mat[variant] as string) : undefined;
-      const derived = explicit ?? inferVariant(base, variant);
+      const derived = this.deriveVariant(role, variant, base);
       if (derived) {
         block = derived;
       } else {
         this.warnings.add(
           `style "${this.style.id}": role "${role}" has no "${variant}" variant and none could be derived from ${base} — used the full block`,
         );
+        // Critically, drop the variant too: applying stair/trapdoor states to a plain
+        // block yields ids like `terracotta[half=bottom]`, which the server rejects
+        // and which would fail the entire build request.
+        effectiveVariant = undefined;
       }
     }
 
-    return this.applyStates(block, variant, opts);
+    return this.applyStates(block, effectiveVariant, opts);
+  }
+
+  /**
+   * Finds a concrete block for `role` + `variant`.
+   *
+   * Looks past the single block that was picked: any block in the role's list may
+   * carry the variant, and failing that the role's fallback chain is searched too.
+   * Without this, an accent role made of calcite or packed ice — neither of which
+   * has a `_wall` — would silently render a chunky full block where the blueprint
+   * asked for a thin wall, even though the style's primary material has one.
+   */
+  private deriveVariant(role: string, variant: string, base: string): string | null {
+    const chain: string[] = [];
+    let current: string | undefined = role;
+    const seen = new Set<string>();
+    while (current && !seen.has(current)) {
+      seen.add(current);
+      chain.push(current);
+      current = ROLE_FALLBACK[current as Role];
+    }
+
+    for (const link of chain) {
+      const mat = this.style.materials?.[link];
+      if (!mat) continue;
+      if (typeof mat[variant] === 'string') return mat[variant] as string;
+      const candidates = link === role
+        ? [base, ...(mat.full ?? []).map((f) => f.block)]
+        : (mat.full ?? []).map((f) => f.block);
+      for (const candidate of candidates) {
+        const derived = inferVariant(candidate, variant);
+        if (derived) return derived;
+      }
+    }
+    return null;
   }
 
   private applyStates(block: string, variant: string | undefined, opts: BlockOptions): string {

@@ -1,0 +1,130 @@
+{
+  "id": "tree_medieval_oak",
+  "name": { "ru": "Дуб", "en": "Oak tree" },
+  "category": "tree",
+  "tags": ["nature","tree","oak","scatter"],
+  "size": [7,9,7],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [7,7],
+  "styleHints": ["medieval","fantasy","rustic","autumn","winter"],
+  "minStyleRoles": ["foliage","ground_under"],
+  "legend": {
+    " ": { "skip": true },
+    "*": { "role": "foliage" },
+    "I": { "role": "log", "variant": "axisY" },
+    "u": { "role": "ground_under" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "   u   ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "   I   ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "   I   ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "   I   ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "       ",
+        "       ",
+        "       ",
+        "   I   ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "  ***  ",
+        " ***** ",
+        "*******",
+        "***I***",
+        "*******",
+        " ***** ",
+        "  ***  "
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "   *   ",
+        "  ***  ",
+        " ***** ",
+        "***I***",
+        " ***** ",
+        "  ***  ",
+        "   *   "
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "       ",
+        "   *   ",
+        "  ***  ",
+        " ***** ",
+        "  ***  ",
+        "   *   ",
+        "       "
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "       ",
+        "       ",
+        "   *   ",
+        "  ***  ",
+        "   *   ",
+        "       ",
+        "       "
+      ]
+    }
+  ],
+  "clearance": { "above": 2 },
+  "prepare": { "flatten": false, "padding": 0 }
+}

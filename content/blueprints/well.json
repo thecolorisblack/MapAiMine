@@ -1,0 +1,91 @@
+{
+  "id": "well",
+  "name": { "ru": "Колодец", "en": "Well" },
+  "category": "well",
+  "tags": ["village","well","water","landmark","plaza"],
+  "size": [5,6,5],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [5,5],
+  "styleHints": ["medieval","fantasy","rustic","winter"],
+  "minStyleRoles": ["beam","foundation","light","path_primary","roof_primary","wall_primary","water"],
+  "legend": {
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    ",": { "role": "wall_primary", "variant": "slab", "half": "bottom" },
+    ".": { "block": "minecraft:air" },
+    "/": { "role": "roof_primary", "variant": "stairs", "facing": "east" },
+    ":": { "block": "minecraft:chain[axis=y]" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "O": { "role": "foundation" },
+    "X": { "role": "roof_primary" },
+    "\\": { "role": "roof_primary", "variant": "stairs", "facing": "west" },
+    "l": { "role": "light", "variant": "hanging" },
+    "z": { "role": "path_primary" },
+    "~": { "role": "water" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOO",
+        "OOOOO",
+        "OO~OO",
+        "OOOOO",
+        "OOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "zzzzz",
+        "z###z",
+        "z#~#z",
+        "z###z",
+        "zzzzz"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "     ",
+        " B,B ",
+        " ,., ",
+        " B,B ",
+        "     "
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "     ",
+        " B.B ",
+        " .l. ",
+        " B.B ",
+        "     "
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "/...\\",
+        "/...\\",
+        "/.:.\\",
+        "/...\\",
+        "/...\\"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        " /X\\ ",
+        " /X\\ ",
+        " /X\\ ",
+        " /X\\ ",
+        " /X\\ "
+      ]
+    }
+  ],
+  "clearance": { "above": 4 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

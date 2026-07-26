@@ -85,6 +85,38 @@ export function variantStem(id: string): string {
   return n;
 }
 
+/** Woods that actually have sign blocks. Stripped variants and stone families do not. */
+const SIGN_WOODS = new Set([
+  'oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry',
+  'bamboo', 'crimson', 'warped', 'pale_oak',
+]);
+
+/** Variants that only exist for base wood types, never for stripped logs or stone. */
+const WOOD_ONLY = new Set(['door', 'trapdoor', 'fence', 'gate', 'sign', 'wall_sign', 'button', 'pressure_plate']);
+
+const WOODS = new Set([
+  'oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry',
+  'pale_oak', 'bamboo', 'crimson', 'warped',
+]);
+
+const COPPER = new Set([
+  'copper', 'exposed_copper', 'weathered_copper', 'oxidized_copper',
+  'waxed_copper', 'waxed_exposed_copper', 'waxed_weathered_copper', 'waxed_oxidized_copper',
+]);
+
+/**
+ * Families that genuinely have a `_wall` block. Deriving one for anything else
+ * produces ids like `packed_ice_wall`, which the server rejects outright — and a
+ * single bad id fails the whole build request, so guessing is not acceptable here.
+ */
+const WALL_FAMILIES = new Set([
+  'cobblestone', 'mossy_cobblestone', 'brick', 'prismarine', 'sandstone', 'red_sandstone',
+  'stone_brick', 'mossy_stone_brick', 'granite', 'andesite', 'diorite', 'nether_brick',
+  'red_nether_brick', 'end_stone_brick', 'blackstone', 'polished_blackstone',
+  'polished_blackstone_brick', 'deepslate_brick', 'deepslate_tile', 'cobbled_deepslate',
+  'polished_deepslate', 'mud_brick', 'tuff', 'polished_tuff', 'tuff_brick', 'resin_brick',
+]);
+
 /**
  * Best-effort derivation of a variant block when a style did not spell it out.
  * Returns null when nothing sensible can be derived, so the caller can fall back
@@ -92,7 +124,11 @@ export function variantStem(id: string): string {
  */
 export function inferVariant(fullBlock: string, variant: string): string | null {
   const id = bareId(fullBlock);
-  const stem = variantStem(fullBlock);
+  let stem = variantStem(fullBlock);
+
+  // `stripped_spruce_wood` is a fine wall material but there is no
+  // `stripped_spruce_door` — the joinery variants come from the base wood.
+  if (WOOD_ONLY.has(variant)) stem = stem.replace(/^stripped_/, '');
 
   switch (variant) {
     case 'full':
@@ -102,25 +138,30 @@ export function inferVariant(fullBlock: string, variant: string): string | null 
     case 'slab':
       return `minecraft:${stem}_slab`;
     case 'wall':
-      return `minecraft:${stem}_wall`;
+      return WALL_FAMILIES.has(stem) ? `minecraft:${stem}_wall` : null;
     case 'fence':
       // Wooden fences use the wood name; nether brick fence is the odd one out.
       if (stem === 'nether_brick') return 'minecraft:nether_brick_fence';
-      return `minecraft:${stem}_fence`;
+      return WOODS.has(stem) ? `minecraft:${stem}_fence` : null;
     case 'gate':
-      return `minecraft:${stem}_fence_gate`;
+      return WOODS.has(stem) ? `minecraft:${stem}_fence_gate` : null;
     case 'door':
-      return `minecraft:${stem}_door`;
+      if (stem === 'iron') return 'minecraft:iron_door';
+      return WOODS.has(stem) || COPPER.has(stem) ? `minecraft:${stem}_door` : null;
     case 'trapdoor':
-      return `minecraft:${stem}_trapdoor`;
+      if (stem === 'iron') return 'minecraft:iron_trapdoor';
+      return WOODS.has(stem) || COPPER.has(stem) ? `minecraft:${stem}_trapdoor` : null;
     case 'button':
-      return `minecraft:${stem}_button`;
+      return WOODS.has(stem) || stem === 'stone' || stem === 'polished_blackstone'
+        ? `minecraft:${stem}_button` : null;
     case 'pressure_plate':
-      return `minecraft:${stem}_pressure_plate`;
+      return WOODS.has(stem) || stem === 'stone' || stem === 'polished_blackstone'
+        ? `minecraft:${stem}_pressure_plate` : null;
     case 'sign':
-      return `minecraft:${stem}_sign`;
-    case 'wall_sign':
-      return `minecraft:${stem}_wall_sign`;
+    case 'wall_sign': {
+      const wood = SIGN_WOODS.has(stem) ? stem : 'oak';
+      return `minecraft:${wood}${variant === 'wall_sign' ? '_wall_sign' : '_sign'}`;
+    }
     case 'carpet':
       if (id.endsWith('_wool')) return `minecraft:${id.replace(/_wool$/, '_carpet')}`;
       if (id === 'moss_block') return 'minecraft:moss_carpet';

@@ -1,0 +1,214 @@
+{
+  "id": "gatehouse",
+  "name": { "ru": "Надвратная башня", "en": "Gatehouse" },
+  "category": "gate",
+  "tags": ["defence","gate","fortification","entrance","landmark"],
+  "size": [13,12,9],
+  "facing": "north",
+  "groundLevel": 1,
+  "footprint": [13,9],
+  "styleHints": ["medieval","fantasy","gothic"],
+  "minStyleRoles": ["banner","beam","door","floor","foundation","light","path_primary","wall_primary","window"],
+  "legend": {
+    " ": { "skip": true },
+    "#": { "role": "wall_primary" },
+    "(": { "block": "minecraft:ladder[facing=east]" },
+    ")": { "block": "minecraft:ladder[facing=west]" },
+    ".": { "block": "minecraft:air" },
+    ":": { "block": "minecraft:iron_bars" },
+    "<": { "role": "door", "variant": "door", "facing": "west" },
+    ">": { "role": "door", "variant": "door", "facing": "east" },
+    "B": { "role": "beam", "variant": "axisY" },
+    "C": { "role": "ceiling" },
+    "F": { "role": "floor" },
+    "G": { "role": "gate", "variant": "gate", "facing": "north" },
+    "L": { "role": "light" },
+    "O": { "role": "foundation" },
+    "W": { "role": "window", "variant": "pane" },
+    "b": { "role": "banner" },
+    "e": { "role": "wall_primary", "variant": "stairs", "facing": "east" },
+    "m": { "role": "wall_primary", "variant": "stairs", "facing": "west" },
+    "z": { "role": "path_primary" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO",
+        "OOOOOOOOOOOOO"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "B##BzzzzzB##B",
+        "#FF#zzzzz#FF#",
+        "#FF#zzzzz#FF#",
+        "#FF#zzzzz#FF#",
+        "#FF#zzzzz#FF#",
+        "#FF#zzzzz#FF#",
+        "#FF#zzzzz#FF#",
+        "#FF#zzzzz#FF#",
+        "B##BzzzzzB##B"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "B##B.....B##B",
+        "#(.#.....#.)#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..>.....<..#",
+        "#..#.....#..#",
+        "#L.##GGG##.L#",
+        "#..#.....#..#",
+        "B##B.....B##B"
+      ]
+    },
+    {
+      "y": 3,
+      "rows": [
+        "BWWB.....BWWB",
+        "#(.#.....#.)#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "W.. ..... ..W",
+        "#..#.....#..#",
+        "#..#e...m#..#",
+        "#..#.....#..#",
+        "BWWB.....BWWB"
+      ]
+    },
+    {
+      "y": 4,
+      "rows": [
+        "B##B.....B##B",
+        "#(.#.....#.)#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "B##B.....B##B"
+      ]
+    },
+    {
+      "y": 5,
+      "rows": [
+        "B##B.....B##B",
+        "#(C#.....#C)#",
+        "#CC#:::::#CC#",
+        "#CC#.....#CC#",
+        "#CC#.....#CC#",
+        "#CC#.....#CC#",
+        "#CC#.....#CC#",
+        "#CC#.....#CC#",
+        "B##B.....B##B"
+      ]
+    },
+    {
+      "y": 6,
+      "rows": [
+        "B##B#####B##B",
+        "#(.#CCCCC#.)#",
+        "#..#CCCCC#..#",
+        "#.L#CCCCC#L.#",
+        "#..#CCCCC#..#",
+        "#..#CCCCC#..#",
+        "#..#CCCCC#..#",
+        "#..#CCCCC#..#",
+        "B##B#####B##B"
+      ]
+    },
+    {
+      "y": 7,
+      "rows": [
+        "BWWB#####BWWB",
+        "#(.#.....#.)#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "W..#.....#..W",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "BWWB#####BWWB"
+      ]
+    },
+    {
+      "y": 8,
+      "rows": [
+        "B##B#####B##B",
+        "#(.#.....#.)#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "#..#.....#..#",
+        "B##B#####B##B"
+      ]
+    },
+    {
+      "y": 9,
+      "rows": [
+        "CCCCCCCCCCCCC",
+        "C(CCCCCCCCC)C",
+        "CCCCCCCCCCCCC",
+        "CCCCCCCCCCCCC",
+        "CCCCCCCCCCCCC",
+        "CCCCCCCCCCCCC",
+        "CCCCCCCCCCCCC",
+        "CCCCCCCCCCCCC",
+        "CCCCCCCCCCCCC"
+      ]
+    },
+    {
+      "y": 10,
+      "rows": [
+        "#############",
+        "#...........#",
+        "#.....L.....#",
+        "#...........#",
+        "#.b.......b.#",
+        "#...........#",
+        "#.....L.....#",
+        "#...........#",
+        "#############"
+      ]
+    },
+    {
+      "y": 11,
+      "rows": [
+        "#.#.#.#.#.#.#",
+        ".............",
+        "#...........#",
+        ".............",
+        "#...........#",
+        ".............",
+        "#...........#",
+        ".............",
+        "#.#.#.#.#.#.#"
+      ]
+    }
+  ],
+  "signs": [
+    { "pos": [6,7,0], "variant": "wall_sign", "facing": "north", "textKey": "welcome" }
+  ],
+  "containers": [
+    { "pos": [2,6,6], "block": "minecraft:chest[facing=north]", "lootTable": "minecraft:chests/village/village_armorer" }
+  ],
+  "entities": [
+    { "pos": [6,10,4], "entity": "minecraft:villager", "profession": "armorer" }
+  ],
+  "clearance": { "above": 4 },
+  "prepare": { "flatten": true, "padding": 1, "foundationTo": "ground" }
+}

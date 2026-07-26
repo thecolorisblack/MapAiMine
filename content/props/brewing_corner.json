@@ -1,0 +1,24 @@
+{
+  "id": "brewing_corner",
+  "name": { "ru": "Уголок зельевара", "en": "Brewing corner" },
+  "category": "prop",
+  "tags": ["tavern","alchemy","brewing"],
+  "size": [2,1,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [2,1],
+  "styleHints": ["any"],
+  "minStyleRoles": [],
+  "legend": {
+    "1": { "block": "minecraft:brewing_stand" },
+    "2": { "block": "minecraft:water_cauldron[level=3]" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "12"
+      ]
+    }
+  ]
+}

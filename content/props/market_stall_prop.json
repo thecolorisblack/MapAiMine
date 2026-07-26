@@ -1,0 +1,42 @@
+{
+  "id": "market_stall_prop",
+  "name": { "ru": "Прилавок", "en": "Market stall (prop)" },
+  "category": "prop",
+  "tags": ["market","trade","stall"],
+  "size": [3,3,2],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [3,2],
+  "styleHints": ["any"],
+  "minStyleRoles": ["fence","roof_primary","wall_secondary"],
+  "legend": {
+    " ": { "skip": true },
+    "%": { "role": "wall_secondary" },
+    ".": { "block": "minecraft:air" },
+    "_": { "role": "roof_primary", "variant": "slab", "half": "bottom" },
+    "f": { "role": "fence", "variant": "fence" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "%%%",
+        "f f"
+      ]
+    },
+    {
+      "y": 1,
+      "rows": [
+        "...",
+        "f f"
+      ]
+    },
+    {
+      "y": 2,
+      "rows": [
+        "___",
+        "___"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "anvil_station",
+  "name": { "ru": "Наковальня с верстаком", "en": "Anvil station" },
+  "category": "prop",
+  "tags": ["smithy","craft","anvil"],
+  "size": [3,1,1],
+  "facing": "north",
+  "groundLevel": 0,
+  "footprint": [3,1],
+  "styleHints": ["any"],
+  "minStyleRoles": [],
+  "legend": {
+    "1": { "block": "minecraft:anvil[facing=north]" },
+    "2": { "block": "minecraft:smithing_table" },
+    ".": { "block": "minecraft:air" }
+  },
+  "layers": [
+    {
+      "y": 0,
+      "rows": [
+        "1.2"
+      ]
+    }
+  ]
+}
