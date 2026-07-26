@@ -50,7 +50,12 @@ public final class MapAiMinePlugin extends JavaPlugin {
             return;
         }
 
-        getCommand("mapaimine").setExecutor(new MapAiMineCommand(this));
+        MapAiMineCommand command = new MapAiMineCommand(this);
+        org.bukkit.command.PluginCommand registered = getCommand("mapaimine");
+        if (registered != null) {
+            registered.setExecutor(command);
+            registered.setTabCompleter(command);
+        }
         announce();
     }
 

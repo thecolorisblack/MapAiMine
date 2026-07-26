@@ -224,21 +224,42 @@ public final class ExecutionContext {
     }
 
     /**
-     * End-of-job pass. Resends every touched chunk to nearby players so that lighting and block
-     * changes applied with {@code physics=false} are guaranteed to be visible client-side.
+     * End-of-job pass. Resends touched chunks so lighting and block changes applied with
+     * {@code physics=false} are guaranteed to be visible client-side.
+     *
+     * <p>Only chunks a player could actually see are refreshed: resending thousands of chunks
+     * nobody is looking at would cost more main-thread time than the build itself, and the server
+     * sends them correctly anyway when a player walks into range.
      */
+    @SuppressWarnings("deprecation")
     public void finish() {
-        if (!lightUpdate) return;
-        for (long key : touchedChunks) {
-            int cx = (int) (key >> 32);
-            int cz = (int) key;
-            try {
-                world.refreshChunk(cx, cz);
-            } catch (RuntimeException ignored) {
-                // refreshChunk is best-effort; never fail a finished job over it.
+        if (!lightUpdate || touchedChunks.isEmpty()) return;
+        List<int[]> viewers = new java.util.ArrayList<>();
+        for (org.bukkit.entity.Player player : world.getPlayers()) {
+            viewers.add(new int[]{player.getLocation().getBlockX() >> 4,
+                    player.getLocation().getBlockZ() >> 4, player.getClientViewDistance()});
+        }
+        if (!viewers.isEmpty()) {
+            for (long key : touchedChunks) {
+                int cx = (int) (key >> 32);
+                int cz = (int) key;
+                if (!visible(viewers, cx, cz)) continue;
+                try {
+                    world.refreshChunk(cx, cz);
+                } catch (RuntimeException ignored) {
+                    // refreshChunk is best-effort; never fail a finished job over it.
+                }
             }
         }
         touchedChunks.clear();
+    }
+
+    private static boolean visible(List<int[]> viewers, int cx, int cz) {
+        for (int[] viewer : viewers) {
+            int range = Math.max(2, Math.min(32, viewer[2]));
+            if (Math.abs(viewer[0] - cx) <= range && Math.abs(viewer[1] - cz) <= range) return true;
+        }
+        return false;
     }
 
     private static long chunkKey(int cx, int cz) {

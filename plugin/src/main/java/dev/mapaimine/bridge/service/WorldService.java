@@ -108,8 +108,12 @@ public final class WorldService {
             case "large_biomes" -> creator.type(WorldType.LARGE_BIOMES);
             case "amplified" -> creator.type(WorldType.AMPLIFIED);
             case "void" -> {
+                // Two belts and braces: the custom generator produces nothing while the plugin is
+                // loaded, and the empty-layer flat settings are stored in level.dat so the world
+                // still reads as void if it is ever opened without MapAiMine.
                 creator.type(WorldType.FLAT);
                 creator.generator(new VoidChunkGenerator());
+                creator.generatorSettings("{\"layers\":[],\"biome\":\"minecraft:the_void\"}");
                 creator.generateStructures(false);
             }
             default -> throw ApiException.badRequest("unknown worldType '" + worldType + "'",

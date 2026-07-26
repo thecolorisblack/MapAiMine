@@ -507,8 +507,4 @@ public final class BasicOps {
         Material m = block.getType();
         return m == Material.AIR || m == Material.CAVE_AIR || m == Material.VOID_AIR;
     }
-
-    static JsonElement ignored(JsonObject o, String key) {
-        return o.get(key);
-    }
 }

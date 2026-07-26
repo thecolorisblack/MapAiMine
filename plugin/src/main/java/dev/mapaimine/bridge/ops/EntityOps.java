@@ -553,6 +553,9 @@ public final class EntityOps {
             Placement p = new Placement().set(x, y, z, block);
             ctx.place(p);
         } else {
+            // No carrier block was requested: snapshot the existing one anyway so that the NBT we
+            // are about to overwrite (sign text, chest contents…) can still be rolled back.
+            ctx.recordUndo(b);
             ctx.spend(1);
         }
         return b;

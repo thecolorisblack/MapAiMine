@@ -383,6 +383,42 @@ export function generateSettlement(opts: SettlementOptions): SettlementResult {
   };
 }
 
+/**
+ * Top-down ASCII map of a generated layout. Lets an agent (and the user) sanity-check
+ * a town plan before a single block is placed.
+ */
+export function renderLayout(result: SettlementResult, cellSize = 2): string {
+  const { bounds, plaza } = result;
+  const cols = Math.max(1, Math.ceil((bounds.x2 - bounds.x1 + 1) / cellSize));
+  const rows = Math.max(1, Math.ceil((bounds.z2 - bounds.z1 + 1) / cellSize));
+  const grid: string[][] = Array.from({ length: rows }, () => Array<string>(cols).fill('·'));
+
+  const mark = (x1: number, z1: number, x2: number, z2: number, ch: string, overwrite = true) => {
+    for (let z = z1; z <= z2; z++) {
+      for (let x = x1; x <= x2; x++) {
+        const c = Math.floor((x - bounds.x1) / cellSize);
+        const r = Math.floor((z - bounds.z1) / cellSize);
+        if (r < 0 || r >= rows || c < 0 || c >= cols) continue;
+        if (overwrite || grid[r][c] === '·') grid[r][c] = ch;
+      }
+    }
+  };
+
+  mark(plaza.x1, plaza.z1, plaza.x2, plaza.z2, '▒');
+  const legend = new Map<string, string>();
+  for (const b of result.buildings) {
+    const ch = b.category[0].toUpperCase();
+    legend.set(ch, b.category);
+    mark(b.pos[0], b.pos[2], b.pos[0] + b.footprint[0] - 1, b.pos[2] + b.footprint[1] - 1, ch);
+  }
+
+  const legendText = [...legend.entries()].map(([ch, cat]) => `${ch}=${cat}`).join(', ');
+  return (
+    grid.map((row) => row.join('')).join('\n') +
+    `\n(1 символ ≈ ${cellSize}×${cellSize} блоков; ▒ — площадь, · — свободно; ${legendText})`
+  );
+}
+
 function pairs(edges: number[]): Array<[number, number]> {
   const out: Array<[number, number]> = [];
   for (let i = 0; i + 1 < edges.length; i += 2) out.push([edges[i], edges[i + 1]]);
@@ -413,15 +449,37 @@ function buildCatalog(
   return out;
 }
 
+/** Styles name their landmark loosely ("mill", "tower"); map that onto real blueprints. */
+const LANDMARK_ALIASES: Record<string, string[]> = {
+  mill: ['windmill', 'watermill'],
+  tower: ['watchtower', 'keep'],
+  statue: ['statue_plinth', 'fountain'],
+  market: ['market_stall'],
+  temple: ['church'],
+  hall: ['town_hall'],
+  fountain: ['fountain', 'well'],
+};
+
 function pickBlueprint(
   lib: ContentLibrary,
   ids: string[],
   _style: StylePack,
-  _rng: Rng,
+  rng: Rng,
 ): Blueprint | null {
-  for (const id of ids) {
+  const tried = new Set<string>();
+  const queue = [...ids];
+  for (const id of ids) queue.push(...(LANDMARK_ALIASES[id] ?? []));
+
+  for (const id of queue) {
+    if (tried.has(id)) continue;
+    tried.add(id);
     const bp = lib.blueprints.get(id);
     if (bp) return bp;
+  }
+  // Last resort: any blueprint filed under that category.
+  for (const id of ids) {
+    const byCategory = [...lib.blueprints.values()].filter((b) => b.category === id);
+    if (byCategory.length) return rng.pick(byCategory);
   }
   return null;
 }

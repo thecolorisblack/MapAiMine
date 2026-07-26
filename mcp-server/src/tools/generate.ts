@@ -3,7 +3,7 @@ import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { Context, toolError, toolText } from '../context.js';
 import type { Op, Pos } from '../protocol.js';
 import { placeBlueprint, rotatedFootprint, type Rotation } from '../build/blueprint.js';
-import { generateSettlement } from '../build/settlement.js';
+import { generateSettlement, renderLayout } from '../build/settlement.js';
 import { decodeRle } from '../build/raster.js';
 import { toScatterEntries } from '../build/flora.js';
 import { parseBlock, rotateAxis, rotateFacing, withStates, type Facing } from '../build/blockstate.js';
@@ -170,6 +170,66 @@ export function registerGenerateTools(server: McpServer, ctx: Context): void {
             '',
             `Дальше: set_spawn на площадь (${a.centerX}, ${baseY + 1}, ${a.centerZ}), ` +
               `configure_world с applyStyleEnvironment="${style.id}", teleport_player чтобы посмотреть.`,
+          ].filter(Boolean).join('\n'),
+        );
+      } catch (err) {
+        return toolError(err);
+      }
+    },
+  );
+
+  server.registerTool(
+    'plan_settlement',
+    {
+      title: 'Спланировать поселение (без стройки)',
+      description:
+        'Посчитать план поселения и показать его сверху в ASCII: площадь, улицы, какие постройки и где. ' +
+        'Мир НЕ изменяется. Дёшево и быстро — используй, чтобы согласовать план с пользователем или ' +
+        'подобрать size/seed/density до настоящей стройки через generate_settlement с теми же параметрами.',
+      inputSchema: {
+        world: z.string().optional(),
+        centerX: z.number().int(),
+        centerZ: z.number().int(),
+        size: z.number().int().min(32).max(400),
+        style: z.string(),
+        kind: z.enum(['village', 'town', 'castle', 'camp', 'farmstead', 'harbor']).optional(),
+        seed: z.number().int().optional(),
+        wall: z.boolean().optional(),
+        density: z.number().min(0.1).max(1).optional(),
+        name: z.string().optional(),
+        y: z.number().int().optional(),
+      },
+    },
+    async (a) => {
+      try {
+        const style = ctx.style(a.style);
+        const result = generateSettlement({
+          center: [a.centerX, a.centerZ],
+          size: a.size,
+          baseY: a.y ?? 64,
+          style,
+          library: ctx.library,
+          kind: a.kind ?? 'village',
+          seed: a.seed ?? Math.floor(Math.abs(a.centerX * 31 + a.centerZ * 17)),
+          name: a.name,
+          lang: ctx.lang,
+          wall: a.wall,
+          density: a.density,
+        });
+        const byCategory = result.buildings.reduce<Record<string, number>>((acc, b) => {
+          acc[b.category] = (acc[b.category] ?? 0) + 1;
+          return acc;
+        }, {});
+        return toolText(
+          [
+            `ПЛАН (мир не изменён): ${result.summary}`,
+            `Оценка объёма: ~${result.blockCount.toLocaleString()} блоков`,
+            `Состав: ${Object.entries(byCategory).map(([c, n]) => `${c}×${n}`).join(', ') || '—'}`,
+            '',
+            renderLayout(result, Math.max(1, Math.round(a.size / 60))),
+            '',
+            result.warnings.length ? `предупреждения:\n- ${[...new Set(result.warnings)].slice(0, 8).join('\n- ')}` : '',
+            `Понравилось — вызови generate_settlement с ТЕМИ ЖЕ параметрами (обязательно тот же seed=${a.seed ?? Math.floor(Math.abs(a.centerX * 31 + a.centerZ * 17))}).`,
           ].filter(Boolean).join('\n'),
         );
       } catch (err) {
