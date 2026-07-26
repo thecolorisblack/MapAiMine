@@ -1,0 +1,61 @@
+name: Build plugin
+
+on:
+  push:
+    branches: ['**']
+    tags: ['v*']
+    paths:
+      - 'plugin/**'
+      - '.github/workflows/build-plugin.yml'
+  pull_request:
+    paths:
+      - 'plugin/**'
+      - '.github/workflows/build-plugin.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build mapaimine-bridge
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        working-directory: plugin
+        run: mvn -B -ntp -DskipTests package
+
+      - name: Resolve jar name
+        id: jar
+        working-directory: plugin
+        run: |
+          JAR=$(ls target/mapaimine-bridge-*.jar | head -n 1)
+          echo "path=plugin/$JAR" >> "$GITHUB_OUTPUT"
+          echo "name=$(basename "$JAR")" >> "$GITHUB_OUTPUT"
+          echo "Built $JAR ($(du -h "$JAR" | cut -f1))"
+
+      - name: Upload jar artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mapaimine-bridge
+          path: plugin/target/mapaimine-bridge-*.jar
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Attach jar to release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.jar.outputs.path }}
+          generate_release_notes: true
