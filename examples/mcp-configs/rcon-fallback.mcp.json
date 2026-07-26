@@ -1,0 +1,15 @@
+{
+  "_comment": "Режим без плагина: только запись, мир не читается (нет survey/undo/paint/scatter)",
+  "mcpServers": {
+    "mapaimine": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/MapAiMine/mcp-server/dist/index.js"],
+      "env": {
+        "MAPAIMINE_TRANSPORT": "rcon",
+        "MAPAIMINE_RCON_HOST": "127.0.0.1",
+        "MAPAIMINE_RCON_PORT": "25575",
+        "MAPAIMINE_RCON_PASSWORD": "PASTE_RCON_PASSWORD"
+      }
+    }
+  }
+}

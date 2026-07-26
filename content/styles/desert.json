@@ -1,0 +1,432 @@
+{
+  "id": "desert",
+  "name": { "ru": "Пустыня", "en": "Desert" },
+  "description": {
+    "ru": "Саманный город в песках: песчаник всех видов, утрамбованная глина и саманный кирпич, терракота, джунглевое и акациевое дерево, плоские крыши-террасы.",
+    "en": "An adobe town in the sands: sandstone in every form, packed mud and mud bricks, terracotta, jungle and acacia wood, flat terrace roofs."
+  },
+  "tags": ["desert", "adobe", "sandstone", "arid", "oasis", "caravan"],
+  "season": "summer",
+  "author": "MapAiMine",
+  "version": 1,
+
+  "materials": {
+    "foundation": {
+      "full": [
+        { "block": "minecraft:sandstone", "weight": 5 },
+        { "block": "minecraft:cut_sandstone", "weight": 3 },
+        { "block": "minecraft:smooth_sandstone", "weight": 2 },
+        { "block": "minecraft:terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:sandstone_stairs",
+      "slab": "minecraft:sandstone_slab",
+      "wall": "minecraft:sandstone_wall"
+    },
+    "wall_primary": {
+      "full": [
+        { "block": "minecraft:smooth_sandstone", "weight": 5 },
+        { "block": "minecraft:sandstone", "weight": 3 },
+        { "block": "minecraft:cut_sandstone", "weight": 2 },
+        { "block": "minecraft:chiseled_sandstone", "weight": 1 }
+      ],
+      "stairs": "minecraft:smooth_sandstone_stairs",
+      "slab": "minecraft:smooth_sandstone_slab",
+      "wall": "minecraft:sandstone_wall",
+      "button": "minecraft:stone_button",
+      "pressure_plate": "minecraft:stone_pressure_plate"
+    },
+    "wall_secondary": {
+      "full": [
+        { "block": "minecraft:packed_mud", "weight": 4 },
+        { "block": "minecraft:mud_bricks", "weight": 4 },
+        { "block": "minecraft:terracotta", "weight": 2 }
+      ],
+      "stairs": "minecraft:mud_brick_stairs",
+      "slab": "minecraft:mud_brick_slab",
+      "wall": "minecraft:mud_brick_wall"
+    },
+    "wall_accent": {
+      "full": [
+        { "block": "minecraft:orange_terracotta", "weight": 4 },
+        { "block": "minecraft:white_terracotta", "weight": 3 },
+        { "block": "minecraft:light_blue_terracotta", "weight": 2 },
+        { "block": "minecraft:orange_glazed_terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:red_sandstone_stairs",
+      "slab": "minecraft:red_sandstone_slab",
+      "wall": "minecraft:red_sandstone_wall"
+    },
+    "beam": {
+      "full": [{ "block": "minecraft:jungle_log", "weight": 1 }],
+      "axisX": "minecraft:jungle_log[axis=x]",
+      "axisY": "minecraft:jungle_log[axis=y]",
+      "axisZ": "minecraft:jungle_log[axis=z]",
+      "fence": "minecraft:jungle_fence",
+      "slab": "minecraft:jungle_slab",
+      "stairs": "minecraft:jungle_stairs"
+    },
+    "pillar": {
+      "full": [
+        { "block": "minecraft:chiseled_sandstone", "weight": 5 },
+        { "block": "minecraft:cut_sandstone", "weight": 3 },
+        { "block": "minecraft:smooth_sandstone", "weight": 2 }
+      ],
+      "axisX": "minecraft:stripped_jungle_log[axis=x]",
+      "axisY": "minecraft:stripped_jungle_log[axis=y]",
+      "axisZ": "minecraft:stripped_jungle_log[axis=z]",
+      "wall": "minecraft:sandstone_wall",
+      "stairs": "minecraft:sandstone_stairs",
+      "slab": "minecraft:cut_sandstone_slab"
+    },
+    "floor": {
+      "full": [
+        { "block": "minecraft:jungle_planks", "weight": 5 },
+        { "block": "minecraft:smooth_sandstone", "weight": 3 },
+        { "block": "minecraft:acacia_planks", "weight": 2 }
+      ],
+      "stairs": "minecraft:jungle_stairs",
+      "slab": "minecraft:jungle_slab",
+      "trapdoor": "minecraft:jungle_trapdoor"
+    },
+    "floor_accent": {
+      "full": [
+        { "block": "minecraft:orange_terracotta", "weight": 4 },
+        { "block": "minecraft:light_blue_terracotta", "weight": 2 },
+        { "block": "minecraft:red_terracotta", "weight": 2 },
+        { "block": "minecraft:blue_glazed_terracotta", "weight": 1 }
+      ],
+      "carpet": "minecraft:orange_carpet"
+    },
+    "ceiling": {
+      "full": [
+        { "block": "minecraft:jungle_planks", "weight": 5 },
+        { "block": "minecraft:acacia_planks", "weight": 2 }
+      ],
+      "stairs": "minecraft:jungle_stairs",
+      "slab": "minecraft:jungle_slab"
+    },
+    "roof_primary": {
+      "full": [
+        { "block": "minecraft:smooth_sandstone", "weight": 6 },
+        { "block": "minecraft:cut_sandstone", "weight": 3 },
+        { "block": "minecraft:sandstone", "weight": 2 },
+        { "block": "minecraft:packed_mud", "weight": 1 }
+      ],
+      "stairs": "minecraft:smooth_sandstone_stairs",
+      "slab": "minecraft:smooth_sandstone_slab",
+      "wall": "minecraft:sandstone_wall"
+    },
+    "roof_secondary": {
+      "full": [
+        { "block": "minecraft:smooth_red_sandstone", "weight": 5 },
+        { "block": "minecraft:red_sandstone", "weight": 2 },
+        { "block": "minecraft:cut_red_sandstone", "weight": 1 }
+      ],
+      "stairs": "minecraft:smooth_red_sandstone_stairs",
+      "slab": "minecraft:smooth_red_sandstone_slab",
+      "wall": "minecraft:red_sandstone_wall"
+    },
+    "roof_support": {
+      "full": [{ "block": "minecraft:jungle_log", "weight": 1 }],
+      "axisX": "minecraft:jungle_log[axis=x]",
+      "axisY": "minecraft:jungle_log[axis=y]",
+      "axisZ": "minecraft:jungle_log[axis=z]",
+      "fence": "minecraft:jungle_fence",
+      "slab": "minecraft:jungle_slab"
+    },
+    "window": {
+      "full": [
+        { "block": "minecraft:glass", "weight": 5 },
+        { "block": "minecraft:orange_stained_glass", "weight": 2 },
+        { "block": "minecraft:light_blue_stained_glass", "weight": 1 }
+      ],
+      "pane": "minecraft:glass_pane"
+    },
+    "window_frame": {
+      "full": [{ "block": "minecraft:cut_sandstone", "weight": 1 }],
+      "stairs": "minecraft:sandstone_stairs",
+      "slab": "minecraft:cut_sandstone_slab",
+      "wall": "minecraft:sandstone_wall",
+      "trapdoor": "minecraft:jungle_trapdoor",
+      "fence": "minecraft:jungle_fence"
+    },
+    "door": {
+      "full": [{ "block": "minecraft:jungle_planks", "weight": 1 }],
+      "door": "minecraft:jungle_door",
+      "trapdoor": "minecraft:jungle_trapdoor",
+      "button": "minecraft:jungle_button",
+      "pressure_plate": "minecraft:jungle_pressure_plate"
+    },
+    "gate": {
+      "full": [{ "block": "minecraft:acacia_planks", "weight": 1 }],
+      "door": "minecraft:acacia_door",
+      "gate": "minecraft:acacia_fence_gate",
+      "fence": "minecraft:acacia_fence",
+      "trapdoor": "minecraft:acacia_trapdoor"
+    },
+    "fence": {
+      "full": [{ "block": "minecraft:jungle_planks", "weight": 1 }],
+      "fence": "minecraft:jungle_fence",
+      "gate": "minecraft:jungle_fence_gate",
+      "slab": "minecraft:jungle_slab",
+      "wall": "minecraft:sandstone_wall"
+    },
+    "railing": {
+      "full": [{ "block": "minecraft:cut_sandstone", "weight": 1 }],
+      "wall": "minecraft:sandstone_wall",
+      "fence": "minecraft:acacia_fence",
+      "gate": "minecraft:acacia_fence_gate",
+      "slab": "minecraft:cut_sandstone_slab"
+    },
+    "path_primary": {
+      "full": [
+        { "block": "minecraft:smooth_sandstone", "weight": 5 },
+        { "block": "minecraft:cut_sandstone", "weight": 3 },
+        { "block": "minecraft:sandstone", "weight": 2 },
+        { "block": "minecraft:sand", "weight": 2 }
+      ],
+      "slab": "minecraft:smooth_sandstone_slab",
+      "stairs": "minecraft:smooth_sandstone_stairs"
+    },
+    "path_secondary": {
+      "full": [
+        { "block": "minecraft:sand", "weight": 6 },
+        { "block": "minecraft:red_sand", "weight": 2 },
+        { "block": "minecraft:gravel", "weight": 1 }
+      ],
+      "slab": "minecraft:sandstone_slab"
+    },
+    "plaza": {
+      "full": [
+        { "block": "minecraft:smooth_sandstone", "weight": 6 },
+        { "block": "minecraft:cut_sandstone", "weight": 3 },
+        { "block": "minecraft:chiseled_sandstone", "weight": 1 },
+        { "block": "minecraft:orange_terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:smooth_sandstone_stairs",
+      "slab": "minecraft:cut_sandstone_slab",
+      "wall": "minecraft:sandstone_wall"
+    },
+    "ground_top": {
+      "full": [
+        { "block": "minecraft:sand", "weight": 8 },
+        { "block": "minecraft:sandstone", "weight": 2 },
+        { "block": "minecraft:red_sand", "weight": 1 },
+        { "block": "minecraft:coarse_dirt", "weight": 1 }
+      ]
+    },
+    "ground_under": {
+      "full": [
+        { "block": "minecraft:sandstone", "weight": 6 },
+        { "block": "minecraft:sand", "weight": 3 },
+        { "block": "minecraft:terracotta", "weight": 1 }
+      ]
+    },
+    "water": {
+      "full": [{ "block": "minecraft:water", "weight": 1 }],
+      "slab": "minecraft:cut_sandstone_slab",
+      "wall": "minecraft:sandstone_wall"
+    },
+    "light": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 7 },
+        { "block": "minecraft:glowstone", "weight": 2 },
+        { "block": "minecraft:shroomlight", "weight": 1 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "light_ground": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 5 },
+        { "block": "minecraft:campfire[lit=true]", "weight": 3 },
+        { "block": "minecraft:torch", "weight": 2 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "decor": {
+      "full": [
+        { "block": "minecraft:decorated_pot", "weight": 4 },
+        { "block": "minecraft:barrel[facing=up]", "weight": 3 },
+        { "block": "minecraft:cauldron", "weight": 2 },
+        { "block": "minecraft:hay_block", "weight": 2 },
+        { "block": "minecraft:flower_pot", "weight": 1 },
+        { "block": "minecraft:cartography_table", "weight": 1 }
+      ]
+    },
+    "banner": {
+      "full": [
+        { "block": "minecraft:orange_banner", "weight": 4 },
+        { "block": "minecraft:yellow_banner", "weight": 3 },
+        { "block": "minecraft:red_banner", "weight": 2 },
+        { "block": "minecraft:light_blue_banner", "weight": 1 }
+      ]
+    },
+    "carpet": {
+      "full": [
+        { "block": "minecraft:orange_carpet", "weight": 4 },
+        { "block": "minecraft:red_carpet", "weight": 3 },
+        { "block": "minecraft:yellow_carpet", "weight": 2 },
+        { "block": "minecraft:light_blue_carpet", "weight": 2 }
+      ],
+      "carpet": "minecraft:orange_carpet"
+    },
+    "plant": {
+      "full": [
+        { "block": "minecraft:potted_cactus", "weight": 5 },
+        { "block": "minecraft:potted_dead_bush", "weight": 3 },
+        { "block": "minecraft:potted_jungle_sapling", "weight": 1 }
+      ]
+    },
+    "crop": {
+      "full": [
+        { "block": "minecraft:wheat[age=7]", "weight": 5 },
+        { "block": "minecraft:beetroots[age=3]", "weight": 3 },
+        { "block": "minecraft:carrots[age=7]", "weight": 2 },
+        { "block": "minecraft:melon", "weight": 1 }
+      ]
+    },
+    "log": {
+      "full": [{ "block": "minecraft:jungle_log", "weight": 1 }],
+      "axisX": "minecraft:jungle_log[axis=x]",
+      "axisY": "minecraft:jungle_log[axis=y]",
+      "axisZ": "minecraft:jungle_log[axis=z]",
+      "fence": "minecraft:jungle_fence"
+    },
+    "foliage": {
+      "full": [
+        { "block": "minecraft:jungle_leaves[persistent=true]", "weight": 5 },
+        { "block": "minecraft:acacia_leaves[persistent=true]", "weight": 3 }
+      ]
+    }
+  },
+
+  "environment": {
+    "time": 6000,
+    "timeLock": false,
+    "weather": "clear",
+    "snowLayer": false,
+    "biomePaint": "minecraft:desert",
+    "fogTint": "#f0d9a0"
+  },
+
+  "ground": {
+    "top": [
+      { "block": "minecraft:sand", "weight": 8 },
+      { "block": "minecraft:sandstone", "weight": 2 },
+      { "block": "minecraft:red_sand", "weight": 1 },
+      { "block": "minecraft:coarse_dirt", "weight": 1 }
+    ],
+    "under": [
+      { "block": "minecraft:sandstone", "weight": 6 },
+      { "block": "minecraft:sand", "weight": 3 },
+      { "block": "minecraft:terracotta", "weight": 1 }
+    ],
+    "path": [
+      { "block": "minecraft:smooth_sandstone", "weight": 5 },
+      { "block": "minecraft:cut_sandstone", "weight": 3 },
+      { "block": "minecraft:sandstone", "weight": 2 },
+      { "block": "minecraft:sand", "weight": 2 }
+    ],
+    "pathEdge": [
+      { "block": "minecraft:sandstone_slab", "weight": 5 },
+      { "block": "minecraft:cut_sandstone_slab", "weight": 3 },
+      { "block": "minecraft:sandstone_wall", "weight": 1 }
+    ],
+    "plaza": [
+      { "block": "minecraft:smooth_sandstone", "weight": 6 },
+      { "block": "minecraft:cut_sandstone", "weight": 3 },
+      { "block": "minecraft:chiseled_sandstone", "weight": 1 },
+      { "block": "minecraft:orange_terracotta", "weight": 1 }
+    ]
+  },
+
+  "flora": {
+    "trees": [
+      { "tree": "ACACIA", "weight": 7 },
+      { "tree": "SMALL_JUNGLE", "weight": 2 }
+    ],
+    "treeDensity": 0.004,
+    "ground": [
+      { "block": "minecraft:dead_bush", "weight": 9 },
+      { "block": "minecraft:cactus", "weight": 4 },
+      { "block": "minecraft:short_grass", "weight": 1 }
+    ],
+    "groundDensity": 0.05,
+    "rocks": [{ "blueprint": "rock_small", "weight": 1 }],
+    "rockDensity": 0.003
+  },
+
+  "building": {
+    "roofShape": "flat",
+    "roofPitch": 0,
+    "wallStyle": "solid",
+    "storyHeight": 4,
+    "foundationDepth": 2,
+    "overhang": 0,
+    "chimney": false
+  },
+
+  "settlement": {
+    "roadWidth": 5,
+    "plazaSize": [19, 19],
+    "plotPadding": 3,
+    "density": 0.55,
+    "wall": true,
+    "wallHeight": 5,
+    "lampSpacing": 10,
+    "buildingMix": {
+      "house": 8,
+      "shop": 4,
+      "market": 4,
+      "well": 3,
+      "farm": 2,
+      "tavern": 1,
+      "smithy": 1,
+      "watchtower": 3,
+      "gate": 2,
+      "church": 1
+    },
+    "landmark": "well"
+  },
+
+  "lighting": { "role": "light", "spacing": 10, "height": 5, "onPosts": true },
+
+  "signs": {
+    "welcome": {
+      "ru": ["Добро пожаловать", "в %settlement%", "Вода — в колодце"],
+      "en": ["Welcome to", "%settlement%", "Water is at the well"]
+    },
+    "tavern": {
+      "ru": ["Караван-сарай", "«Тень Пальмы»"],
+      "en": ["Caravanserai", "\"Palm Shade\""]
+    },
+    "smithy": {
+      "ru": ["Кузница", "Подковы и клинки"],
+      "en": ["Smithy", "Shoes & blades"]
+    },
+    "shop": {
+      "ru": ["Лавка", "Специи и ткани"],
+      "en": ["Shop", "Spices & cloth"]
+    },
+    "market": {
+      "ru": ["Базар", "Торг до полудня"],
+      "en": ["Bazaar", "Trading till noon"]
+    },
+    "farm": {
+      "ru": ["Оазис", "Финики и пшеница"],
+      "en": ["Oasis", "Dates & wheat"]
+    },
+    "well": {
+      "ru": ["Колодец", "Не мутить воду"],
+      "en": ["The Well", "Do not muddy the water"]
+    },
+    "church": {
+      "ru": ["Святилище", "Пески помнят"],
+      "en": ["Sanctuary", "The sands remember"]
+    },
+    "house": {
+      "ru": ["Дом", "Крыша — тоже двор"],
+      "en": ["House", "The roof is a courtyard too"]
+    }
+  }
+}

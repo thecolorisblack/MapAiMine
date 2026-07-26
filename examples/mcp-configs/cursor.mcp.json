@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mapaimine": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/MapAiMine/mcp-server/dist/index.js"],
+      "env": {
+        "MAPAIMINE_BRIDGE_URL": "http://127.0.0.1:25599",
+        "MAPAIMINE_TOKEN": "PASTE_TOKEN_FROM_plugins/MapAiMine/config.yml",
+        "MAPAIMINE_DEFAULT_WORLD": "world",
+        "MAPAIMINE_LANG": "ru"
+      }
+    }
+  }
+}

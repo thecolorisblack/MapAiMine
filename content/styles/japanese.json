@@ -1,0 +1,441 @@
+{
+  "id": "japanese",
+  "name": { "ru": "Япония", "en": "Japanese" },
+  "description": {
+    "ru": "Пагоды и чайные домики: белые стены из бетона и кварца, балки тёмного дуба, бамбук и вишня, тёмная черепица из глубинного сланца, бумажные фонари.",
+    "en": "Pagodas and tea houses: white concrete and quartz walls, dark oak beams, bamboo and cherry, dark deepslate tile roofs, paper lanterns."
+  },
+  "tags": ["japanese", "asian", "pagoda", "zen", "bamboo", "cherry"],
+  "season": "spring",
+  "author": "MapAiMine",
+  "version": 1,
+
+  "materials": {
+    "foundation": {
+      "full": [
+        { "block": "minecraft:stone_bricks", "weight": 5 },
+        { "block": "minecraft:cobblestone", "weight": 3 },
+        { "block": "minecraft:smooth_stone", "weight": 2 },
+        { "block": "minecraft:mossy_stone_bricks", "weight": 1 }
+      ],
+      "stairs": "minecraft:stone_brick_stairs",
+      "slab": "minecraft:stone_brick_slab",
+      "wall": "minecraft:stone_brick_wall"
+    },
+    "wall_primary": {
+      "full": [
+        { "block": "minecraft:white_concrete", "weight": 6 },
+        { "block": "minecraft:smooth_quartz", "weight": 3 },
+        { "block": "minecraft:white_terracotta", "weight": 2 },
+        { "block": "minecraft:quartz_block", "weight": 1 }
+      ],
+      "stairs": "minecraft:smooth_quartz_stairs",
+      "slab": "minecraft:smooth_quartz_slab"
+    },
+    "wall_secondary": {
+      "full": [
+        { "block": "minecraft:dark_oak_planks", "weight": 5 },
+        { "block": "minecraft:stripped_dark_oak_wood", "weight": 3 },
+        { "block": "minecraft:spruce_planks", "weight": 2 }
+      ],
+      "stairs": "minecraft:dark_oak_stairs",
+      "slab": "minecraft:dark_oak_slab",
+      "fence": "minecraft:dark_oak_fence",
+      "gate": "minecraft:dark_oak_fence_gate",
+      "door": "minecraft:dark_oak_door",
+      "trapdoor": "minecraft:dark_oak_trapdoor",
+      "button": "minecraft:dark_oak_button",
+      "pressure_plate": "minecraft:dark_oak_pressure_plate",
+      "sign": "minecraft:dark_oak_sign",
+      "wall_sign": "minecraft:dark_oak_wall_sign"
+    },
+    "wall_accent": {
+      "full": [
+        { "block": "minecraft:bamboo_mosaic", "weight": 5 },
+        { "block": "minecraft:bamboo_planks", "weight": 3 },
+        { "block": "minecraft:stripped_bamboo_block", "weight": 2 },
+        { "block": "minecraft:cherry_planks", "weight": 1 }
+      ],
+      "stairs": "minecraft:bamboo_mosaic_stairs",
+      "slab": "minecraft:bamboo_mosaic_slab",
+      "fence": "minecraft:bamboo_fence",
+      "gate": "minecraft:bamboo_fence_gate",
+      "door": "minecraft:bamboo_door",
+      "trapdoor": "minecraft:bamboo_trapdoor"
+    },
+    "beam": {
+      "full": [{ "block": "minecraft:dark_oak_log", "weight": 1 }],
+      "axisX": "minecraft:dark_oak_log[axis=x]",
+      "axisY": "minecraft:dark_oak_log[axis=y]",
+      "axisZ": "minecraft:dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence",
+      "slab": "minecraft:dark_oak_slab",
+      "stairs": "minecraft:dark_oak_stairs"
+    },
+    "pillar": {
+      "full": [
+        { "block": "minecraft:stripped_dark_oak_log", "weight": 5 },
+        { "block": "minecraft:dark_oak_log", "weight": 3 },
+        { "block": "minecraft:bamboo_block", "weight": 1 }
+      ],
+      "axisX": "minecraft:stripped_dark_oak_log[axis=x]",
+      "axisY": "minecraft:stripped_dark_oak_log[axis=y]",
+      "axisZ": "minecraft:stripped_dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence"
+    },
+    "floor": {
+      "full": [
+        { "block": "minecraft:bamboo_planks", "weight": 5 },
+        { "block": "minecraft:bamboo_mosaic", "weight": 3 },
+        { "block": "minecraft:spruce_planks", "weight": 2 }
+      ],
+      "stairs": "minecraft:bamboo_stairs",
+      "slab": "minecraft:bamboo_slab",
+      "trapdoor": "minecraft:bamboo_trapdoor"
+    },
+    "floor_accent": {
+      "full": [
+        { "block": "minecraft:green_wool", "weight": 3 },
+        { "block": "minecraft:lime_wool", "weight": 2 },
+        { "block": "minecraft:white_wool", "weight": 2 },
+        { "block": "minecraft:red_wool", "weight": 1 }
+      ],
+      "carpet": "minecraft:green_carpet"
+    },
+    "ceiling": {
+      "full": [
+        { "block": "minecraft:dark_oak_planks", "weight": 5 },
+        { "block": "minecraft:spruce_planks", "weight": 2 }
+      ],
+      "stairs": "minecraft:dark_oak_stairs",
+      "slab": "minecraft:dark_oak_slab"
+    },
+    "roof_primary": {
+      "full": [
+        { "block": "minecraft:deepslate_tiles", "weight": 5 },
+        { "block": "minecraft:polished_blackstone", "weight": 3 },
+        { "block": "minecraft:deepslate_bricks", "weight": 2 },
+        { "block": "minecraft:cracked_deepslate_tiles", "weight": 1 }
+      ],
+      "stairs": "minecraft:deepslate_tile_stairs",
+      "slab": "minecraft:deepslate_tile_slab",
+      "wall": "minecraft:deepslate_tile_wall"
+    },
+    "roof_secondary": {
+      "full": [
+        { "block": "minecraft:blackstone", "weight": 5 },
+        { "block": "minecraft:polished_blackstone_bricks", "weight": 2 }
+      ],
+      "stairs": "minecraft:blackstone_stairs",
+      "slab": "minecraft:blackstone_slab",
+      "wall": "minecraft:blackstone_wall"
+    },
+    "roof_support": {
+      "full": [{ "block": "minecraft:dark_oak_log", "weight": 1 }],
+      "axisX": "minecraft:dark_oak_log[axis=x]",
+      "axisY": "minecraft:dark_oak_log[axis=y]",
+      "axisZ": "minecraft:dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence",
+      "slab": "minecraft:dark_oak_slab"
+    },
+    "window": {
+      "full": [
+        { "block": "minecraft:white_stained_glass", "weight": 6 },
+        { "block": "minecraft:glass", "weight": 2 }
+      ],
+      "pane": "minecraft:white_stained_glass_pane"
+    },
+    "window_frame": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "stairs": "minecraft:dark_oak_stairs",
+      "slab": "minecraft:dark_oak_slab",
+      "fence": "minecraft:dark_oak_fence",
+      "trapdoor": "minecraft:dark_oak_trapdoor"
+    },
+    "door": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "door": "minecraft:dark_oak_door",
+      "trapdoor": "minecraft:dark_oak_trapdoor",
+      "button": "minecraft:dark_oak_button",
+      "pressure_plate": "minecraft:dark_oak_pressure_plate"
+    },
+    "gate": {
+      "full": [{ "block": "minecraft:red_terracotta", "weight": 1 }],
+      "door": "minecraft:spruce_door",
+      "gate": "minecraft:spruce_fence_gate",
+      "fence": "minecraft:spruce_fence",
+      "trapdoor": "minecraft:spruce_trapdoor"
+    },
+    "fence": {
+      "full": [{ "block": "minecraft:bamboo_planks", "weight": 1 }],
+      "fence": "minecraft:bamboo_fence",
+      "gate": "minecraft:bamboo_fence_gate",
+      "slab": "minecraft:bamboo_slab"
+    },
+    "railing": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "fence": "minecraft:dark_oak_fence",
+      "gate": "minecraft:dark_oak_fence_gate",
+      "slab": "minecraft:dark_oak_slab",
+      "wall": "minecraft:stone_brick_wall"
+    },
+    "path_primary": {
+      "full": [
+        { "block": "minecraft:gravel", "weight": 5 },
+        { "block": "minecraft:smooth_stone", "weight": 3 },
+        { "block": "minecraft:cobblestone", "weight": 2 },
+        { "block": "minecraft:dirt_path", "weight": 2 }
+      ],
+      "slab": "minecraft:smooth_stone_slab",
+      "stairs": "minecraft:stone_stairs"
+    },
+    "path_secondary": {
+      "full": [
+        { "block": "minecraft:andesite", "weight": 4 },
+        { "block": "minecraft:polished_andesite", "weight": 3 },
+        { "block": "minecraft:moss_block", "weight": 1 }
+      ],
+      "slab": "minecraft:polished_andesite_slab",
+      "stairs": "minecraft:polished_andesite_stairs"
+    },
+    "plaza": {
+      "full": [
+        { "block": "minecraft:smooth_stone", "weight": 5 },
+        { "block": "minecraft:polished_andesite", "weight": 3 },
+        { "block": "minecraft:stone_bricks", "weight": 2 },
+        { "block": "minecraft:gravel", "weight": 1 }
+      ],
+      "stairs": "minecraft:polished_andesite_stairs",
+      "slab": "minecraft:smooth_stone_slab",
+      "wall": "minecraft:stone_brick_wall"
+    },
+    "ground_top": {
+      "full": [
+        { "block": "minecraft:grass_block", "weight": 8 },
+        { "block": "minecraft:moss_block", "weight": 2 },
+        { "block": "minecraft:podzol", "weight": 1 }
+      ]
+    },
+    "ground_under": {
+      "full": [
+        { "block": "minecraft:dirt", "weight": 6 },
+        { "block": "minecraft:rooted_dirt", "weight": 2 },
+        { "block": "minecraft:gravel", "weight": 1 }
+      ]
+    },
+    "water": {
+      "full": [{ "block": "minecraft:water", "weight": 1 }],
+      "slab": "minecraft:smooth_stone_slab",
+      "wall": "minecraft:stone_brick_wall"
+    },
+    "light": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 7 },
+        { "block": "minecraft:redstone_lamp[lit=true]", "weight": 2 },
+        { "block": "minecraft:glowstone", "weight": 1 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "light_ground": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 6 },
+        { "block": "minecraft:campfire[lit=true]", "weight": 2 },
+        { "block": "minecraft:soul_lantern", "weight": 1 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "decor": {
+      "full": [
+        { "block": "minecraft:decorated_pot", "weight": 4 },
+        { "block": "minecraft:barrel[facing=up]", "weight": 3 },
+        { "block": "minecraft:flower_pot", "weight": 2 },
+        { "block": "minecraft:lectern[facing=north]", "weight": 2 },
+        { "block": "minecraft:cauldron", "weight": 1 },
+        { "block": "minecraft:bell[facing=north,attachment=floor]", "weight": 1 }
+      ]
+    },
+    "banner": {
+      "full": [
+        { "block": "minecraft:white_banner", "weight": 4 },
+        { "block": "minecraft:red_banner", "weight": 3 },
+        { "block": "minecraft:black_banner", "weight": 2 }
+      ]
+    },
+    "carpet": {
+      "full": [
+        { "block": "minecraft:green_carpet", "weight": 3 },
+        { "block": "minecraft:white_carpet", "weight": 3 },
+        { "block": "minecraft:red_carpet", "weight": 2 },
+        { "block": "minecraft:lime_carpet", "weight": 1 }
+      ],
+      "carpet": "minecraft:white_carpet"
+    },
+    "plant": {
+      "full": [
+        { "block": "minecraft:potted_bamboo", "weight": 4 },
+        { "block": "minecraft:potted_cherry_sapling", "weight": 3 },
+        { "block": "minecraft:potted_fern", "weight": 2 },
+        { "block": "minecraft:potted_azalea_bush", "weight": 1 }
+      ]
+    },
+    "crop": {
+      "full": [
+        { "block": "minecraft:wheat[age=7]", "weight": 5 },
+        { "block": "minecraft:beetroots[age=3]", "weight": 3 },
+        { "block": "minecraft:carrots[age=7]", "weight": 2 }
+      ]
+    },
+    "log": {
+      "full": [
+        { "block": "minecraft:bamboo_block", "weight": 5 },
+        { "block": "minecraft:cherry_log", "weight": 3 }
+      ],
+      "axisX": "minecraft:bamboo_block[axis=x]",
+      "axisY": "minecraft:bamboo_block[axis=y]",
+      "axisZ": "minecraft:bamboo_block[axis=z]",
+      "fence": "minecraft:bamboo_fence"
+    },
+    "foliage": {
+      "full": [
+        { "block": "minecraft:cherry_leaves[persistent=true]", "weight": 5 },
+        { "block": "minecraft:oak_leaves[persistent=true]", "weight": 3 },
+        { "block": "minecraft:flowering_azalea_leaves[persistent=true]", "weight": 2 }
+      ],
+      "carpet": "minecraft:pink_petals[flower_amount=3]"
+    }
+  },
+
+  "environment": {
+    "time": 1200,
+    "timeLock": false,
+    "weather": "clear",
+    "snowLayer": false,
+    "biomePaint": "minecraft:cherry_grove",
+    "fogTint": "#e8dcd0"
+  },
+
+  "ground": {
+    "top": [
+      { "block": "minecraft:grass_block", "weight": 8 },
+      { "block": "minecraft:moss_block", "weight": 2 },
+      { "block": "minecraft:podzol", "weight": 1 }
+    ],
+    "under": [
+      { "block": "minecraft:dirt", "weight": 6 },
+      { "block": "minecraft:rooted_dirt", "weight": 2 },
+      { "block": "minecraft:gravel", "weight": 1 }
+    ],
+    "path": [
+      { "block": "minecraft:gravel", "weight": 5 },
+      { "block": "minecraft:smooth_stone", "weight": 3 },
+      { "block": "minecraft:cobblestone", "weight": 2 },
+      { "block": "minecraft:dirt_path", "weight": 2 }
+    ],
+    "pathEdge": [
+      { "block": "minecraft:smooth_stone_slab", "weight": 5 },
+      { "block": "minecraft:polished_andesite_slab", "weight": 2 },
+      { "block": "minecraft:moss_carpet", "weight": 1 }
+    ],
+    "plaza": [
+      { "block": "minecraft:smooth_stone", "weight": 5 },
+      { "block": "minecraft:polished_andesite", "weight": 3 },
+      { "block": "minecraft:stone_bricks", "weight": 2 },
+      { "block": "minecraft:gravel", "weight": 1 }
+    ]
+  },
+
+  "flora": {
+    "trees": [
+      { "tree": "CHERRY", "weight": 6 },
+      { "tree": "OAK", "weight": 2 },
+      { "tree": "BIRCH", "weight": 1 }
+    ],
+    "treeDensity": 0.03,
+    "ground": [
+      { "block": "minecraft:short_grass", "weight": 8 },
+      { "block": "minecraft:bamboo", "weight": 5 },
+      { "block": "minecraft:pink_petals[flower_amount=2]", "weight": 4 },
+      { "block": "minecraft:fern", "weight": 3 },
+      { "block": "minecraft:lily_of_the_valley", "weight": 2 },
+      { "block": "minecraft:pink_tulip", "weight": 2 },
+      { "block": "minecraft:moss_carpet", "weight": 2 }
+    ],
+    "groundDensity": 0.16,
+    "rocks": [{ "blueprint": "rock_small", "weight": 1 }],
+    "rockDensity": 0.006
+  },
+
+  "building": {
+    "roofShape": "pagoda",
+    "roofPitch": 1,
+    "wallStyle": "timber_frame",
+    "storyHeight": 4,
+    "foundationDepth": 2,
+    "overhang": 2,
+    "chimney": false
+  },
+
+  "settlement": {
+    "roadWidth": 3,
+    "plazaSize": [15, 15],
+    "plotPadding": 3,
+    "density": 0.6,
+    "wall": true,
+    "wallHeight": 4,
+    "lampSpacing": 7,
+    "buildingMix": {
+      "house": 7,
+      "shop": 3,
+      "tavern": 2,
+      "farm": 3,
+      "tower": 2,
+      "church": 2,
+      "well": 1,
+      "bridge": 2,
+      "gate": 2,
+      "market": 2
+    },
+    "landmark": "tower"
+  },
+
+  "lighting": { "role": "light", "spacing": 7, "height": 4, "onPosts": true },
+
+  "signs": {
+    "welcome": {
+      "ru": ["Добро пожаловать", "в %settlement%", "Снимите обувь"],
+      "en": ["Welcome to", "%settlement%", "Please remove your shoes"]
+    },
+    "tavern": {
+      "ru": ["Чайный дом", "«Тихий Бамбук»"],
+      "en": ["Tea House", "\"Quiet Bamboo\""]
+    },
+    "smithy": {
+      "ru": ["Кузница", "Клинки на заказ"],
+      "en": ["Forge", "Blades to order"]
+    },
+    "shop": {
+      "ru": ["Лавка", "Рис, чай, бумага"],
+      "en": ["Shop", "Rice, tea, paper"]
+    },
+    "market": {
+      "ru": ["Рынок", "У ворот"],
+      "en": ["Market", "By the gate"]
+    },
+    "farm": {
+      "ru": ["Поле", "Рисовые террасы"],
+      "en": ["Fields", "Rice terraces"]
+    },
+    "church": {
+      "ru": ["Храм", "Тишина и поклон"],
+      "en": ["Shrine", "Silence and a bow"]
+    },
+    "tower": {
+      "ru": ["Пагода", "Пять ярусов"],
+      "en": ["Pagoda", "Five tiers"]
+    },
+    "house": {
+      "ru": ["Дом", "Сад за домом"],
+      "en": ["House", "Garden at the back"]
+    }
+  }
+}

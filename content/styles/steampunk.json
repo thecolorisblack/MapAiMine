@@ -1,0 +1,441 @@
+{
+  "id": "steampunk",
+  "name": { "ru": "Стимпанк", "en": "Steampunk" },
+  "description": {
+    "ru": "Век пара и меди: кирпич и полированный сланец, медь всех стадий окисления, тёмный дуб, железные решётки, цепи, плавильни и лампы.",
+    "en": "The age of steam and brass: brick and polished deepslate, copper at every oxidation stage, dark oak, iron bars, chains, blast furnaces and lamps."
+  },
+  "tags": ["steampunk", "industrial", "copper", "victorian", "brass", "machine"],
+  "season": "none",
+  "author": "MapAiMine",
+  "version": 1,
+
+  "materials": {
+    "foundation": {
+      "full": [
+        { "block": "minecraft:polished_deepslate", "weight": 4 },
+        { "block": "minecraft:deepslate_bricks", "weight": 3 },
+        { "block": "minecraft:cobbled_deepslate", "weight": 2 },
+        { "block": "minecraft:tuff_bricks", "weight": 1 }
+      ],
+      "stairs": "minecraft:deepslate_brick_stairs",
+      "slab": "minecraft:deepslate_brick_slab",
+      "wall": "minecraft:deepslate_brick_wall"
+    },
+    "wall_primary": {
+      "full": [
+        { "block": "minecraft:bricks", "weight": 6 },
+        { "block": "minecraft:polished_deepslate", "weight": 2 },
+        { "block": "minecraft:tuff_bricks", "weight": 2 },
+        { "block": "minecraft:deepslate_bricks", "weight": 1 }
+      ],
+      "stairs": "minecraft:brick_stairs",
+      "slab": "minecraft:brick_slab",
+      "wall": "minecraft:brick_wall",
+      "button": "minecraft:stone_button",
+      "pressure_plate": "minecraft:stone_pressure_plate"
+    },
+    "wall_secondary": {
+      "full": [
+        { "block": "minecraft:copper_block", "weight": 4 },
+        { "block": "minecraft:exposed_copper", "weight": 3 },
+        { "block": "minecraft:weathered_copper", "weight": 2 },
+        { "block": "minecraft:oxidized_copper", "weight": 1 }
+      ],
+      "stairs": "minecraft:cut_copper_stairs",
+      "slab": "minecraft:cut_copper_slab",
+      "door": "minecraft:copper_door",
+      "trapdoor": "minecraft:copper_trapdoor"
+    },
+    "wall_accent": {
+      "full": [
+        { "block": "minecraft:chiseled_copper", "weight": 4 },
+        { "block": "minecraft:copper_grate", "weight": 3 },
+        { "block": "minecraft:exposed_copper_grate", "weight": 2 },
+        { "block": "minecraft:weathered_chiseled_copper", "weight": 1 }
+      ],
+      "stairs": "minecraft:exposed_cut_copper_stairs",
+      "slab": "minecraft:exposed_cut_copper_slab",
+      "trapdoor": "minecraft:exposed_copper_trapdoor",
+      "door": "minecraft:exposed_copper_door"
+    },
+    "beam": {
+      "full": [{ "block": "minecraft:dark_oak_log", "weight": 1 }],
+      "axisX": "minecraft:dark_oak_log[axis=x]",
+      "axisY": "minecraft:dark_oak_log[axis=y]",
+      "axisZ": "minecraft:dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence",
+      "slab": "minecraft:dark_oak_slab",
+      "stairs": "minecraft:dark_oak_stairs"
+    },
+    "pillar": {
+      "full": [
+        { "block": "minecraft:polished_basalt", "weight": 4 },
+        { "block": "minecraft:stripped_dark_oak_log", "weight": 3 },
+        { "block": "minecraft:iron_block", "weight": 2 }
+      ],
+      "axisX": "minecraft:polished_basalt[axis=x]",
+      "axisY": "minecraft:polished_basalt[axis=y]",
+      "axisZ": "minecraft:polished_basalt[axis=z]",
+      "fence": "minecraft:dark_oak_fence",
+      "pane": "minecraft:iron_bars"
+    },
+    "floor": {
+      "full": [
+        { "block": "minecraft:dark_oak_planks", "weight": 5 },
+        { "block": "minecraft:spruce_planks", "weight": 2 },
+        { "block": "minecraft:polished_deepslate", "weight": 2 },
+        { "block": "minecraft:copper_grate", "weight": 1 }
+      ],
+      "stairs": "minecraft:dark_oak_stairs",
+      "slab": "minecraft:dark_oak_slab",
+      "trapdoor": "minecraft:dark_oak_trapdoor"
+    },
+    "floor_accent": {
+      "full": [
+        { "block": "minecraft:cut_copper", "weight": 4 },
+        { "block": "minecraft:exposed_cut_copper", "weight": 3 },
+        { "block": "minecraft:copper_grate", "weight": 2 }
+      ],
+      "stairs": "minecraft:cut_copper_stairs",
+      "slab": "minecraft:cut_copper_slab",
+      "carpet": "minecraft:brown_carpet"
+    },
+    "ceiling": {
+      "full": [
+        { "block": "minecraft:dark_oak_planks", "weight": 5 },
+        { "block": "minecraft:exposed_copper", "weight": 2 },
+        { "block": "minecraft:copper_grate", "weight": 1 }
+      ],
+      "stairs": "minecraft:dark_oak_stairs",
+      "slab": "minecraft:dark_oak_slab"
+    },
+    "roof_primary": {
+      "full": [
+        { "block": "minecraft:oxidized_cut_copper", "weight": 5 },
+        { "block": "minecraft:weathered_cut_copper", "weight": 3 },
+        { "block": "minecraft:exposed_cut_copper", "weight": 2 },
+        { "block": "minecraft:cut_copper", "weight": 1 }
+      ],
+      "stairs": "minecraft:oxidized_cut_copper_stairs",
+      "slab": "minecraft:oxidized_cut_copper_slab"
+    },
+    "roof_secondary": {
+      "full": [
+        { "block": "minecraft:weathered_cut_copper", "weight": 4 },
+        { "block": "minecraft:weathered_copper", "weight": 2 },
+        { "block": "minecraft:polished_deepslate", "weight": 1 }
+      ],
+      "stairs": "minecraft:weathered_cut_copper_stairs",
+      "slab": "minecraft:weathered_cut_copper_slab"
+    },
+    "roof_support": {
+      "full": [
+        { "block": "minecraft:dark_oak_log", "weight": 4 },
+        { "block": "minecraft:iron_block", "weight": 1 }
+      ],
+      "axisX": "minecraft:dark_oak_log[axis=x]",
+      "axisY": "minecraft:dark_oak_log[axis=y]",
+      "axisZ": "minecraft:dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence",
+      "slab": "minecraft:dark_oak_slab"
+    },
+    "window": {
+      "full": [
+        { "block": "minecraft:glass", "weight": 5 },
+        { "block": "minecraft:brown_stained_glass", "weight": 2 },
+        { "block": "minecraft:tinted_glass", "weight": 1 }
+      ],
+      "pane": "minecraft:glass_pane"
+    },
+    "window_frame": {
+      "full": [{ "block": "minecraft:iron_block", "weight": 1 }],
+      "pane": "minecraft:iron_bars",
+      "trapdoor": "minecraft:iron_trapdoor",
+      "slab": "minecraft:cut_copper_slab",
+      "stairs": "minecraft:cut_copper_stairs"
+    },
+    "door": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "door": "minecraft:dark_oak_door",
+      "trapdoor": "minecraft:dark_oak_trapdoor",
+      "button": "minecraft:dark_oak_button",
+      "pressure_plate": "minecraft:dark_oak_pressure_plate"
+    },
+    "gate": {
+      "full": [{ "block": "minecraft:copper_block", "weight": 1 }],
+      "door": "minecraft:copper_door",
+      "trapdoor": "minecraft:copper_trapdoor",
+      "gate": "minecraft:dark_oak_fence_gate",
+      "fence": "minecraft:dark_oak_fence"
+    },
+    "fence": {
+      "full": [{ "block": "minecraft:iron_block", "weight": 1 }],
+      "fence": "minecraft:iron_bars",
+      "pane": "minecraft:iron_bars",
+      "wall": "minecraft:brick_wall",
+      "gate": "minecraft:dark_oak_fence_gate"
+    },
+    "railing": {
+      "full": [{ "block": "minecraft:iron_block", "weight": 1 }],
+      "fence": "minecraft:iron_bars",
+      "pane": "minecraft:iron_bars",
+      "wall": "minecraft:deepslate_brick_wall",
+      "slab": "minecraft:cut_copper_slab"
+    },
+    "path_primary": {
+      "full": [
+        { "block": "minecraft:bricks", "weight": 4 },
+        { "block": "minecraft:cobblestone", "weight": 3 },
+        { "block": "minecraft:gravel", "weight": 2 },
+        { "block": "minecraft:polished_deepslate", "weight": 2 }
+      ],
+      "stairs": "minecraft:brick_stairs",
+      "slab": "minecraft:brick_slab"
+    },
+    "path_secondary": {
+      "full": [
+        { "block": "minecraft:gravel", "weight": 4 },
+        { "block": "minecraft:cobbled_deepslate", "weight": 3 },
+        { "block": "minecraft:coarse_dirt", "weight": 1 }
+      ],
+      "slab": "minecraft:cobbled_deepslate_slab"
+    },
+    "plaza": {
+      "full": [
+        { "block": "minecraft:polished_andesite", "weight": 5 },
+        { "block": "minecraft:bricks", "weight": 3 },
+        { "block": "minecraft:polished_deepslate", "weight": 2 },
+        { "block": "minecraft:copper_grate", "weight": 1 }
+      ],
+      "stairs": "minecraft:polished_andesite_stairs",
+      "slab": "minecraft:polished_andesite_slab",
+      "wall": "minecraft:brick_wall"
+    },
+    "ground_top": {
+      "full": [
+        { "block": "minecraft:grass_block", "weight": 5 },
+        { "block": "minecraft:coarse_dirt", "weight": 3 },
+        { "block": "minecraft:gravel", "weight": 2 },
+        { "block": "minecraft:podzol", "weight": 1 }
+      ]
+    },
+    "ground_under": {
+      "full": [
+        { "block": "minecraft:dirt", "weight": 5 },
+        { "block": "minecraft:gravel", "weight": 3 },
+        { "block": "minecraft:cobbled_deepslate", "weight": 2 }
+      ]
+    },
+    "water": {
+      "full": [{ "block": "minecraft:water", "weight": 1 }],
+      "slab": "minecraft:cut_copper_slab",
+      "wall": "minecraft:brick_wall"
+    },
+    "light": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 5 },
+        { "block": "minecraft:redstone_lamp[lit=true]", "weight": 3 },
+        { "block": "minecraft:copper_bulb[lit=true]", "weight": 2 },
+        { "block": "minecraft:soul_lantern", "weight": 1 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "light_ground": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 5 },
+        { "block": "minecraft:redstone_lamp[lit=true]", "weight": 3 },
+        { "block": "minecraft:campfire[lit=true]", "weight": 1 }
+      ],
+      "hanging": "minecraft:soul_lantern[hanging=true]"
+    },
+    "decor": {
+      "full": [
+        { "block": "minecraft:blast_furnace[facing=north]", "weight": 4 },
+        { "block": "minecraft:barrel[facing=up]", "weight": 3 },
+        { "block": "minecraft:anvil[facing=north]", "weight": 2 },
+        { "block": "minecraft:cauldron", "weight": 2 },
+        { "block": "minecraft:smithing_table", "weight": 2 },
+        { "block": "minecraft:grindstone[face=floor,facing=north]", "weight": 1 },
+        { "block": "minecraft:stonecutter[facing=north]", "weight": 1 }
+      ]
+    },
+    "banner": {
+      "full": [
+        { "block": "minecraft:brown_banner", "weight": 4 },
+        { "block": "minecraft:black_banner", "weight": 3 },
+        { "block": "minecraft:red_banner", "weight": 2 },
+        { "block": "minecraft:gray_banner", "weight": 1 }
+      ]
+    },
+    "carpet": {
+      "full": [
+        { "block": "minecraft:brown_carpet", "weight": 4 },
+        { "block": "minecraft:red_carpet", "weight": 3 },
+        { "block": "minecraft:gray_carpet", "weight": 2 },
+        { "block": "minecraft:black_carpet", "weight": 1 }
+      ],
+      "carpet": "minecraft:brown_carpet"
+    },
+    "plant": {
+      "full": [
+        { "block": "minecraft:potted_fern", "weight": 3 },
+        { "block": "minecraft:potted_dead_bush", "weight": 2 },
+        { "block": "minecraft:potted_oak_sapling", "weight": 2 },
+        { "block": "minecraft:flower_pot", "weight": 1 }
+      ]
+    },
+    "crop": {
+      "full": [
+        { "block": "minecraft:wheat[age=7]", "weight": 4 },
+        { "block": "minecraft:potatoes[age=7]", "weight": 3 },
+        { "block": "minecraft:beetroots[age=3]", "weight": 2 }
+      ]
+    },
+    "log": {
+      "full": [{ "block": "minecraft:dark_oak_log", "weight": 1 }],
+      "axisX": "minecraft:dark_oak_log[axis=x]",
+      "axisY": "minecraft:dark_oak_log[axis=y]",
+      "axisZ": "minecraft:dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence"
+    },
+    "foliage": {
+      "full": [
+        { "block": "minecraft:oak_leaves[persistent=true]", "weight": 5 },
+        { "block": "minecraft:dark_oak_leaves[persistent=true]", "weight": 3 }
+      ]
+    }
+  },
+
+  "environment": {
+    "time": 13000,
+    "timeLock": false,
+    "weather": "rain",
+    "snowLayer": false,
+    "biomePaint": null,
+    "fogTint": "#8a7860"
+  },
+
+  "ground": {
+    "top": [
+      { "block": "minecraft:grass_block", "weight": 5 },
+      { "block": "minecraft:coarse_dirt", "weight": 3 },
+      { "block": "minecraft:gravel", "weight": 2 },
+      { "block": "minecraft:podzol", "weight": 1 }
+    ],
+    "under": [
+      { "block": "minecraft:dirt", "weight": 5 },
+      { "block": "minecraft:gravel", "weight": 3 },
+      { "block": "minecraft:cobbled_deepslate", "weight": 2 }
+    ],
+    "path": [
+      { "block": "minecraft:bricks", "weight": 4 },
+      { "block": "minecraft:cobblestone", "weight": 3 },
+      { "block": "minecraft:gravel", "weight": 2 },
+      { "block": "minecraft:polished_deepslate", "weight": 2 }
+    ],
+    "pathEdge": [
+      { "block": "minecraft:brick_slab", "weight": 5 },
+      { "block": "minecraft:cut_copper_slab", "weight": 2 },
+      { "block": "minecraft:deepslate_brick_wall", "weight": 1 }
+    ],
+    "plaza": [
+      { "block": "minecraft:polished_andesite", "weight": 5 },
+      { "block": "minecraft:bricks", "weight": 3 },
+      { "block": "minecraft:polished_deepslate", "weight": 2 },
+      { "block": "minecraft:copper_grate", "weight": 1 }
+    ]
+  },
+
+  "flora": {
+    "trees": [
+      { "tree": "OAK", "weight": 5 },
+      { "tree": "DARK_OAK", "weight": 3 },
+      { "tree": "BIRCH", "weight": 1 }
+    ],
+    "treeDensity": 0.008,
+    "ground": [
+      { "block": "minecraft:short_grass", "weight": 8 },
+      { "block": "minecraft:fern", "weight": 3 },
+      { "block": "minecraft:dead_bush", "weight": 3 },
+      { "block": "minecraft:brown_mushroom", "weight": 1 }
+    ],
+    "groundDensity": 0.06,
+    "rocks": [{ "blueprint": "rock_small", "weight": 1 }],
+    "rockDensity": 0.004
+  },
+
+  "building": {
+    "roofShape": "hip",
+    "roofPitch": 2,
+    "wallStyle": "solid",
+    "storyHeight": 5,
+    "foundationDepth": 3,
+    "overhang": 1,
+    "chimney": true
+  },
+
+  "settlement": {
+    "roadWidth": 5,
+    "plazaSize": [15, 15],
+    "plotPadding": 1,
+    "density": 0.85,
+    "wall": true,
+    "wallHeight": 7,
+    "lampSpacing": 5,
+    "buildingMix": {
+      "house": 6,
+      "smithy": 4,
+      "shop": 4,
+      "tower": 3,
+      "mill": 3,
+      "tavern": 2,
+      "market": 2,
+      "watchtower": 2,
+      "bridge": 2,
+      "well": 1
+    },
+    "landmark": "tower"
+  },
+
+  "lighting": { "role": "light", "spacing": 5, "height": 5, "onPosts": true },
+
+  "signs": {
+    "welcome": {
+      "ru": ["Добро пожаловать", "в %settlement%", "Держитесь дорожек"],
+      "en": ["Welcome to", "%settlement%", "Mind the walkways"]
+    },
+    "tavern": {
+      "ru": ["Паб", "«Медный Клапан»"],
+      "en": ["Public House", "\"The Brass Valve\""]
+    },
+    "smithy": {
+      "ru": ["Мастерская", "Шестерни на заказ"],
+      "en": ["Machine Works", "Gears to order"]
+    },
+    "shop": {
+      "ru": ["Лавка", "Приборы и линзы"],
+      "en": ["Emporium", "Instruments & lenses"]
+    },
+    "market": {
+      "ru": ["Биржа", "Уголь и медь"],
+      "en": ["Exchange", "Coal & copper"]
+    },
+    "farm": {
+      "ru": ["Теплица", "Пар греет"],
+      "en": ["Glasshouse", "Steam-heated"]
+    },
+    "mill": {
+      "ru": ["Котельная", "Не открывать под давлением"],
+      "en": ["Boiler House", "Do not open under pressure"]
+    },
+    "tower": {
+      "ru": ["Часовая башня", "Бьёт каждый час"],
+      "en": ["Clock Tower", "Strikes on the hour"]
+    },
+    "house": {
+      "ru": ["Дом", "Труба дымит — хозяин дома"],
+      "en": ["Residence", "Smoke means someone's in"]
+    }
+  }
+}

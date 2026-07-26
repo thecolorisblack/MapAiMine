@@ -1,0 +1,11 @@
+node_modules/
+dist/
+target/
+*.log
+.DS_Store
+.env
+.idea/
+.vscode/
+!.vscode/mcp.json
+plugin/dependency-reduced-pom.xml
+content/captures/

@@ -1,0 +1,442 @@
+{
+  "id": "spring",
+  "name": { "ru": "Весна", "en": "Spring" },
+  "description": {
+    "ru": "Цветущая деревня: вишнёвое дерево, берёза, азалия, пастельная керамика и шерсть, цветы повсюду и сочная зелень.",
+    "en": "A village in bloom: cherry wood, birch, azalea, pastel terracotta and wool, flowers everywhere and lush green ground."
+  },
+  "tags": ["spring", "season", "cherry", "blossom", "pastel", "floral"],
+  "season": "spring",
+  "author": "MapAiMine",
+  "version": 1,
+
+  "materials": {
+    "foundation": {
+      "full": [
+        { "block": "minecraft:cobblestone", "weight": 5 },
+        { "block": "minecraft:mossy_cobblestone", "weight": 3 },
+        { "block": "minecraft:calcite", "weight": 2 },
+        { "block": "minecraft:stone", "weight": 1 }
+      ],
+      "stairs": "minecraft:cobblestone_stairs",
+      "slab": "minecraft:cobblestone_slab",
+      "wall": "minecraft:mossy_cobblestone_wall"
+    },
+    "wall_primary": {
+      "full": [
+        { "block": "minecraft:cherry_planks", "weight": 5 },
+        { "block": "minecraft:birch_planks", "weight": 3 },
+        { "block": "minecraft:stripped_birch_wood", "weight": 2 },
+        { "block": "minecraft:white_terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:cherry_stairs",
+      "slab": "minecraft:cherry_slab",
+      "fence": "minecraft:cherry_fence",
+      "gate": "minecraft:cherry_fence_gate",
+      "door": "minecraft:cherry_door",
+      "trapdoor": "minecraft:cherry_trapdoor",
+      "button": "minecraft:cherry_button",
+      "pressure_plate": "minecraft:cherry_pressure_plate",
+      "sign": "minecraft:cherry_sign",
+      "wall_sign": "minecraft:cherry_wall_sign"
+    },
+    "wall_secondary": {
+      "full": [
+        { "block": "minecraft:birch_planks", "weight": 6 },
+        { "block": "minecraft:stripped_birch_log", "weight": 2 },
+        { "block": "minecraft:white_terracotta", "weight": 2 }
+      ],
+      "stairs": "minecraft:birch_stairs",
+      "slab": "minecraft:birch_slab",
+      "fence": "minecraft:birch_fence",
+      "gate": "minecraft:birch_fence_gate",
+      "door": "minecraft:birch_door",
+      "trapdoor": "minecraft:birch_trapdoor",
+      "button": "minecraft:birch_button",
+      "pressure_plate": "minecraft:birch_pressure_plate"
+    },
+    "wall_accent": {
+      "full": [
+        { "block": "minecraft:pink_terracotta", "weight": 4 },
+        { "block": "minecraft:light_blue_terracotta", "weight": 3 },
+        { "block": "minecraft:white_terracotta", "weight": 3 },
+        { "block": "minecraft:pink_wool", "weight": 1 }
+      ],
+      "stairs": "minecraft:smooth_quartz_stairs",
+      "slab": "minecraft:smooth_quartz_slab",
+      "carpet": "minecraft:pink_carpet"
+    },
+    "beam": {
+      "full": [{ "block": "minecraft:cherry_log", "weight": 1 }],
+      "axisX": "minecraft:cherry_log[axis=x]",
+      "axisY": "minecraft:cherry_log[axis=y]",
+      "axisZ": "minecraft:cherry_log[axis=z]",
+      "fence": "minecraft:cherry_fence",
+      "slab": "minecraft:cherry_slab",
+      "stairs": "minecraft:cherry_stairs"
+    },
+    "pillar": {
+      "full": [
+        { "block": "minecraft:stripped_birch_log", "weight": 6 },
+        { "block": "minecraft:stripped_cherry_log", "weight": 3 }
+      ],
+      "axisX": "minecraft:stripped_birch_log[axis=x]",
+      "axisY": "minecraft:stripped_birch_log[axis=y]",
+      "axisZ": "minecraft:stripped_birch_log[axis=z]",
+      "fence": "minecraft:birch_fence"
+    },
+    "floor": {
+      "full": [
+        { "block": "minecraft:birch_planks", "weight": 6 },
+        { "block": "minecraft:cherry_planks", "weight": 3 },
+        { "block": "minecraft:oak_planks", "weight": 1 }
+      ],
+      "stairs": "minecraft:birch_stairs",
+      "slab": "minecraft:birch_slab",
+      "trapdoor": "minecraft:birch_trapdoor"
+    },
+    "floor_accent": {
+      "full": [
+        { "block": "minecraft:pink_wool", "weight": 4 },
+        { "block": "minecraft:light_blue_wool", "weight": 2 },
+        { "block": "minecraft:white_wool", "weight": 2 }
+      ],
+      "carpet": "minecraft:pink_carpet"
+    },
+    "ceiling": {
+      "full": [
+        { "block": "minecraft:birch_planks", "weight": 6 },
+        { "block": "minecraft:stripped_birch_wood", "weight": 2 }
+      ],
+      "stairs": "minecraft:birch_stairs",
+      "slab": "minecraft:birch_slab"
+    },
+    "roof_primary": {
+      "full": [
+        { "block": "minecraft:cherry_planks", "weight": 5 },
+        { "block": "minecraft:pink_terracotta", "weight": 3 },
+        { "block": "minecraft:stripped_cherry_wood", "weight": 2 },
+        { "block": "minecraft:white_terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:cherry_stairs",
+      "slab": "minecraft:cherry_slab",
+      "trapdoor": "minecraft:cherry_trapdoor"
+    },
+    "roof_secondary": {
+      "full": [
+        { "block": "minecraft:white_terracotta", "weight": 5 },
+        { "block": "minecraft:smooth_quartz", "weight": 3 }
+      ],
+      "stairs": "minecraft:smooth_quartz_stairs",
+      "slab": "minecraft:smooth_quartz_slab"
+    },
+    "roof_support": {
+      "full": [{ "block": "minecraft:cherry_log", "weight": 1 }],
+      "axisX": "minecraft:cherry_log[axis=x]",
+      "axisY": "minecraft:cherry_log[axis=y]",
+      "axisZ": "minecraft:cherry_log[axis=z]",
+      "fence": "minecraft:cherry_fence",
+      "slab": "minecraft:cherry_slab"
+    },
+    "window": {
+      "full": [
+        { "block": "minecraft:glass", "weight": 6 },
+        { "block": "minecraft:white_stained_glass", "weight": 2 },
+        { "block": "minecraft:pink_stained_glass", "weight": 1 }
+      ],
+      "pane": "minecraft:glass_pane"
+    },
+    "window_frame": {
+      "full": [{ "block": "minecraft:cherry_planks", "weight": 1 }],
+      "stairs": "minecraft:cherry_stairs",
+      "slab": "minecraft:cherry_slab",
+      "fence": "minecraft:cherry_fence",
+      "trapdoor": "minecraft:cherry_trapdoor"
+    },
+    "door": {
+      "full": [{ "block": "minecraft:cherry_planks", "weight": 1 }],
+      "door": "minecraft:cherry_door",
+      "trapdoor": "minecraft:cherry_trapdoor",
+      "button": "minecraft:cherry_button",
+      "pressure_plate": "minecraft:cherry_pressure_plate"
+    },
+    "gate": {
+      "full": [{ "block": "minecraft:birch_planks", "weight": 1 }],
+      "door": "minecraft:birch_door",
+      "gate": "minecraft:birch_fence_gate",
+      "fence": "minecraft:birch_fence",
+      "trapdoor": "minecraft:birch_trapdoor"
+    },
+    "fence": {
+      "full": [{ "block": "minecraft:birch_planks", "weight": 1 }],
+      "fence": "minecraft:birch_fence",
+      "gate": "minecraft:birch_fence_gate",
+      "slab": "minecraft:birch_slab"
+    },
+    "railing": {
+      "full": [{ "block": "minecraft:cherry_planks", "weight": 1 }],
+      "fence": "minecraft:cherry_fence",
+      "gate": "minecraft:cherry_fence_gate",
+      "slab": "minecraft:cherry_slab",
+      "wall": "minecraft:mossy_cobblestone_wall"
+    },
+    "path_primary": {
+      "full": [
+        { "block": "minecraft:dirt_path", "weight": 5 },
+        { "block": "minecraft:cobblestone", "weight": 3 },
+        { "block": "minecraft:moss_block", "weight": 2 },
+        { "block": "minecraft:gravel", "weight": 1 }
+      ],
+      "slab": "minecraft:cobblestone_slab",
+      "stairs": "minecraft:cobblestone_stairs",
+      "carpet": "minecraft:moss_carpet"
+    },
+    "path_secondary": {
+      "full": [
+        { "block": "minecraft:moss_block", "weight": 4 },
+        { "block": "minecraft:mossy_cobblestone", "weight": 3 },
+        { "block": "minecraft:coarse_dirt", "weight": 1 }
+      ],
+      "slab": "minecraft:mossy_cobblestone_slab",
+      "carpet": "minecraft:moss_carpet"
+    },
+    "plaza": {
+      "full": [
+        { "block": "minecraft:smooth_quartz", "weight": 4 },
+        { "block": "minecraft:stone_bricks", "weight": 3 },
+        { "block": "minecraft:calcite", "weight": 2 },
+        { "block": "minecraft:moss_block", "weight": 1 }
+      ],
+      "stairs": "minecraft:smooth_quartz_stairs",
+      "slab": "minecraft:smooth_quartz_slab",
+      "wall": "minecraft:stone_brick_wall"
+    },
+    "ground_top": {
+      "full": [
+        { "block": "minecraft:grass_block", "weight": 8 },
+        { "block": "minecraft:moss_block", "weight": 3 },
+        { "block": "minecraft:rooted_dirt", "weight": 1 }
+      ]
+    },
+    "ground_under": {
+      "full": [
+        { "block": "minecraft:dirt", "weight": 6 },
+        { "block": "minecraft:rooted_dirt", "weight": 2 },
+        { "block": "minecraft:coarse_dirt", "weight": 1 }
+      ]
+    },
+    "water": {
+      "full": [{ "block": "minecraft:water", "weight": 1 }]
+    },
+    "light": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 7 },
+        { "block": "minecraft:glowstone", "weight": 2 },
+        { "block": "minecraft:shroomlight", "weight": 1 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "light_ground": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 6 },
+        { "block": "minecraft:campfire[lit=true]", "weight": 2 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "decor": {
+      "full": [
+        { "block": "minecraft:flower_pot", "weight": 4 },
+        { "block": "minecraft:composter", "weight": 3 },
+        { "block": "minecraft:barrel[facing=up]", "weight": 3 },
+        { "block": "minecraft:decorated_pot", "weight": 2 },
+        { "block": "minecraft:cauldron", "weight": 1 },
+        { "block": "minecraft:beehive[facing=north]", "weight": 1 }
+      ]
+    },
+    "banner": {
+      "full": [
+        { "block": "minecraft:pink_banner", "weight": 4 },
+        { "block": "minecraft:white_banner", "weight": 3 },
+        { "block": "minecraft:light_blue_banner", "weight": 2 },
+        { "block": "minecraft:lime_banner", "weight": 1 }
+      ]
+    },
+    "carpet": {
+      "full": [
+        { "block": "minecraft:pink_carpet", "weight": 4 },
+        { "block": "minecraft:white_carpet", "weight": 3 },
+        { "block": "minecraft:light_blue_carpet", "weight": 2 },
+        { "block": "minecraft:lime_carpet", "weight": 1 }
+      ],
+      "carpet": "minecraft:pink_carpet"
+    },
+    "plant": {
+      "full": [
+        { "block": "minecraft:potted_cherry_sapling", "weight": 4 },
+        { "block": "minecraft:potted_flowering_azalea_bush", "weight": 3 },
+        { "block": "minecraft:potted_azalea_bush", "weight": 2 },
+        { "block": "minecraft:potted_allium", "weight": 2 },
+        { "block": "minecraft:potted_pink_tulip", "weight": 2 },
+        { "block": "minecraft:potted_lily_of_the_valley", "weight": 1 }
+      ]
+    },
+    "crop": {
+      "full": [
+        { "block": "minecraft:wheat[age=7]", "weight": 5 },
+        { "block": "minecraft:carrots[age=7]", "weight": 3 },
+        { "block": "minecraft:potatoes[age=7]", "weight": 3 },
+        { "block": "minecraft:beetroots[age=3]", "weight": 2 }
+      ]
+    },
+    "log": {
+      "full": [{ "block": "minecraft:cherry_log", "weight": 1 }],
+      "axisX": "minecraft:cherry_log[axis=x]",
+      "axisY": "minecraft:cherry_log[axis=y]",
+      "axisZ": "minecraft:cherry_log[axis=z]",
+      "fence": "minecraft:cherry_fence"
+    },
+    "foliage": {
+      "full": [
+        { "block": "minecraft:cherry_leaves[persistent=true]", "weight": 6 },
+        { "block": "minecraft:flowering_azalea_leaves[persistent=true]", "weight": 3 },
+        { "block": "minecraft:birch_leaves[persistent=true]", "weight": 2 },
+        { "block": "minecraft:azalea_leaves[persistent=true]", "weight": 1 }
+      ],
+      "carpet": "minecraft:pink_petals[flower_amount=4]"
+    }
+  },
+
+  "environment": {
+    "time": 1000,
+    "timeLock": false,
+    "weather": "clear",
+    "snowLayer": false,
+    "biomePaint": "minecraft:cherry_grove",
+    "fogTint": "#ffd9e8"
+  },
+
+  "ground": {
+    "top": [
+      { "block": "minecraft:grass_block", "weight": 8 },
+      { "block": "minecraft:moss_block", "weight": 3 },
+      { "block": "minecraft:rooted_dirt", "weight": 1 }
+    ],
+    "under": [
+      { "block": "minecraft:dirt", "weight": 6 },
+      { "block": "minecraft:rooted_dirt", "weight": 2 },
+      { "block": "minecraft:coarse_dirt", "weight": 1 }
+    ],
+    "path": [
+      { "block": "minecraft:dirt_path", "weight": 5 },
+      { "block": "minecraft:cobblestone", "weight": 3 },
+      { "block": "minecraft:moss_block", "weight": 2 },
+      { "block": "minecraft:gravel", "weight": 1 }
+    ],
+    "pathEdge": [
+      { "block": "minecraft:moss_carpet", "weight": 5 },
+      { "block": "minecraft:cobblestone_slab", "weight": 3 },
+      { "block": "minecraft:pink_petals[flower_amount=2]", "weight": 2 }
+    ],
+    "plaza": [
+      { "block": "minecraft:smooth_quartz", "weight": 4 },
+      { "block": "minecraft:stone_bricks", "weight": 3 },
+      { "block": "minecraft:calcite", "weight": 2 },
+      { "block": "minecraft:moss_block", "weight": 1 }
+    ]
+  },
+
+  "flora": {
+    "trees": [
+      { "tree": "CHERRY", "weight": 6 },
+      { "tree": "BIRCH", "weight": 3 },
+      { "tree": "AZALEA", "weight": 2 },
+      { "tree": "OAK", "weight": 2 }
+    ],
+    "treeDensity": 0.035,
+    "ground": [
+      { "block": "minecraft:short_grass", "weight": 10 },
+      { "block": "minecraft:pink_petals[flower_amount=3]", "weight": 5 },
+      { "block": "minecraft:dandelion", "weight": 3 },
+      { "block": "minecraft:allium", "weight": 3 },
+      { "block": "minecraft:azure_bluet", "weight": 3 },
+      { "block": "minecraft:cornflower", "weight": 2 },
+      { "block": "minecraft:lily_of_the_valley", "weight": 2 },
+      { "block": "minecraft:pink_tulip", "weight": 2 },
+      { "block": "minecraft:white_tulip", "weight": 2 },
+      { "block": "minecraft:oxeye_daisy", "weight": 2 },
+      { "block": "minecraft:flowering_azalea", "weight": 1 }
+    ],
+    "groundDensity": 0.22,
+    "rocks": [{ "blueprint": "rock_small", "weight": 1 }],
+    "rockDensity": 0.003
+  },
+
+  "building": {
+    "roofShape": "gable",
+    "roofPitch": 1,
+    "wallStyle": "timber_frame",
+    "storyHeight": 4,
+    "foundationDepth": 1,
+    "overhang": 1,
+    "chimney": true
+  },
+
+  "settlement": {
+    "roadWidth": 3,
+    "plazaSize": [15, 15],
+    "plotPadding": 3,
+    "density": 0.65,
+    "wall": false,
+    "wallHeight": 3,
+    "lampSpacing": 8,
+    "buildingMix": {
+      "house": 8,
+      "shop": 3,
+      "farm": 4,
+      "tavern": 1,
+      "smithy": 1,
+      "well": 2,
+      "church": 1,
+      "market": 2,
+      "watchtower": 1
+    },
+    "landmark": "well"
+  },
+
+  "lighting": { "role": "light", "spacing": 8, "height": 4, "onPosts": true },
+
+  "signs": {
+    "welcome": {
+      "ru": ["Добро пожаловать", "в %settlement%", "Всё в цвету"],
+      "en": ["Welcome to", "%settlement%", "Everything's in bloom"]
+    },
+    "tavern": {
+      "ru": ["Таверна", "«Розовый Лепесток»"],
+      "en": ["Tavern", "\"The Pink Petal\""]
+    },
+    "smithy": {
+      "ru": ["Кузница", "Тише, чем зимой"],
+      "en": ["Smithy", "Quieter than winter"]
+    },
+    "shop": {
+      "ru": ["Лавка", "Семена и саженцы"],
+      "en": ["Shop", "Seeds & saplings"]
+    },
+    "market": {
+      "ru": ["Цветочный рынок", "Каждое утро"],
+      "en": ["Flower Market", "Every morning"]
+    },
+    "farm": {
+      "ru": ["Ферма", "Первый посев"],
+      "en": ["Farm", "First sowing"]
+    },
+    "church": {
+      "ru": ["Храм", "Пробуждения"],
+      "en": ["Shrine of", "the Awakening"]
+    },
+    "house": {
+      "ru": ["Дом", "под вишней"],
+      "en": ["The house", "under the cherry tree"]
+    }
+  }
+}

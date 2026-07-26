@@ -1,0 +1,452 @@
+{
+  "id": "nordic",
+  "name": { "ru": "Север", "en": "Nordic" },
+  "description": {
+    "ru": "Викингские длинные дома: ель и тёмный дуб, замшелый камень, дерновые крыши из земли и мха, костры и резные столбы.",
+    "en": "Viking longhouses: spruce and dark oak, mossy stone, turf roofs of grass and moss, open fires and carved posts."
+  },
+  "tags": ["nordic", "viking", "longhouse", "taiga", "rustic", "norse"],
+  "season": "none",
+  "author": "MapAiMine",
+  "version": 1,
+
+  "materials": {
+    "foundation": {
+      "full": [
+        { "block": "minecraft:cobblestone", "weight": 4 },
+        { "block": "minecraft:mossy_cobblestone", "weight": 3 },
+        { "block": "minecraft:stone", "weight": 2 },
+        { "block": "minecraft:andesite", "weight": 1 }
+      ],
+      "stairs": "minecraft:cobblestone_stairs",
+      "slab": "minecraft:cobblestone_slab",
+      "wall": "minecraft:mossy_cobblestone_wall"
+    },
+    "wall_primary": {
+      "full": [
+        { "block": "minecraft:spruce_log", "weight": 5 },
+        { "block": "minecraft:stripped_spruce_log", "weight": 3 },
+        { "block": "minecraft:spruce_planks", "weight": 2 },
+        { "block": "minecraft:spruce_wood", "weight": 1 }
+      ],
+      "axisX": "minecraft:spruce_log[axis=x]",
+      "axisY": "minecraft:spruce_log[axis=y]",
+      "axisZ": "minecraft:spruce_log[axis=z]",
+      "stairs": "minecraft:spruce_stairs",
+      "slab": "minecraft:spruce_slab",
+      "fence": "minecraft:spruce_fence",
+      "gate": "minecraft:spruce_fence_gate",
+      "door": "minecraft:spruce_door",
+      "trapdoor": "minecraft:spruce_trapdoor",
+      "button": "minecraft:spruce_button",
+      "pressure_plate": "minecraft:spruce_pressure_plate",
+      "sign": "minecraft:spruce_sign",
+      "wall_sign": "minecraft:spruce_wall_sign"
+    },
+    "wall_secondary": {
+      "full": [
+        { "block": "minecraft:spruce_planks", "weight": 6 },
+        { "block": "minecraft:dark_oak_planks", "weight": 3 },
+        { "block": "minecraft:stripped_spruce_wood", "weight": 2 }
+      ],
+      "stairs": "minecraft:spruce_stairs",
+      "slab": "minecraft:spruce_slab",
+      "fence": "minecraft:spruce_fence",
+      "gate": "minecraft:spruce_fence_gate",
+      "door": "minecraft:spruce_door",
+      "trapdoor": "minecraft:spruce_trapdoor"
+    },
+    "wall_accent": {
+      "full": [
+        { "block": "minecraft:mossy_stone_bricks", "weight": 4 },
+        { "block": "minecraft:mossy_cobblestone", "weight": 3 },
+        { "block": "minecraft:stone_bricks", "weight": 2 },
+        { "block": "minecraft:cracked_stone_bricks", "weight": 1 }
+      ],
+      "stairs": "minecraft:mossy_stone_brick_stairs",
+      "slab": "minecraft:mossy_stone_brick_slab",
+      "wall": "minecraft:mossy_stone_brick_wall"
+    },
+    "beam": {
+      "full": [{ "block": "minecraft:dark_oak_log", "weight": 1 }],
+      "axisX": "minecraft:dark_oak_log[axis=x]",
+      "axisY": "minecraft:dark_oak_log[axis=y]",
+      "axisZ": "minecraft:dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence",
+      "slab": "minecraft:dark_oak_slab",
+      "stairs": "minecraft:dark_oak_stairs"
+    },
+    "pillar": {
+      "full": [
+        { "block": "minecraft:stripped_spruce_log", "weight": 5 },
+        { "block": "minecraft:stripped_dark_oak_log", "weight": 3 }
+      ],
+      "axisX": "minecraft:stripped_spruce_log[axis=x]",
+      "axisY": "minecraft:stripped_spruce_log[axis=y]",
+      "axisZ": "minecraft:stripped_spruce_log[axis=z]",
+      "fence": "minecraft:spruce_fence"
+    },
+    "floor": {
+      "full": [
+        { "block": "minecraft:spruce_planks", "weight": 6 },
+        { "block": "minecraft:dark_oak_planks", "weight": 3 },
+        { "block": "minecraft:stone", "weight": 1 }
+      ],
+      "stairs": "minecraft:spruce_stairs",
+      "slab": "minecraft:spruce_slab",
+      "trapdoor": "minecraft:spruce_trapdoor"
+    },
+    "floor_accent": {
+      "full": [
+        { "block": "minecraft:brown_wool", "weight": 4 },
+        { "block": "minecraft:red_wool", "weight": 2 },
+        { "block": "minecraft:gray_wool", "weight": 2 },
+        { "block": "minecraft:cobblestone", "weight": 1 }
+      ],
+      "carpet": "minecraft:brown_carpet"
+    },
+    "ceiling": {
+      "full": [
+        { "block": "minecraft:dark_oak_planks", "weight": 5 },
+        { "block": "minecraft:spruce_planks", "weight": 3 }
+      ],
+      "stairs": "minecraft:dark_oak_stairs",
+      "slab": "minecraft:dark_oak_slab"
+    },
+    "roof_primary": {
+      "full": [
+        { "block": "minecraft:grass_block", "weight": 5 },
+        { "block": "minecraft:moss_block", "weight": 3 },
+        { "block": "minecraft:podzol", "weight": 2 },
+        { "block": "minecraft:coarse_dirt", "weight": 1 }
+      ],
+      "stairs": "minecraft:mossy_cobblestone_stairs",
+      "slab": "minecraft:mossy_cobblestone_slab",
+      "wall": "minecraft:mossy_cobblestone_wall",
+      "carpet": "minecraft:moss_carpet"
+    },
+    "roof_secondary": {
+      "full": [
+        { "block": "minecraft:spruce_planks", "weight": 5 },
+        { "block": "minecraft:dark_oak_planks", "weight": 3 },
+        { "block": "minecraft:stripped_spruce_wood", "weight": 2 }
+      ],
+      "stairs": "minecraft:spruce_stairs",
+      "slab": "minecraft:spruce_slab",
+      "trapdoor": "minecraft:spruce_trapdoor"
+    },
+    "roof_support": {
+      "full": [{ "block": "minecraft:dark_oak_log", "weight": 1 }],
+      "axisX": "minecraft:dark_oak_log[axis=x]",
+      "axisY": "minecraft:dark_oak_log[axis=y]",
+      "axisZ": "minecraft:dark_oak_log[axis=z]",
+      "fence": "minecraft:dark_oak_fence",
+      "slab": "minecraft:dark_oak_slab"
+    },
+    "window": {
+      "full": [
+        { "block": "minecraft:glass", "weight": 6 },
+        { "block": "minecraft:brown_stained_glass", "weight": 1 }
+      ],
+      "pane": "minecraft:glass_pane"
+    },
+    "window_frame": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "stairs": "minecraft:dark_oak_stairs",
+      "slab": "minecraft:dark_oak_slab",
+      "fence": "minecraft:dark_oak_fence",
+      "trapdoor": "minecraft:dark_oak_trapdoor"
+    },
+    "door": {
+      "full": [{ "block": "minecraft:spruce_planks", "weight": 1 }],
+      "door": "minecraft:spruce_door",
+      "trapdoor": "minecraft:spruce_trapdoor",
+      "button": "minecraft:spruce_button",
+      "pressure_plate": "minecraft:spruce_pressure_plate"
+    },
+    "gate": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "door": "minecraft:dark_oak_door",
+      "gate": "minecraft:dark_oak_fence_gate",
+      "fence": "minecraft:dark_oak_fence",
+      "trapdoor": "minecraft:dark_oak_trapdoor"
+    },
+    "fence": {
+      "full": [{ "block": "minecraft:spruce_planks", "weight": 1 }],
+      "fence": "minecraft:spruce_fence",
+      "gate": "minecraft:spruce_fence_gate",
+      "slab": "minecraft:spruce_slab"
+    },
+    "railing": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "fence": "minecraft:dark_oak_fence",
+      "gate": "minecraft:dark_oak_fence_gate",
+      "slab": "minecraft:dark_oak_slab",
+      "wall": "minecraft:mossy_cobblestone_wall"
+    },
+    "path_primary": {
+      "full": [
+        { "block": "minecraft:dirt_path", "weight": 5 },
+        { "block": "minecraft:cobblestone", "weight": 3 },
+        { "block": "minecraft:gravel", "weight": 3 },
+        { "block": "minecraft:podzol", "weight": 1 }
+      ],
+      "slab": "minecraft:cobblestone_slab",
+      "stairs": "minecraft:cobblestone_stairs"
+    },
+    "path_secondary": {
+      "full": [
+        { "block": "minecraft:mossy_cobblestone", "weight": 4 },
+        { "block": "minecraft:gravel", "weight": 3 },
+        { "block": "minecraft:coarse_dirt", "weight": 2 }
+      ],
+      "slab": "minecraft:mossy_cobblestone_slab"
+    },
+    "plaza": {
+      "full": [
+        { "block": "minecraft:cobblestone", "weight": 4 },
+        { "block": "minecraft:mossy_cobblestone", "weight": 3 },
+        { "block": "minecraft:stone_bricks", "weight": 2 },
+        { "block": "minecraft:gravel", "weight": 2 }
+      ],
+      "stairs": "minecraft:cobblestone_stairs",
+      "slab": "minecraft:cobblestone_slab",
+      "wall": "minecraft:cobblestone_wall"
+    },
+    "ground_top": {
+      "full": [
+        { "block": "minecraft:grass_block", "weight": 6 },
+        { "block": "minecraft:podzol", "weight": 3 },
+        { "block": "minecraft:coarse_dirt", "weight": 2 },
+        { "block": "minecraft:moss_block", "weight": 1 }
+      ]
+    },
+    "ground_under": {
+      "full": [
+        { "block": "minecraft:dirt", "weight": 6 },
+        { "block": "minecraft:coarse_dirt", "weight": 2 },
+        { "block": "minecraft:stone", "weight": 2 }
+      ]
+    },
+    "water": {
+      "full": [
+        { "block": "minecraft:water", "weight": 6 },
+        { "block": "minecraft:ice", "weight": 1 }
+      ]
+    },
+    "light": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 5 },
+        { "block": "minecraft:campfire[lit=true]", "weight": 3 },
+        { "block": "minecraft:torch", "weight": 2 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "light_ground": {
+      "full": [
+        { "block": "minecraft:campfire[lit=true]", "weight": 6 },
+        { "block": "minecraft:lantern", "weight": 3 },
+        { "block": "minecraft:soul_campfire[lit=true]", "weight": 1 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "decor": {
+      "full": [
+        { "block": "minecraft:barrel[facing=up]", "weight": 4 },
+        { "block": "minecraft:hay_block", "weight": 3 },
+        { "block": "minecraft:cauldron", "weight": 2 },
+        { "block": "minecraft:composter", "weight": 2 },
+        { "block": "minecraft:smithing_table", "weight": 1 },
+        { "block": "minecraft:fletching_table", "weight": 1 }
+      ]
+    },
+    "banner": {
+      "full": [
+        { "block": "minecraft:red_banner", "weight": 4 },
+        { "block": "minecraft:black_banner", "weight": 3 },
+        { "block": "minecraft:white_banner", "weight": 2 },
+        { "block": "minecraft:blue_banner", "weight": 2 }
+      ]
+    },
+    "carpet": {
+      "full": [
+        { "block": "minecraft:brown_carpet", "weight": 4 },
+        { "block": "minecraft:red_carpet", "weight": 3 },
+        { "block": "minecraft:gray_carpet", "weight": 2 },
+        { "block": "minecraft:white_carpet", "weight": 1 }
+      ],
+      "carpet": "minecraft:brown_carpet"
+    },
+    "plant": {
+      "full": [
+        { "block": "minecraft:potted_spruce_sapling", "weight": 4 },
+        { "block": "minecraft:potted_fern", "weight": 3 },
+        { "block": "minecraft:potted_brown_mushroom", "weight": 2 },
+        { "block": "minecraft:potted_red_mushroom", "weight": 1 }
+      ]
+    },
+    "crop": {
+      "full": [
+        { "block": "minecraft:wheat[age=7]", "weight": 5 },
+        { "block": "minecraft:potatoes[age=7]", "weight": 3 },
+        { "block": "minecraft:beetroots[age=3]", "weight": 3 },
+        { "block": "minecraft:sweet_berry_bush[age=3]", "weight": 2 }
+      ]
+    },
+    "log": {
+      "full": [{ "block": "minecraft:spruce_log", "weight": 1 }],
+      "axisX": "minecraft:spruce_log[axis=x]",
+      "axisY": "minecraft:spruce_log[axis=y]",
+      "axisZ": "minecraft:spruce_log[axis=z]",
+      "fence": "minecraft:spruce_fence"
+    },
+    "foliage": {
+      "full": [
+        { "block": "minecraft:spruce_leaves[persistent=true]", "weight": 7 },
+        { "block": "minecraft:oak_leaves[persistent=true]", "weight": 2 }
+      ]
+    },
+    "snow": {
+      "full": [
+        { "block": "minecraft:snow_block", "weight": 5 },
+        { "block": "minecraft:ice", "weight": 2 }
+      ],
+      "slab": "minecraft:snow[layers=4]",
+      "carpet": "minecraft:snow[layers=1]"
+    }
+  },
+
+  "environment": {
+    "time": 6000,
+    "timeLock": false,
+    "weather": "clear",
+    "snowLayer": false,
+    "biomePaint": "minecraft:taiga",
+    "fogTint": "#93a7b5"
+  },
+
+  "ground": {
+    "top": [
+      { "block": "minecraft:grass_block", "weight": 6 },
+      { "block": "minecraft:podzol", "weight": 3 },
+      { "block": "minecraft:coarse_dirt", "weight": 2 },
+      { "block": "minecraft:moss_block", "weight": 1 }
+    ],
+    "under": [
+      { "block": "minecraft:dirt", "weight": 6 },
+      { "block": "minecraft:coarse_dirt", "weight": 2 },
+      { "block": "minecraft:stone", "weight": 2 }
+    ],
+    "path": [
+      { "block": "minecraft:dirt_path", "weight": 5 },
+      { "block": "minecraft:cobblestone", "weight": 3 },
+      { "block": "minecraft:gravel", "weight": 3 },
+      { "block": "minecraft:podzol", "weight": 1 }
+    ],
+    "pathEdge": [
+      { "block": "minecraft:cobblestone_slab", "weight": 4 },
+      { "block": "minecraft:mossy_cobblestone_slab", "weight": 3 },
+      { "block": "minecraft:moss_carpet", "weight": 1 }
+    ],
+    "plaza": [
+      { "block": "minecraft:cobblestone", "weight": 4 },
+      { "block": "minecraft:mossy_cobblestone", "weight": 3 },
+      { "block": "minecraft:stone_bricks", "weight": 2 },
+      { "block": "minecraft:gravel", "weight": 2 }
+    ]
+  },
+
+  "flora": {
+    "trees": [
+      { "tree": "REDWOOD", "weight": 5 },
+      { "tree": "TALL_REDWOOD", "weight": 3 },
+      { "tree": "MEGA_REDWOOD", "weight": 1 },
+      { "tree": "OAK", "weight": 1 }
+    ],
+    "treeDensity": 0.05,
+    "ground": [
+      { "block": "minecraft:short_grass", "weight": 8 },
+      { "block": "minecraft:fern", "weight": 6 },
+      { "block": "minecraft:brown_mushroom", "weight": 2 },
+      { "block": "minecraft:red_mushroom", "weight": 1 },
+      { "block": "minecraft:sweet_berry_bush[age=3]", "weight": 2 },
+      { "block": "minecraft:moss_carpet", "weight": 2 }
+    ],
+    "groundDensity": 0.14,
+    "rocks": [{ "blueprint": "rock_small", "weight": 1 }],
+    "rockDensity": 0.008
+  },
+
+  "building": {
+    "roofShape": "gable",
+    "roofPitch": 2,
+    "wallStyle": "log_cabin",
+    "storyHeight": 5,
+    "foundationDepth": 2,
+    "overhang": 2,
+    "chimney": true
+  },
+
+  "settlement": {
+    "roadWidth": 4,
+    "plazaSize": [15, 15],
+    "plotPadding": 5,
+    "density": 0.45,
+    "wall": true,
+    "wallHeight": 5,
+    "lampSpacing": 10,
+    "buildingMix": {
+      "house": 9,
+      "farm": 4,
+      "smithy": 2,
+      "tavern": 2,
+      "dock": 2,
+      "watchtower": 2,
+      "shop": 1,
+      "well": 1,
+      "statue": 1
+    },
+    "landmark": "statue"
+  },
+
+  "lighting": { "role": "light", "spacing": 10, "height": 3, "onPosts": true },
+
+  "signs": {
+    "welcome": {
+      "ru": ["Добро пожаловать", "в %settlement%", "Ветер с фьорда"],
+      "en": ["Welcome to", "%settlement%", "Wind off the fjord"]
+    },
+    "tavern": {
+      "ru": ["Медовый зал", "«Ворон и Весло»"],
+      "en": ["Mead Hall", "\"Raven & Oar\""]
+    },
+    "smithy": {
+      "ru": ["Кузня", "Топоры и гвозди"],
+      "en": ["Forge", "Axes & nails"]
+    },
+    "shop": {
+      "ru": ["Торг", "Соль, канат, шкуры"],
+      "en": ["Trader", "Salt, rope, hides"]
+    },
+    "market": {
+      "ru": ["Торговое место", "После похода"],
+      "en": ["Trading Ground", "After the voyage"]
+    },
+    "farm": {
+      "ru": ["Двор", "Ячмень и репа"],
+      "en": ["Steading", "Barley & turnips"]
+    },
+    "dock": {
+      "ru": ["Пристань", "Драккары у мостков"],
+      "en": ["Docks", "Longships at the pier"]
+    },
+    "church": {
+      "ru": ["Капище", "Резные столбы"],
+      "en": ["Hof", "Carved posts"]
+    },
+    "house": {
+      "ru": ["Длинный дом", "Очаг горит"],
+      "en": ["Longhouse", "The hearth is lit"]
+    }
+  }
+}

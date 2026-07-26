@@ -1,0 +1,78 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  MapAiMine Bridge — configuration
+#  Protocol: Bridge Protocol v1 (docs/PROTOCOL.md)
+#
+#  After changing anything here run  /mapaimine reload  (no server restart needed).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Interface the HTTP bridge binds to. Keep 127.0.0.1 unless the MCP server runs
+# on another machine — the API can rewrite your world, so do not expose it.
+host: 127.0.0.1
+port: 25599
+
+# Left empty on first start: the plugin generates a 256-bit token and writes it
+# back here. Copy it into the MCP server config. Rotate with:
+#   /mapaimine token regenerate
+token: ''
+
+# HTTP worker threads. Handlers never touch the world directly (they marshal to
+# the main thread), so a small pool is plenty.
+httpThreads: 4
+
+# Hard cap on a single request body. Blueprint uploads are the big ones.
+maxRequestBytes: 33554432   # 32 MiB
+
+limits:
+  # ── advertised in GET /health ──────────────────────────────────────────────
+  maxOpsPerRequest: 4096      # entries allowed in one POST /ops
+  maxBlocksPerOp: 4000000     # estimated block writes allowed for a single op
+  maxRegionVolume: 8000000    # bounding-box volume allowed for a region op
+  blocksPerTick: 20000        # main-thread work budget per tick — the anti-lag knob
+  maxUndoHistory: 20          # snapshots kept for POST /undo
+  surveyMaxPoints: 16384      # sample points GET /survey may return
+
+  # ── enforced but not part of the advertised limit block ────────────────────
+  maxUndoBlocks: 2000000      # per job; beyond this undo is dropped with a warning
+  maxUndoMemoryMb: 256        # per job memory budget for the undo snapshot
+  maxProbePoints: 1024        # points allowed in POST /probe
+  maxSyncBlocks: 200000       # largest job allowed with "async": false
+  surveyMaxChunks: 4096       # refuse surveys that would generate more chunks
+  syncTimeoutMs: 60000        # how long a sync POST /ops or /undo may wait
+  readTimeoutMs: 15000        # how long a world read may wait for the main thread
+  finishedJobsKept: 64        # finished jobs retained for GET /jobs/{id}
+  maxCaptureVolume: 2000000   # blocks allowed in one POST /capture
+
+# Feature switches. Whatever is enabled here is reported in GET /health
+# capabilities; the MCP server is required to respect that list.
+capabilities:
+  survey: true        # GET /survey — the AI's view of the world
+  undo: true          # snapshots + POST /undo
+  jobs: true          # async tick-budgeted execution; false forces sync mode
+  worldCreate: true   # POST /worlds
+  schematic: true     # POST /capture and the /captures endpoints
+  entities: true      # the "entity" op
+  containers: true    # chest/barrel contents in the "container" op
+  commands: false     # the "command" escape hatch — runs arbitrary console commands
+  trees: true         # TreeType entries in "scatter"
+
+# Empty list = every loaded world is writable. Otherwise only these are, and
+# anything else answers 403 REGION_PROTECTED.
+allowedWorlds: []
+
+# Boxes the bridge will never modify. Blocks inside them are skipped and counted
+# in the job warnings. 'world: "*"' matches every world.
+# protectedRegions:
+#   - world: world
+#     from: [-64, -64, -64]
+#     to:   [ 64, 320,  64]
+protectedRegions: []
+
+# Default for POST /ops "physics". false is right for building: sand does not
+# fall, water does not flow, redstone does not fire while the job runs.
+physics: false
+
+# Default for POST /ops "lightUpdate": resend touched chunks when a job finishes
+# so clients see the result immediately.
+lightUpdate: true
+
+logLevel: INFO

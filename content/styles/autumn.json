@@ -1,0 +1,448 @@
+{
+  "id": "autumn",
+  "name": { "ru": "Осень", "en": "Autumn" },
+  "description": {
+    "ru": "Золотая осень без «оранжевой листвы»: мангровое дерево и корни, оранжевая и коричневая керамика, подзол и грубая земля, тыквы-фонари и стога сена, берёза с азалией под саванновым тоном биома.",
+    "en": "Golden autumn built without orange leaves: mangrove wood and roots, orange & brown terracotta, podzol and coarse dirt, jack o'lanterns and hay bales, birch mixed with azalea under a savanna biome tint."
+  },
+  "tags": ["autumn", "fall", "season", "harvest", "mangrove", "terracotta", "cozy"],
+  "season": "autumn",
+  "author": "MapAiMine",
+  "version": 1,
+
+  "materials": {
+    "foundation": {
+      "full": [
+        { "block": "minecraft:cobblestone", "weight": 5 },
+        { "block": "minecraft:mossy_cobblestone", "weight": 3 },
+        { "block": "minecraft:bricks", "weight": 2 },
+        { "block": "minecraft:brown_terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:cobblestone_stairs",
+      "slab": "minecraft:cobblestone_slab",
+      "wall": "minecraft:mossy_cobblestone_wall"
+    },
+    "wall_primary": {
+      "full": [
+        { "block": "minecraft:mangrove_planks", "weight": 5 },
+        { "block": "minecraft:stripped_mangrove_wood", "weight": 3 },
+        { "block": "minecraft:brown_terracotta", "weight": 2 },
+        { "block": "minecraft:orange_terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:mangrove_stairs",
+      "slab": "minecraft:mangrove_slab",
+      "fence": "minecraft:mangrove_fence",
+      "gate": "minecraft:mangrove_fence_gate",
+      "door": "minecraft:mangrove_door",
+      "trapdoor": "minecraft:mangrove_trapdoor",
+      "button": "minecraft:mangrove_button",
+      "pressure_plate": "minecraft:mangrove_pressure_plate",
+      "sign": "minecraft:mangrove_sign",
+      "wall_sign": "minecraft:mangrove_wall_sign"
+    },
+    "wall_secondary": {
+      "full": [
+        { "block": "minecraft:birch_planks", "weight": 4 },
+        { "block": "minecraft:stripped_birch_wood", "weight": 3 },
+        { "block": "minecraft:white_terracotta", "weight": 2 },
+        { "block": "minecraft:oak_planks", "weight": 2 }
+      ],
+      "stairs": "minecraft:birch_stairs",
+      "slab": "minecraft:birch_slab",
+      "fence": "minecraft:birch_fence",
+      "gate": "minecraft:birch_fence_gate",
+      "door": "minecraft:birch_door",
+      "trapdoor": "minecraft:birch_trapdoor",
+      "button": "minecraft:birch_button",
+      "pressure_plate": "minecraft:birch_pressure_plate"
+    },
+    "wall_accent": {
+      "full": [
+        { "block": "minecraft:orange_terracotta", "weight": 5 },
+        { "block": "minecraft:brown_terracotta", "weight": 3 },
+        { "block": "minecraft:orange_glazed_terracotta", "weight": 1 },
+        { "block": "minecraft:brown_glazed_terracotta", "weight": 1 }
+      ],
+      "stairs": "minecraft:brick_stairs",
+      "slab": "minecraft:brick_slab",
+      "wall": "minecraft:brick_wall"
+    },
+    "beam": {
+      "full": [{ "block": "minecraft:mangrove_log", "weight": 1 }],
+      "axisX": "minecraft:mangrove_log[axis=x]",
+      "axisY": "minecraft:mangrove_log[axis=y]",
+      "axisZ": "minecraft:mangrove_log[axis=z]",
+      "fence": "minecraft:mangrove_fence",
+      "slab": "minecraft:mangrove_slab",
+      "stairs": "minecraft:mangrove_stairs"
+    },
+    "pillar": {
+      "full": [
+        { "block": "minecraft:stripped_mangrove_log", "weight": 5 },
+        { "block": "minecraft:mangrove_roots", "weight": 2 },
+        { "block": "minecraft:muddy_mangrove_roots", "weight": 1 }
+      ],
+      "axisX": "minecraft:stripped_mangrove_log[axis=x]",
+      "axisY": "minecraft:stripped_mangrove_log[axis=y]",
+      "axisZ": "minecraft:stripped_mangrove_log[axis=z]",
+      "fence": "minecraft:mangrove_fence"
+    },
+    "floor": {
+      "full": [
+        { "block": "minecraft:mangrove_planks", "weight": 5 },
+        { "block": "minecraft:oak_planks", "weight": 3 },
+        { "block": "minecraft:birch_planks", "weight": 2 }
+      ],
+      "stairs": "minecraft:mangrove_stairs",
+      "slab": "minecraft:mangrove_slab",
+      "trapdoor": "minecraft:mangrove_trapdoor"
+    },
+    "floor_accent": {
+      "full": [
+        { "block": "minecraft:orange_wool", "weight": 4 },
+        { "block": "minecraft:brown_wool", "weight": 3 },
+        { "block": "minecraft:red_wool", "weight": 1 }
+      ],
+      "carpet": "minecraft:orange_carpet"
+    },
+    "ceiling": {
+      "full": [
+        { "block": "minecraft:mangrove_planks", "weight": 5 },
+        { "block": "minecraft:stripped_mangrove_wood", "weight": 2 }
+      ],
+      "stairs": "minecraft:mangrove_stairs",
+      "slab": "minecraft:mangrove_slab"
+    },
+    "roof_primary": {
+      "full": [
+        { "block": "minecraft:bricks", "weight": 5 },
+        { "block": "minecraft:orange_terracotta", "weight": 3 },
+        { "block": "minecraft:brown_terracotta", "weight": 2 },
+        { "block": "minecraft:granite", "weight": 1 }
+      ],
+      "stairs": "minecraft:brick_stairs",
+      "slab": "minecraft:brick_slab",
+      "wall": "minecraft:brick_wall"
+    },
+    "roof_secondary": {
+      "full": [
+        { "block": "minecraft:mangrove_planks", "weight": 5 },
+        { "block": "minecraft:stripped_mangrove_wood", "weight": 2 }
+      ],
+      "stairs": "minecraft:mangrove_stairs",
+      "slab": "minecraft:mangrove_slab"
+    },
+    "roof_support": {
+      "full": [{ "block": "minecraft:mangrove_log", "weight": 1 }],
+      "axisX": "minecraft:mangrove_log[axis=x]",
+      "axisY": "minecraft:mangrove_log[axis=y]",
+      "axisZ": "minecraft:mangrove_log[axis=z]",
+      "fence": "minecraft:mangrove_fence",
+      "slab": "minecraft:mangrove_slab"
+    },
+    "window": {
+      "full": [
+        { "block": "minecraft:glass", "weight": 5 },
+        { "block": "minecraft:orange_stained_glass", "weight": 2 },
+        { "block": "minecraft:brown_stained_glass", "weight": 1 }
+      ],
+      "pane": "minecraft:glass_pane"
+    },
+    "window_frame": {
+      "full": [{ "block": "minecraft:mangrove_planks", "weight": 1 }],
+      "stairs": "minecraft:mangrove_stairs",
+      "slab": "minecraft:mangrove_slab",
+      "fence": "minecraft:mangrove_fence",
+      "trapdoor": "minecraft:mangrove_trapdoor"
+    },
+    "door": {
+      "full": [{ "block": "minecraft:mangrove_planks", "weight": 1 }],
+      "door": "minecraft:mangrove_door",
+      "trapdoor": "minecraft:mangrove_trapdoor",
+      "button": "minecraft:mangrove_button",
+      "pressure_plate": "minecraft:mangrove_pressure_plate"
+    },
+    "gate": {
+      "full": [{ "block": "minecraft:dark_oak_planks", "weight": 1 }],
+      "door": "minecraft:dark_oak_door",
+      "gate": "minecraft:mangrove_fence_gate",
+      "fence": "minecraft:mangrove_fence",
+      "trapdoor": "minecraft:dark_oak_trapdoor"
+    },
+    "fence": {
+      "full": [{ "block": "minecraft:mangrove_planks", "weight": 1 }],
+      "fence": "minecraft:mangrove_fence",
+      "gate": "minecraft:mangrove_fence_gate",
+      "slab": "minecraft:mangrove_slab"
+    },
+    "railing": {
+      "full": [{ "block": "minecraft:birch_planks", "weight": 1 }],
+      "fence": "minecraft:birch_fence",
+      "gate": "minecraft:birch_fence_gate",
+      "slab": "minecraft:birch_slab",
+      "wall": "minecraft:brick_wall"
+    },
+    "path_primary": {
+      "full": [
+        { "block": "minecraft:dirt_path", "weight": 5 },
+        { "block": "minecraft:coarse_dirt", "weight": 3 },
+        { "block": "minecraft:podzol", "weight": 2 },
+        { "block": "minecraft:cobblestone", "weight": 2 }
+      ],
+      "slab": "minecraft:cobblestone_slab",
+      "stairs": "minecraft:cobblestone_stairs"
+    },
+    "path_secondary": {
+      "full": [
+        { "block": "minecraft:gravel", "weight": 4 },
+        { "block": "minecraft:rooted_dirt", "weight": 3 },
+        { "block": "minecraft:brown_terracotta", "weight": 1 }
+      ],
+      "slab": "minecraft:brick_slab"
+    },
+    "plaza": {
+      "full": [
+        { "block": "minecraft:bricks", "weight": 4 },
+        { "block": "minecraft:cobblestone", "weight": 3 },
+        { "block": "minecraft:brown_terracotta", "weight": 2 },
+        { "block": "minecraft:podzol", "weight": 1 }
+      ],
+      "stairs": "minecraft:brick_stairs",
+      "slab": "minecraft:brick_slab",
+      "wall": "minecraft:brick_wall"
+    },
+    "ground_top": {
+      "full": [
+        { "block": "minecraft:podzol", "weight": 6 },
+        { "block": "minecraft:coarse_dirt", "weight": 4 },
+        { "block": "minecraft:grass_block", "weight": 3 },
+        { "block": "minecraft:rooted_dirt", "weight": 1 }
+      ]
+    },
+    "ground_under": {
+      "full": [
+        { "block": "minecraft:dirt", "weight": 6 },
+        { "block": "minecraft:coarse_dirt", "weight": 3 },
+        { "block": "minecraft:rooted_dirt", "weight": 1 }
+      ]
+    },
+    "water": {
+      "full": [{ "block": "minecraft:water", "weight": 1 }]
+    },
+    "light": {
+      "full": [
+        { "block": "minecraft:lantern", "weight": 5 },
+        { "block": "minecraft:jack_o_lantern", "weight": 3 },
+        { "block": "minecraft:ochre_froglight", "weight": 1 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "light_ground": {
+      "full": [
+        { "block": "minecraft:jack_o_lantern", "weight": 4 },
+        { "block": "minecraft:campfire[lit=true]", "weight": 3 },
+        { "block": "minecraft:lantern", "weight": 3 }
+      ],
+      "hanging": "minecraft:lantern[hanging=true]"
+    },
+    "decor": {
+      "full": [
+        { "block": "minecraft:hay_block", "weight": 4 },
+        { "block": "minecraft:pumpkin", "weight": 3 },
+        { "block": "minecraft:barrel[facing=up]", "weight": 3 },
+        { "block": "minecraft:composter", "weight": 2 },
+        { "block": "minecraft:decorated_pot", "weight": 1 },
+        { "block": "minecraft:cauldron", "weight": 1 }
+      ]
+    },
+    "banner": {
+      "full": [
+        { "block": "minecraft:orange_banner", "weight": 4 },
+        { "block": "minecraft:brown_banner", "weight": 3 },
+        { "block": "minecraft:red_banner", "weight": 2 },
+        { "block": "minecraft:yellow_banner", "weight": 1 }
+      ]
+    },
+    "carpet": {
+      "full": [
+        { "block": "minecraft:orange_carpet", "weight": 4 },
+        { "block": "minecraft:brown_carpet", "weight": 3 },
+        { "block": "minecraft:red_carpet", "weight": 2 },
+        { "block": "minecraft:yellow_carpet", "weight": 1 }
+      ],
+      "carpet": "minecraft:orange_carpet"
+    },
+    "plant": {
+      "full": [
+        { "block": "minecraft:potted_brown_mushroom", "weight": 3 },
+        { "block": "minecraft:potted_red_mushroom", "weight": 3 },
+        { "block": "minecraft:potted_fern", "weight": 3 },
+        { "block": "minecraft:potted_birch_sapling", "weight": 2 },
+        { "block": "minecraft:potted_dead_bush", "weight": 1 }
+      ]
+    },
+    "crop": {
+      "full": [
+        { "block": "minecraft:wheat[age=7]", "weight": 5 },
+        { "block": "minecraft:pumpkin", "weight": 3 },
+        { "block": "minecraft:carrots[age=7]", "weight": 3 },
+        { "block": "minecraft:beetroots[age=3]", "weight": 2 },
+        { "block": "minecraft:potatoes[age=7]", "weight": 2 }
+      ]
+    },
+    "log": {
+      "full": [
+        { "block": "minecraft:mangrove_log", "weight": 6 },
+        { "block": "minecraft:mangrove_roots", "weight": 2 }
+      ],
+      "axisX": "minecraft:mangrove_log[axis=x]",
+      "axisY": "minecraft:mangrove_log[axis=y]",
+      "axisZ": "minecraft:mangrove_log[axis=z]",
+      "fence": "minecraft:mangrove_fence"
+    },
+    "foliage": {
+      "full": [
+        { "block": "minecraft:birch_leaves[persistent=true]", "weight": 5 },
+        { "block": "minecraft:oak_leaves[persistent=true]", "weight": 4 },
+        { "block": "minecraft:azalea_leaves[persistent=true]", "weight": 3 },
+        { "block": "minecraft:mangrove_leaves[persistent=true]", "weight": 2 }
+      ]
+    }
+  },
+
+  "environment": {
+    "time": 10000,
+    "timeLock": false,
+    "weather": "clear",
+    "snowLayer": false,
+    "biomePaint": "minecraft:savanna",
+    "fogTint": "#d8a154"
+  },
+
+  "ground": {
+    "top": [
+      { "block": "minecraft:podzol", "weight": 6 },
+      { "block": "minecraft:coarse_dirt", "weight": 4 },
+      { "block": "minecraft:grass_block", "weight": 3 },
+      { "block": "minecraft:rooted_dirt", "weight": 1 }
+    ],
+    "under": [
+      { "block": "minecraft:dirt", "weight": 6 },
+      { "block": "minecraft:coarse_dirt", "weight": 3 },
+      { "block": "minecraft:rooted_dirt", "weight": 1 }
+    ],
+    "path": [
+      { "block": "minecraft:dirt_path", "weight": 5 },
+      { "block": "minecraft:coarse_dirt", "weight": 3 },
+      { "block": "minecraft:podzol", "weight": 2 },
+      { "block": "minecraft:cobblestone", "weight": 2 }
+    ],
+    "pathEdge": [
+      { "block": "minecraft:brick_slab", "weight": 4 },
+      { "block": "minecraft:cobblestone_slab", "weight": 3 },
+      { "block": "minecraft:mangrove_slab", "weight": 1 }
+    ],
+    "plaza": [
+      { "block": "minecraft:bricks", "weight": 4 },
+      { "block": "minecraft:cobblestone", "weight": 3 },
+      { "block": "minecraft:brown_terracotta", "weight": 2 },
+      { "block": "minecraft:podzol", "weight": 1 }
+    ]
+  },
+
+  "flora": {
+    "trees": [
+      { "tree": "BIRCH", "weight": 5 },
+      { "tree": "OAK", "weight": 4 },
+      { "tree": "AZALEA", "weight": 2 },
+      { "tree": "BIG_TREE", "weight": 1 }
+    ],
+    "treeDensity": 0.04,
+    "ground": [
+      { "block": "minecraft:short_grass", "weight": 8 },
+      { "block": "minecraft:fern", "weight": 5 },
+      { "block": "minecraft:brown_mushroom", "weight": 3 },
+      { "block": "minecraft:red_mushroom", "weight": 2 },
+      { "block": "minecraft:dead_bush", "weight": 2 },
+      { "block": "minecraft:sweet_berry_bush[age=3]", "weight": 2 },
+      { "block": "minecraft:pumpkin", "weight": 1 }
+    ],
+    "groundDensity": 0.15,
+    "rocks": [{ "blueprint": "rock_small", "weight": 1 }],
+    "rockDensity": 0.005
+  },
+
+  "building": {
+    "roofShape": "gable",
+    "roofPitch": 1,
+    "wallStyle": "timber_frame",
+    "storyHeight": 4,
+    "foundationDepth": 2,
+    "overhang": 1,
+    "chimney": true
+  },
+
+  "settlement": {
+    "roadWidth": 3,
+    "plazaSize": [13, 13],
+    "plotPadding": 2,
+    "density": 0.68,
+    "wall": false,
+    "wallHeight": 4,
+    "lampSpacing": 7,
+    "buildingMix": {
+      "house": 8,
+      "shop": 3,
+      "farm": 5,
+      "tavern": 2,
+      "smithy": 1,
+      "well": 1,
+      "mill": 2,
+      "church": 1,
+      "market": 2,
+      "watchtower": 1
+    },
+    "landmark": "mill"
+  },
+
+  "lighting": { "role": "light", "spacing": 7, "height": 4, "onPosts": true },
+
+  "signs": {
+    "welcome": {
+      "ru": ["Добро пожаловать", "в %settlement%", "Урожай собран"],
+      "en": ["Welcome to", "%settlement%", "The harvest is in"]
+    },
+    "tavern": {
+      "ru": ["Таверна", "«Тыква и Кружка»"],
+      "en": ["Tavern", "\"Pumpkin & Pint\""]
+    },
+    "smithy": {
+      "ru": ["Кузница", "Куём до заморозков"],
+      "en": ["Smithy", "Forging till frost"]
+    },
+    "shop": {
+      "ru": ["Лавка", "Мёд, яблоки, сидр"],
+      "en": ["Shop", "Honey, apples, cider"]
+    },
+    "market": {
+      "ru": ["Ярмарка урожая", "Три дня подряд"],
+      "en": ["Harvest Fair", "Three days running"]
+    },
+    "farm": {
+      "ru": ["Ферма", "Тыквенное поле"],
+      "en": ["Farm", "Pumpkin patch"]
+    },
+    "mill": {
+      "ru": ["Мельница", "Мелем с рассвета"],
+      "en": ["Mill", "Grinding since dawn"]
+    },
+    "church": {
+      "ru": ["Храм", "Последнего Снопа"],
+      "en": ["Shrine of", "the Last Sheaf"]
+    },
+    "house": {
+      "ru": ["Дом", "Сено в сарае"],
+      "en": ["Home", "Hay in the barn"]
+    }
+  }
+}

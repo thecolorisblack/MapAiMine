@@ -1,0 +1,45 @@
+{
+  "name": "mapaimine-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that lets an AI agent build Minecraft worlds, spawns, villages and styled structures through the MapAiMine bridge plugin (or plain RCON).",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mapaimine-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "validate:content": "tsx src/cli/validate-content.ts",
+    "doctor": "tsx src/cli/doctor.ts",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "minecraft",
+    "paper",
+    "spigot",
+    "ai",
+    "builder"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

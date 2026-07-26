@@ -1,0 +1,21 @@
+name: MapAiMine
+version: '${project.version}'
+main: dev.mapaimine.bridge.MapAiMinePlugin
+api-version: '1.21'
+authors: [MapAiMine]
+description: HTTP bridge that lets an MCP server (and an AI through it) read and build in this world.
+website: https://github.com/mapaimine
+load: POSTWORLD
+folia-supported: false
+
+commands:
+  mapaimine:
+    description: MapAiMine bridge administration (token, status, undo, reload, pos1/pos2).
+    usage: /mapaimine <token|status|undo|reload|pos1|pos2|selection>
+    aliases: [mam, mai]
+    permission: mapaimine.admin
+
+permissions:
+  mapaimine.admin:
+    description: Full access to the /mapaimine command.
+    default: op

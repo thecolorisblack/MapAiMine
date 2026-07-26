@@ -1,0 +1,76 @@
+{
+  "id": "my_style",
+  "name": { "ru": "Мой стиль", "en": "My style" },
+  "description": { "ru": "Опиши вайб в одну строку.", "en": "One-line vibe description." },
+  "tags": ["custom"],
+  "season": "none",
+  "version": 1,
+
+  "materials": {
+    "foundation": { "full": [{ "block": "minecraft:cobblestone" }], "stairs": "minecraft:cobblestone_stairs", "slab": "minecraft:cobblestone_slab", "wall": "minecraft:cobblestone_wall" },
+    "wall_primary": {
+      "full": [
+        { "block": "minecraft:stone_bricks", "weight": 6 },
+        { "block": "minecraft:cracked_stone_bricks", "weight": 2 },
+        { "block": "minecraft:mossy_stone_bricks", "weight": 2 }
+      ],
+      "stairs": "minecraft:stone_brick_stairs",
+      "slab": "minecraft:stone_brick_slab",
+      "wall": "minecraft:stone_brick_wall"
+    },
+    "wall_secondary": { "full": [{ "block": "minecraft:oak_planks" }], "stairs": "minecraft:oak_stairs", "slab": "minecraft:oak_slab", "fence": "minecraft:oak_fence", "gate": "minecraft:oak_fence_gate", "door": "minecraft:oak_door", "trapdoor": "minecraft:oak_trapdoor" },
+    "wall_accent": { "full": [{ "block": "minecraft:stripped_oak_wood" }] },
+    "beam": { "full": [{ "block": "minecraft:dark_oak_log" }], "axisX": "minecraft:dark_oak_log[axis=x]", "axisY": "minecraft:dark_oak_log[axis=y]", "axisZ": "minecraft:dark_oak_log[axis=z]" },
+    "floor": { "full": [{ "block": "minecraft:oak_planks" }], "stairs": "minecraft:oak_stairs", "slab": "minecraft:oak_slab" },
+    "roof_primary": { "full": [{ "block": "minecraft:dark_oak_planks" }], "stairs": "minecraft:dark_oak_stairs", "slab": "minecraft:dark_oak_slab" },
+    "window": { "full": [{ "block": "minecraft:glass" }], "pane": "minecraft:glass_pane" },
+    "door": { "full": [{ "block": "minecraft:oak_planks" }], "door": "minecraft:oak_door" },
+    "fence": { "full": [{ "block": "minecraft:oak_planks" }], "fence": "minecraft:oak_fence", "gate": "minecraft:oak_fence_gate" },
+    "path_primary": { "full": [{ "block": "minecraft:dirt_path" }] },
+    "ground_top": { "full": [{ "block": "minecraft:grass_block" }] },
+    "ground_under": { "full": [{ "block": "minecraft:dirt" }] },
+    "light": { "full": [{ "block": "minecraft:lantern" }], "hanging": "minecraft:lantern[hanging=true]" }
+  },
+
+  "environment": { "time": 6000, "timeLock": false, "weather": "clear", "snowLayer": false, "biomePaint": null },
+
+  "ground": {
+    "top": [{ "block": "minecraft:grass_block", "weight": 8 }, { "block": "minecraft:coarse_dirt", "weight": 1 }],
+    "under": [{ "block": "minecraft:dirt" }],
+    "path": [{ "block": "minecraft:dirt_path", "weight": 6 }, { "block": "minecraft:gravel", "weight": 2 }],
+    "pathEdge": [{ "block": "minecraft:cobblestone_slab" }],
+    "plaza": [{ "block": "minecraft:stone_bricks", "weight": 6 }, { "block": "minecraft:cracked_stone_bricks", "weight": 2 }]
+  },
+
+  "flora": {
+    "trees": [{ "tree": "TREE", "weight": 6 }, { "tree": "BIG_TREE", "weight": 2 }],
+    "treeDensity": 0.02,
+    "ground": [{ "block": "minecraft:short_grass", "weight": 12 }, { "block": "minecraft:poppy", "weight": 2 }, { "block": "minecraft:dandelion", "weight": 2 }],
+    "groundDensity": 0.12,
+    "rocks": [{ "blueprint": "rock_small" }],
+    "rockDensity": 0.004
+  },
+
+  "building": { "roofShape": "gable", "roofPitch": 1, "wallStyle": "solid", "storyHeight": 4, "foundationDepth": 2, "overhang": 1, "chimney": true },
+
+  "settlement": {
+    "roadWidth": 3,
+    "plazaSize": [13, 13],
+    "plotPadding": 2,
+    "density": 0.7,
+    "wall": false,
+    "wallHeight": 6,
+    "lampSpacing": 8,
+    "buildingMix": { "house": 8, "shop": 3, "farm": 3, "tavern": 1, "smithy": 1, "well": 1, "watchtower": 1 },
+    "landmark": "well"
+  },
+
+  "lighting": { "role": "light", "spacing": 8, "height": 4, "onPosts": true },
+
+  "signs": {
+    "welcome": { "ru": ["Добро пожаловать", "в %settlement%"], "en": ["Welcome", "to %settlement%"] },
+    "tavern": { "ru": ["Таверна"], "en": ["Tavern"] },
+    "smithy": { "ru": ["Кузница"], "en": ["Smithy"] },
+    "shop": { "ru": ["Лавка"], "en": ["Shop"] }
+  }
+}
